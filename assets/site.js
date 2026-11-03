@@ -28,12 +28,16 @@
   const search = document.querySelector('#publication-search');
   if (!search) return;
   const year = document.querySelector('#publication-year');
+  const domain = document.querySelector('#publication-domain');
+  const params = new URLSearchParams(location.search);
+  search.value = params.get('q') || '';
+  if ([...domain.options].some(option => option.value === params.get('domain'))) domain.value = params.get('domain');
   const publications = [...document.querySelectorAll('.pub[data-search]')];
   function filter() {
     const query = search.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
     let count = 0;
     publications.forEach(pub => {
-      const matches = (!year.value || pub.dataset.year === year.value) && query.every(term => pub.dataset.search.includes(term));
+      const matches = (!year.value || pub.dataset.year === year.value) && (!domain.value || pub.dataset.domains.split('|').includes(domain.value)) && query.every(term => pub.dataset.search.includes(term));
       pub.hidden = !matches;
       if (matches) count++;
     });
@@ -45,5 +49,6 @@
   }
   search.addEventListener('input', filter);
   year.addEventListener('change', filter);
+  domain.addEventListener('change', filter);
   filter();
 })();

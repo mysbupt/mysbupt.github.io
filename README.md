@@ -23,7 +23,7 @@ Open http://127.0.0.1:8765/. The `dist` directory is the complete deployable sit
 - `assets/img/profile.png`: profile photograph.
 - `image/`: locally preserved slides and GenWardrobe paper.
 
-Run the build after changes. `scripts/import_original.rb` reproduces the initial import from the preserved source HTML; it requires Ruby and Nokogiri. It is not needed for normal builds and will overwrite edits to `content/site.json`.
+Run the build after changes. `scripts/import_original.rb` reproduces the initial import from the preserved source HTML; it requires Ruby and Nokogiri. It is not needed for normal builds and will overwrite edits to `content/site.json`, including curated publication records, domain tags, and award/selection metadata.
 
 ## Publish to the existing GitHub Pages site
 
@@ -43,10 +43,18 @@ GitHub Pages should continue using its existing branch-based deployment configur
 ## Content review notes
 
 - The original Publications page ends at 2024. Recent papers were carried over from the homepage news; missing author lists have not been invented.
-- 58 valid publication entries, 33 news announcements, 6 talks, and 8 honors are included.
+- 60 valid publication entries, 33 news announcements, 6 talks, and 8 honors are included.
 - An ACM Multimedia 2019 demo entry repeats an author list where its title should be. It is preserved in the original source and imported JSON, but excluded from the displayed list pending a correct title.
 - PortfolioPilot's source announcement is dated October 2025 and says AAAI 2025. The new list keeps it under 2025 and flags the conference year for confirmation.
 - The music paper is listed under MMM 2026 based on the explicit January 2026 award announcement, despite an older announcement saying MMM 2025.
 - BundleLM is listed under MMM 2027; Potent but Stealthy under AAAI 2026, matching the announced conference years.
 - Minor typography fixes include the duplicated “DiFashion” prefix, spacing in FashionDPO, and “Finalist”. Unavailable PDFs are plain text, not broken empty links.
 - PDF/code/dataset links are preserved from the source, not independently checked against publisher metadata. Bibliographic details should be reviewed before public deployment.
+
+## LMF research structure and selected publications
+
+The group is **LMF: Lab for Multimodality and Forecasting**, with a group overview at `group.html`. The research page presents two pillars: multimodal understanding/fusion and compositional/combinatorial modeling; and forecasting at macro scales (financial and geopolitical events) and micro scales (user behavior and cyber attack sequences). Applications are organized into Fashion, Finance, Cybersecurity, and Music. The publication page supports domain filtering and title-based deep links.
+
+The homepage selects the six paper/demo award winners listed in the original news and honors, plus the two highly cited works specifically named by Yunshan Ma: AttacKG+ and Learning to Generate Explainable Stock Predictions using Self-Reflective Large Language Models. No current citation counts or comprehensive citation ranking are asserted. The 2018 finalist and the personal NUS research achievement award remain in the CV but are not classified as award-winning papers in this selection.
+
+AttacKG+ and AlphaEdit were missing from the initial imported publication list and have been added using their author/publisher records. Bibliographic source URLs are stored on those records in `content/site.json`. The earlier public group page is retained in `content/original/group.html` for reference; the new group page does not assert a current member roster.
