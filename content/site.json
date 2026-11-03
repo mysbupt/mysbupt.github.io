@@ -433,7 +433,7 @@
     },
     {
       "title": "Frozen LVLMs for Micro-Video Recommendation: A Systematic Study of Feature Extraction and Fusion.",
-      "authors": "",
+      "authors": "Huatuan Sun, Yunshan Ma, Changguang Wu, Yanxin Zhang, Pengfei Wang, Xiaoyu Du.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -450,7 +450,10 @@
       "announced": "2026/04",
       "award": "Best Paper Award · ICMR 2026",
       "selected": "award",
-      "domains": []
+      "domains": [],
+      "sources": [
+        "https://arxiv.org/abs/2512.21863"
+      ]
     },
     {
       "title": "MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits.",
@@ -597,7 +600,7 @@
     },
     {
       "title": "Reasoning on Time-Series for Financial Technical Analysis.",
-      "authors": "",
+      "authors": "Kelvin J.L. Koa, Jan Chen, Yunshan Ma, Huanhuan Zheng, Tat-Seng Chua.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -614,6 +617,9 @@
       "announced": "2026/01",
       "domains": [
         "Finance"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2511.08616v1"
       ]
     },
     {
@@ -679,7 +685,7 @@
     },
     {
       "title": "Integrating Symbolic and Waveform Music into Large Language Models.",
-      "authors": "",
+      "authors": "Teng Tu, Xiaohao Liu, Yunshan Ma, Ji Qi, Tat-Seng Chua.",
       "venue": "",
       "year": 2025,
       "links": [
@@ -698,6 +704,9 @@
       "selected": "award",
       "domains": [
         "Music"
+      ],
+      "sources": [
+        "https://link.springer.com/chapter/10.1007/978-981-95-6957-1_7"
       ]
     },
     {
@@ -719,7 +728,7 @@
     },
     {
       "title": "Reasoning on Time-Series for Financial Analysis.",
-      "authors": "",
+      "authors": "Kelvin J.L. Koa, Jan Chen, Yunshan Ma, Huanhuan Zheng, Tat-Seng Chua.",
       "venue": "",
       "year": 2025,
       "links": [
@@ -738,11 +747,14 @@
       "selected": "award",
       "domains": [
         "Finance"
+      ],
+      "sources": [
+        "https://arxiv.org/abs/2511.08616v1"
       ]
     },
     {
       "title": "VibeMus: Proactive Agentic System for Music Personalization.",
-      "authors": "",
+      "authors": "Zhiliang Guo, Teng Tu, Yunshan Ma, Xun Yang.",
       "venue": "",
       "year": 2025,
       "links": [
@@ -761,6 +773,9 @@
       "selected": "award",
       "domains": [
         "Music"
+      ],
+      "sources": [
+        "https://ink.library.smu.edu.sg/sis_research/10915/"
       ]
     },
     {
@@ -1036,7 +1051,7 @@
     },
     {
       "title": "Leveraging Two Types of Global Graph for Sequential Fashion Recommendation.",
-      "authors": "Yujuan Ding, Yunshan Ma, Wai Keung Wong, Tat-Seng Chua. (Best Student Paper)",
+      "authors": "Yujuan Ding, Yunshan Ma, Wai Keung Wong, Tat-Seng Chua.",
       "venue": "ICMR'21",
       "year": 2021,
       "links": [

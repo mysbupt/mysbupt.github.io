@@ -5,6 +5,7 @@ import json
 import re
 import shutil
 import argparse
+import hashlib
 from pathlib import Path
 from urllib.parse import quote
 
@@ -13,6 +14,8 @@ OUT = ROOT / 'dist'
 DATA = json.loads((ROOT / 'content/site.json').read_text())
 ESC = html.escape
 SCHOLAR = 'https://scholar.google.com/citations?user=WSDsPtMAAAAJ&hl=en'
+CSS_VERSION = hashlib.sha256((ROOT / 'assets/site.css').read_bytes()).hexdigest()[:10]
+JS_VERSION = hashlib.sha256((ROOT / 'assets/site.js').read_bytes()).hexdigest()[:10]
 
 ICONS = {
     'sun': '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>',
@@ -40,9 +43,9 @@ def page(filename, name, title, content, description=None):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{ESC(title)} | Yunshan Ma · SMU</title><meta name="description" content="{ESC(desc, quote=True)}">
 <meta name="color-scheme" content="light dark"><meta property="og:type" content="website"><meta property="og:title" content="{ESC(title)} | Yunshan Ma"><meta property="og:description" content="{ESC(desc, quote=True)}">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css?v={CSS_VERSION}">
 <script>try{{const t=localStorage.getItem('theme');document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}}catch(e){{}}</script>
-<script defer src="assets/site.js"></script></head>
+<script defer src="assets/site.js?v={JS_VERSION}"></script></head>
 <body id="top"><a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><strong>Yunshan</strong> Ma<span aria-hidden="true">.</span></a>
 <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="navigation" aria-expanded="false">☰</button>
@@ -130,7 +133,7 @@ shutil.copytree(ROOT/'image',OUT/'image',dirs_exist_ok=True)
 shutil.copy2(ROOT/'assets/img/profile.png',OUT/'image/profile.png')
 shutil.copytree(ROOT/'licenses',OUT/'licenses',dirs_exist_ok=True)
 (OUT/'.nojekyll').touch()
-(OUT/'assets/img/favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#8b228d"/><text x="32" y="43" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" fill="white">M</text></svg>')
+(OUT/'assets/img/favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#579ece"/><path fill="#eeb11c" d="M0 0h32v32H0z"/><path fill="#de5c1d" d="M32 0h32v32H32z"/><path fill="#7962a9" d="M32 32h32v32H32z"/><text x="32" y="43" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" font-weight="bold" fill="#243342">M</text></svg>')
 
 intro = '''<div class="hero"><div><p class="eyebrow">Singapore Management University</p><h1><strong>Yunshan</strong> Ma <span class="chinese" lang="zh">马云山</span></h1><p class="subtitle">Assistant Professor<br><a href="https://computing.smu.edu.sg/">School of Computing and Information Systems</a></p>
 <div class="intro"><p>I am a tenure-track Assistant Professor at Singapore Management University. My research centers on <strong>multimodality and forecasting</strong>. I lead <a href="group.html"><strong>LMF: Lab for Multimodality and Forecasting</strong></a>, where we connect multimodal modeling with forecasting across scales.</p>
@@ -149,7 +152,7 @@ topics = '''<section class="section" id="fundamental-technologies"><p class="eye
 <section class="topic" id="forecasting"><span class="topic-label">FORECASTING</span><div><h2>Forecasting</h2><p>We aim to anticipate future events and behavior at both macro and micro scales.</p><h3>Macro-level Forecasting</h3><p>Financial forecasting and geopolitical event forecasting: reasoning about markets, economies, and evolving events in the wider world.</p><h3>Micro-level Forecasting</h3><p>User behavior forecasting in recommender systems and cyber attack sequence prediction: modeling how individual actions and sequences unfold over time.</p></div></section>'''
 page('research.html','Research','Research',research_intro+topics+domain_sections()+'<section class="section"><h2>Research talks</h2><p class="tagline">Slides on bundle recommendation and generation, LLMs for cybersecurity, and multimodal open-world event forecasting.</p>'+link('Browse talks and slides →','talks.html','text-link')+'</section>')
 
-group_intro = '<div class="page-intro"><p class="eyebrow">Singapore Management University</p><h1 class="lab-name">LMF<span>Lab for Multimodality<br>and Forecasting</span></h1><p>We connect multimodal understanding and modeling with forecasting at macro and micro scales, grounded in real-world problems.</p><p class="lab-director">Led by '+link('Yunshan Ma','index.html')+' · School of Computing and Information Systems</p></div>'
+group_intro = '<div class="page-intro"><p class="eyebrow">Singapore Management University</p><h1 class="lab-name"><b class="lab-monogram"><i class="lab-initial">L</i><i class="lab-initial">M</i><i class="lab-initial">F</i></b><span>Lab for Multimodality<br>and Forecasting</span></h1><p>We connect multimodal understanding and modeling with forecasting at macro and micro scales, grounded in real-world problems.</p><p class="lab-director">Led by '+link('Yunshan Ma','index.html')+' · School of Computing and Information Systems</p></div>'
 group_pillars = '<section class="section"><h2>What we study</h2><div class="research-grid">'+''.join('<article class="research-item"><span class="number">'+t[1]+'</span><h3>'+t[2]+'</h3><p>'+t[3]+'</p>'+link('Explore this direction →','research.html#'+t[0],'text-link')+'</article>' for t in TOPICS)+'</div></section>'
 group_domains = '<section class="section"><h2>Where we apply it</h2><div class="domain-grid">'+''.join('<article><h3>'+link(name,'research.html#'+domain_slug(name))+'</h3><p>'+ESC(description)+'</p></article>' for name,description,_ in DOMAINS)+'</div></section>'
 page('group.html','LMF','LMF · Lab for Multimodality and Forecasting',group_intro+group_pillars+group_domains+'<section class="section"><h2>Connect with LMF</h2><p class="tagline">For research inquiries, contact '+link('Yunshan Ma','mailto:ysma@smu.edu.sg')+'.</p>'+link('ysma@smu.edu.sg','mailto:ysma@smu.edu.sg','text-link')+'</section>')

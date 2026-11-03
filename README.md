@@ -2,7 +2,7 @@
 
 Recommended template: **[al-folio](https://github.com/alshedivat/al-folio)**, a popular academic website theme with publication, news, and CV layouts. [View its demo](https://alshedivat.github.io/al-folio/).
 
-This implementation is a **static adaptation inspired by al-folio**, with its academic layout, restrained purple accent, right-aligned portrait, publication rows, and light/dark appearance. It is not the upstream Jekyll theme installation. It uses HTML, CSS, JavaScript, and a Python build script so it can run without Ruby, Jekyll, npm, or external frontend dependencies. Theme attribution and the upstream MIT license are included.
+This implementation is a **static adaptation inspired by al-folio**, with its academic layout, NExT++ logo-inspired four-color palette, right-aligned portrait, publication rows, and light/dark appearance. It is not the upstream Jekyll theme installation. It uses HTML, CSS, JavaScript, and a Python build script so it can run without Ruby, Jekyll, npm, or external frontend dependencies. Theme attribution and the upstream MIT license are included.
 
 Content was imported from https://mysbupt.github.io/ on 3 November 2026. The original HTML is preserved in `content/original/` for comparison. The website includes About, Research, Publications, Talks, CV, and a news archive; publication search, year filtering, responsive navigation, dark mode, and a print-friendly CV are implemented. The seven existing public PDFs are included, and existing `/image/` PDF paths are preserved.
 
@@ -64,3 +64,9 @@ AttacKG+ and AlphaEdit were missing from the initial imported publication list a
 Navigation labels use initial capitals. Research is organized by Fundamental Technologies and Vertical Domains. Talks are grouped into the three original topics, with oldest-to-newest talk dates within each topic. Education/experience, honors/awards, and professional service now appear at the bottom of About.
 
 The CV navigation opens a new tab. The user-supplied `CV_Ma_Yunshan_202608.pdf` is preserved byte-for-byte at `assets/pdf/Yunshan_Ma_CV.pdf`. The CV page displays that PDF and requests its download, with a visible Download CV link if the browser blocks automatic downloads. Background, education, honors, and service remain at the bottom of About.
+
+## Palette and author metadata
+
+The logo at https://www.nextcenter.org/ supplied four sampled colors: yellow `#eeb11c`, orange `#de5c1d`, sky blue `#579ece`, and purple `#7962a9`. These colors inform the header, research-domain accents, LMF monogram, awards, and favicon; readable tonal variants are used for text in light and dark modes. The logo itself is not used as site branding.
+
+All nine selected publications have full author lists. The missing Frozen LVLMs, symbolic/waveform music, financial time-series reasoning, and VibeMus records were completed using arXiv, Springer, and SMU repository metadata. Source URLs are retained on the records in `content/site.json`.
