@@ -1,0 +1,1088 @@
+{
+  "source": "https://mysbupt.github.io/",
+  "imported": "2026-11-03",
+  "news": [
+    {
+      "date": "2026/10",
+      "html": "One paper accepted by Multimedia Modeling (MMM) 2027 of using Language Modeling for Bundle Construction!\n\t\t\t\t<br> BundleLM: Bundle Construction Using Language Model.[pdf come soon]",
+      "text": "2026/10 One paper accepted by Multimedia Modeling (MMM) 2027 of using Language Modeling for Bundle Construction! BundleLM: Bundle Construction Using Language Model.[pdf come soon]",
+      "papers": [
+        "BundleLM: Bundle Construction Using Language Model."
+      ]
+    },
+    {
+      "date": "2026/09",
+      "html": "One paper gets accepted by TOIS of adapting MLLM for session recommendation, one paper gets accepted by SIGIR-AP of building a multimodal fashion understanding benchmark FashionStylist!\n\t\t\t\t<br> Distilling Transitional Patterns to Multimodal Large Language Models for Session-based Recommendation.[<a href=\"https://dl.acm.org/doi/pdf/10.1145/3856985\">pdf</a>]\n\t\t\t\t<br> FashionStylist: An Expert Knowledge-enhanced Multimodal Dataset for Fashion Understanding.[<a href=\"https://arxiv.org/pdf/2604.09249\">pdf</a>]\n\t\t\t\t\t[<a href=\"https://github.com/recsys-benchmark/FashionStylist\">dataset and code</a>]",
+      "text": "2026/09 One paper gets accepted by TOIS of adapting MLLM for session recommendation, one paper gets accepted by SIGIR-AP of building a multimodal fashion understanding benchmark FashionStylist! Distilling Transitional Patterns to Multimodal Large Language Models for Session-based Recommendation.[pdf] FashionStylist: An Expert Knowledge-enhanced Multimodal Dataset for Fashion Understanding.[pdf] [dataset and code]",
+      "papers": [
+        "Distilling Transitional Patterns to Multimodal Large Language Models for Session-based Recommendation.",
+        "FashionStylist: An Expert Knowledge-enhanced Multimodal Dataset for Fashion Understanding."
+      ]
+    },
+    {
+      "date": "2026/08",
+      "html": "One paper gets accepted by CIKM on tokenization of GenRec, one paper gets accepted by EMNLP of reusing LLM reasoning for financial report generation!\n\t\t\t\t<br> Personalized Context-Conditioned Tokenization for Generative Recommendation.[<a href=\"https://arxiv.org/pdf/2510.21276\">pdf</a>]\n\t\t\t\t\t[<a href=\"https://github.com/YoungZ365/Pctx\">code</a>]\n\t\t\t\t<br> AnalysisBank: An Expert Analysis Pattern Library for Financial Report Generation.[<a href=\"https://arxiv.org/pdf/2609.00818\">pdf</a>]\n\t\t\t\t\t[<a href=\"https://github.com/yajingyang/AnalysisBank\">code</a>]",
+      "text": "2026/08 One paper gets accepted by CIKM on tokenization of GenRec, one paper gets accepted by EMNLP of reusing LLM reasoning for financial report generation! Personalized Context-Conditioned Tokenization for Generative Recommendation.[pdf] [code] AnalysisBank: An Expert Analysis Pattern Library for Financial Report Generation.[pdf] [code]",
+      "papers": [
+        "Personalized Context-Conditioned Tokenization for Generative Recommendation.",
+        "AnalysisBank: An Expert Analysis Pattern Library for Financial Report Generation."
+      ]
+    },
+    {
+      "date": "2026/07",
+      "html": "One paper gets accepted by TKDE about continual pre-training for recommendation, one demo paper gets accepted by ACMMM of applying visual analogy retrieval to financial K-line analysis!\n\t\t\t\t<br> Large Language Model Empowered Recommendation Meets All-domain Continual Pre-Training.[<a href=\"https://arxiv.org/pdf/2504.08949\">pdf</a>]\n\t\t\t\t<br> FinAlogy: A Visual Analogy Retrieval System for Financial K-Line Analysis.[pdf coming soon][<a href=\"https://github.com/nice-zzy/FinAlogy\">code</a>]\n\t\t\t\t[<a href=\"https://www.youtube.com/watch?v=SIreBcl__WU\">video</a>]",
+      "text": "2026/07 One paper gets accepted by TKDE about continual pre-training for recommendation, one demo paper gets accepted by ACMMM of applying visual analogy retrieval to financial K-line analysis! Large Language Model Empowered Recommendation Meets All-domain Continual Pre-Training.[pdf] FinAlogy: A Visual Analogy Retrieval System for Financial K-Line Analysis.[pdf coming soon][code] [video]",
+      "papers": [
+        "Large Language Model Empowered Recommendation Meets All-domain Continual Pre-Training.",
+        "FinAlogy: A Visual Analogy Retrieval System for Financial K-Line Analysis."
+      ]
+    },
+    {
+      "date": "2026/06",
+      "html": "Our paper, Frozen LVLMs for Micro-Video Recommendation: A Systematic Study of Feature Extraction and Fusion, receives the best paper award of ICMR 2026!",
+      "text": "2026/06 Our paper, Frozen LVLMs for Micro-Video Recommendation: A Systematic Study of Feature Extraction and Fusion, receives the best paper award of ICMR 2026!",
+      "papers": [
+
+      ]
+    },
+    {
+      "date": "2026/06",
+      "html": "One paper gets accepted by Transactions on Information Systems about using LLMs for personalized fashion outfit recommendation!\n\t\t\t\t<br> CFALR: Collaborative Filtering-Augmented Large Language Model for Personalized Fashion Outfit Recommendation.[<a href=\"https://arxiv.org/pdf/2606.13001\">pdf</a>]",
+      "text": "2026/06 One paper gets accepted by Transactions on Information Systems about using LLMs for personalized fashion outfit recommendation! CFALR: Collaborative Filtering-Augmented Large Language Model for Personalized Fashion Outfit Recommendation.[pdf]",
+      "papers": [
+        "CFALR: Collaborative Filtering-Augmented Large Language Model for Personalized Fashion Outfit Recommendation."
+      ]
+    },
+    {
+      "date": "2026/05",
+      "html": "One paper accepted by KDD'26 about multi-behabior recommendation!\n\t\t\t\t<br> Dynamic Spectral Denoising with Global-Context Attention for Multi-Behavior Recommendation.\n\t\t\t\t\t[<a href=\"https://arxiv.org/pdf/2606.02417\">pdf</a>][<a href=\"https://github.com/miaomiao-cai2/SpectraMB-KDD2026\">code</a>]",
+      "text": "2026/05 One paper accepted by KDD'26 about multi-behabior recommendation! Dynamic Spectral Denoising with Global-Context Attention for Multi-Behavior Recommendation. [pdf][code]",
+      "papers": [
+        "Dynamic Spectral Denoising with Global-Context Attention for Multi-Behavior Recommendation."
+      ]
+    },
+    {
+      "date": "2026/04",
+      "html": "One paper gets accepted by Transactions on Information Systems about promoting long-tail items via product bundling!\n\t\t\t\t<br> Promoting Long-tail Items through Debiased Product Bundling.[<a href=\"https://arxiv.org/pdf/2411.19107\">pdf</a>]",
+      "text": "2026/04 One paper gets accepted by Transactions on Information Systems about promoting long-tail items via product bundling! Promoting Long-tail Items through Debiased Product Bundling.[pdf]",
+      "papers": [
+        "Promoting Long-tail Items through Debiased Product Bundling."
+      ]
+    },
+    {
+      "date": "2026/04",
+      "html": "One paper gets accepted by ICMR'26 about video LLM for micro-video recommendation, congratulations to Huatuan!\n\t\t\t\t<br> Frozen LVLMs for Micro-Video Recommendation: A Systematic Study of Feature Extraction and Fusion.[<a href=\"https://dl.acm.org/doi/pdf/10.1145/3805622.3810736\">pdf</a>]\n\t\t\t\t\t[<a href=\"https://github.com/Tuannnxlf/Frozen-LVLMs-for-Micro-Video-Recommendation-A-Systematic-Study-of-Feature-Extraction-and-Fusion\">code</a>]",
+      "text": "2026/04 One paper gets accepted by ICMR'26 about video LLM for micro-video recommendation, congratulations to Huatuan! Frozen LVLMs for Micro-Video Recommendation: A Systematic Study of Feature Extraction and Fusion.[pdf] [code]",
+      "papers": [
+        "Frozen LVLMs for Micro-Video Recommendation: A Systematic Study of Feature Extraction and Fusion."
+      ]
+    },
+    {
+      "date": "2026/04",
+      "html": "Two papers are accepted by ACL'26! One accepted by the main conference about document QA, and another is accepted as findings on open-ended event forecasting. Congruatulations to Yixin and Chang He!\n                <br>  MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits.[<a href=\"https://arxiv.org/pdf/2604.08952\">pdf</a>]\n\t\t\t\t\t[<a href=\"https://github.com/ElephantOH/MAB-DQA\">code</a>]<br>\n                  Scattered Hypothesis Generation for Open-Ended Event Forecasting.[<a href=\"https://arxiv.org/pdf/2604.15788\">pdf</a>]\n\t\t\t\t\t[<a href=\"https://github.com/Sambac1/SCATTER\">code</a>]",
+      "text": "2026/04 Two papers are accepted by ACL'26! One accepted by the main conference about document QA, and another is accepted as findings on open-ended event forecasting. Congruatulations to Yixin and Chang He! MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits.[pdf] [code] Scattered Hypothesis Generation for Open-Ended Event Forecasting.[pdf] [code]",
+      "papers": [
+        "MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits.",
+        "Scattered Hypothesis Generation for Open-Ended Event Forecasting."
+      ]
+    },
+    {
+      "date": "2026/04",
+      "html": "One paper gets accepted by Neurocomputing about tackling the heterogeneity and heterophily issues of graphs, congratulations to Kangkang!\n\t\t\t\t<br> Addressing graph heterogeneity and heterophily from a spectral perspective.[<a href=\"https://arxiv.org/pdf/2410.13373\">pdf</a>][<a href=\"https://github.com/Lukangkang123/H2SGNN/\">code</a>]",
+      "text": "2026/04 One paper gets accepted by Neurocomputing about tackling the heterogeneity and heterophily issues of graphs, congratulations to Kangkang! Addressing graph heterogeneity and heterophily from a spectral perspective.[pdf][code]",
+      "papers": [
+        "Addressing graph heterogeneity and heterophily from a spectral perspective."
+      ]
+    },
+    {
+      "date": "2026/04",
+      "html": "Two papers are accepted by SIGIR'26! One on the research track about fashion outfit image generation, and another on the resource track about travel itinerary modification. Congruatulations to Mingzhe and Zhuoxuan!\n                <br>  Dual-Diffusional Generative Fashion Recommendation.[pdf coming soon]<br>\n                  iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification.[<a href=\"https://arxiv.org/pdf/2601.10609\">pdf</a>][<a href=\"https://github.com/zelo2/iTIMO\">dataset and code</a>]",
+      "text": "2026/04 Two papers are accepted by SIGIR'26! One on the research track about fashion outfit image generation, and another on the resource track about travel itinerary modification. Congruatulations to Mingzhe and Zhuoxuan! Dual-Diffusional Generative Fashion Recommendation.[pdf coming soon] iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification.[pdf][dataset and code]",
+      "papers": [
+        "Dual-Diffusional Generative Fashion Recommendation.",
+        "iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification."
+      ]
+    },
+    {
+      "date": "2026/02",
+      "html": "One paper gets accepted by Transactions on Information Systems about using graph RAG for website owner identification, congratulations to Tu Cheng!\n\t\t\t\t<br> MetaRAG: Identifying Website Owner using Meta-Path-Guided Dynamic Graph Retrieval-Augmented Generation.[<a href=\"https://dl.acm.org/doi/pdf/10.1145/3800961\">pdf</a>]",
+      "text": "2026/02 One paper gets accepted by Transactions on Information Systems about using graph RAG for website owner identification, congratulations to Tu Cheng! MetaRAG: Identifying Website Owner using Meta-Path-Guided Dynamic Graph Retrieval-Augmented Generation.[pdf]",
+      "papers": [
+        "MetaRAG: Identifying Website Owner using Meta-Path-Guided Dynamic Graph Retrieval-Augmented Generation."
+      ]
+    },
+    {
+      "date": "2026/02",
+      "html": "One paper gets accepted by Knowledge-Based Systems about constructing attack graph using multimodal data, congratulations to Yongheng!\n\t\t\t\t<br> MM-AttacKG: A Multimodal Approach to Attack Graph Construction with Large Language Models.[<a href=\"https://arxiv.org/pdf/2506.16968\">pdf</a>]",
+      "text": "2026/02 One paper gets accepted by Knowledge-Based Systems about constructing attack graph using multimodal data, congratulations to Yongheng! MM-AttacKG: A Multimodal Approach to Attack Graph Construction with Large Language Models.[pdf]",
+      "papers": [
+        "MM-AttacKG: A Multimodal Approach to Attack Graph Construction with Large Language Models."
+      ]
+    },
+    {
+      "date": "2026/01",
+      "html": "Our paper, Integrating Symbolic and Waveform Music into Large Language Models, receives the best paper award of Multimdeia Modeling (MMM) 2026!",
+      "text": "2026/01 Our paper, Integrating Symbolic and Waveform Music into Large Language Models, receives the best paper award of Multimdeia Modeling (MMM) 2026!",
+      "papers": [
+
+      ]
+    },
+    {
+      "date": "2026/01",
+      "html": "Two papers are accepted by ICLR'26! On the topics of product bundling and stock forecasting, respectively. Congruatulations to Tu Teng, Li Ai, Kelvin, and Jan!\n                <br>  Discrete Diffusion for Bundle Construction.[<a href=\"https://openreview.net/pdf?id=dKyhgfe50H\">pdf</a>][<a href=\"https://anonymous.4open.science/r/DDBC-44EE\">code</a>]<br>\n                  Reasoning on Time-Series for Financial Technical Analysis.[<a href=\"https://openreview.net/pdf?id=PcjIe5xNaY\">pdf</a>][<a href=\"https://anonymous.4open.science/r/VTA-finance-293C/\">code</a>]",
+      "text": "2026/01 Two papers are accepted by ICLR'26! On the topics of product bundling and stock forecasting, respectively. Congruatulations to Tu Teng, Li Ai, Kelvin, and Jan! Discrete Diffusion for Bundle Construction.[pdf][code] Reasoning on Time-Series for Financial Technical Analysis.[pdf][code]",
+      "papers": [
+        "Discrete Diffusion for Bundle Construction.",
+        "Reasoning on Time-Series for Financial Technical Analysis."
+      ]
+    },
+    {
+      "date": "2026/01",
+      "html": "One short paper, about geo-political event forecasting using LLM agents, gets accepted by The Web Conference (WWW) 2026, congratulations to Haoxuan and Chang He!\n\t\t\t\t<br> ThinkTank-ME: A Multi-Expert Framework for Middle East Event Forecasting.[<a href=\"https://arxiv.org/pdf/2601.17065\">pdf</a>][<a href=\"https://github.com/LuminosityX/ThinkTank-ME\">code</a>]",
+      "text": "2026/01 One short paper, about geo-political event forecasting using LLM agents, gets accepted by The Web Conference (WWW) 2026, congratulations to Haoxuan and Chang He! ThinkTank-ME: A Multi-Expert Framework for Middle East Event Forecasting.[pdf][code]",
+      "papers": [
+        "ThinkTank-ME: A Multi-Expert Framework for Middle East Event Forecasting."
+      ]
+    },
+    {
+      "date": "2025/12",
+      "html": "Our demo paper, VibeMus: Proactive Agentic System for Music Personalization, receives the best demo paper award of ACM Multimdeia Asia 2025!",
+      "text": "2025/12 Our demo paper, VibeMus: Proactive Agentic System for Music Personalization, receives the best demo paper award of ACM Multimdeia Asia 2025!",
+      "papers": [
+
+      ]
+    },
+    {
+      "date": "2025/11",
+      "html": "Our paper, Reasoning on Time-Series for Financial Analysis, wins the best paper award of the Workshop on Rethinking Financial Time-Series in ACM ICAIF 2025.",
+      "text": "2025/11 Our paper, Reasoning on Time-Series for Financial Analysis, wins the best paper award of the Workshop on Rethinking Financial Time-Series in ACM ICAIF 2025.",
+      "papers": [
+
+      ]
+    },
+    {
+      "date": "2025/11",
+      "html": "One paper accepted by AAAI 2026, congratulations to Jiajie!\n\t\t\t\t<br> Potent but Stealthy: Rethink Profile Pollution against Sequential Recommendation via Bi-level Constrained Reinforcement Paradigm.[<a href=\"https://arxiv.org/pdf/2511.09392\">pdf</a>][<a href=\"https://github.com/SSndot/CREAT\">code</a>]",
+      "text": "2025/11 One paper accepted by AAAI 2026, congratulations to Jiajie! Potent but Stealthy: Rethink Profile Pollution against Sequential Recommendation via Bi-level Constrained Reinforcement Paradigm.[pdf][code]",
+      "papers": [
+        "Potent but Stealthy: Rethink Profile Pollution against Sequential Recommendation via Bi-level Constrained Reinforcement Paradigm."
+      ]
+    },
+    {
+      "date": "2025/10",
+      "html": "One demo paper accepted by AAAI 2025, big congratulations to Jared Chan! Notably, Jared is a year-2 undergradute student in SMU SCIS, and this work was done during a part-time summer research project.\n\t\t\t\t<br> PortfolioPilot: An Agentic Platform for Financial Portfolio Management Algorithm Development and Evaluation.[<a href=\"https://github.com/JarudeC/portfoliopilot/blob/main/AAAI_paper/PortfolioPilot%20Demo%20Paper.pdf\">pdf</a>][<a href=\"https://github.com/JarudeC/portfoliopilot\">code</a>]",
+      "text": "2025/10 One demo paper accepted by AAAI 2025, big congratulations to Jared Chan! Notably, Jared is a year-2 undergradute student in SMU SCIS, and this work was done during a part-time summer research project. PortfolioPilot: An Agentic Platform for Financial Portfolio Management Algorithm Development and Evaluation.[pdf][code]",
+      "papers": [
+        "PortfolioPilot: An Agentic Platform for Financial Portfolio Management Algorithm Development and Evaluation."
+      ]
+    },
+    {
+      "date": "2025/10",
+      "html": "One paper accepted by Multimedia Modeling (MMM) 2025, congratulations to Tu Teng and Xiaohao!\n\t\t\t\t<br> Integrating Symbolic and Waveform Music into Large Language Models.[<a href=\"https://link.springer.com/chapter/10.1007/978-981-95-6957-1_7\">pdf</a>][<a href=\"https://anonymous-2024101.github.io/\">website</a>]",
+      "text": "2025/10 One paper accepted by Multimedia Modeling (MMM) 2025, congratulations to Tu Teng and Xiaohao! Integrating Symbolic and Waveform Music into Large Language Models.[pdf][website]",
+      "papers": [
+        "Integrating Symbolic and Waveform Music into Large Language Models."
+      ]
+    },
+    {
+      "date": "2025/10",
+      "html": "One paper accepted by The 2nd Workshop on LLMs and Generative AI for Finance (co-host on ICAIF'25), congratulations to Kelvin!\n\t\t\t\t<br> Temporal Relational Reasoning of Large Language Models for Detecting Stock Portfolio Crashes.[<a href=\"https://arxiv.org/pdf/2410.17266\">pdf</a>]",
+      "text": "2025/10 One paper accepted by The 2nd Workshop on LLMs and Generative AI for Finance (co-host on ICAIF'25), congratulations to Kelvin! Temporal Relational Reasoning of Large Language Models for Detecting Stock Portfolio Crashes.[pdf]",
+      "papers": [
+        "Temporal Relational Reasoning of Large Language Models for Detecting Stock Portfolio Crashes."
+      ]
+    },
+    {
+      "date": "2025/10",
+      "html": "One paper accepted by the Workshop on Rethinking Financial Time-Series, congratulations to Kelvin!\n\t\t\t\t<br> Reasoning on Time-Series for Financial Analysis. [<a href=\"https://arxiv.org/pdf/2511.08616\">pdf</a>][<a href=\"https://anonymous.4open.science/r/VTA-finance-293C/\">code</a>]",
+      "text": "2025/10 One paper accepted by the Workshop on Rethinking Financial Time-Series, congratulations to Kelvin! Reasoning on Time-Series for Financial Analysis. [pdf][code]",
+      "papers": [
+        "Reasoning on Time-Series for Financial Analysis."
+      ]
+    },
+    {
+      "date": "2025/10",
+      "html": "One demo paper accepted by ACM Multimedia Asia 2025, congratulations to Zhiliang and Tu Teng!\n\t\t\t\t<br> VibeMus: Proactive Agentic System for Music Personalization.[<a href=\"https://dl.acm.org/doi/epdf/10.1145/3743093.3771663\">pdf</a>][<a href=\"https://github.com/tuteng0915/VibeMus\">code</a>]",
+      "text": "2025/10 One demo paper accepted by ACM Multimedia Asia 2025, congratulations to Zhiliang and Tu Teng! VibeMus: Proactive Agentic System for Music Personalization.[pdf][code]",
+      "papers": [
+        "VibeMus: Proactive Agentic System for Music Personalization."
+      ]
+    },
+    {
+      "date": "2025/09",
+      "html": "One paper accepted by TKDD, congratulations to Tu Cheng!\n\t\t\t\t<br> Website Owner Identification through Multi-level Contrastive Representation Learning.[<a href=\"https://dl.acm.org/doi/pdf/10.1145/3767155\">pdf</a>][<a href=\"https://github.com/tuchen9/ReMon\">code</a>]",
+      "text": "2025/09 One paper accepted by TKDD, congratulations to Tu Cheng! Website Owner Identification through Multi-level Contrastive Representation Learning.[pdf][code]",
+      "papers": [
+        "Website Owner Identification through Multi-level Contrastive Representation Learning."
+      ]
+    },
+    {
+      "date": "2025/08",
+      "html": "Our workshop proposal, titled as \"International Workshop on Multimodal Generative Search and Recommendation\", gets accepted by CIKM 2025.\n\t\t\t\tWe look forward to submissions relevant to broad topics on Multimodal Generative Search and Recommendation. More details can be seen on the <a href=\"https://mmgensr-cikm25.github.io/\">website</a>.",
+      "text": "2025/08 Our workshop proposal, titled as \"International Workshop on Multimodal Generative Search and Recommendation\", gets accepted by CIKM 2025. We look forward to submissions relevant to broad topics on Multimodal Generative Search and Recommendation. More details can be seen on the website.",
+      "papers": [
+
+      ]
+    },
+    {
+      "date": "2025/07",
+      "html": "Our demo gets accepted by ACM Multimedia'25 Demo Track, congratulations to Jin Peng, Yilin, and Mingzhe!\n\t\t\t\t<br> GenWardrobe: A Fully Generative System for Travel Fashion Wardrobe Construction.[<a href=\"https://mysbupt.github.io/image/MM_2025_GenWardrobe.pdf\">pdf</a>][<a href=\"https://github.com/ShanFengShanFeng/GenWardrobe\">code</a>]",
+      "text": "2025/07 Our demo gets accepted by ACM Multimedia'25 Demo Track, congratulations to Jin Peng, Yilin, and Mingzhe! GenWardrobe: A Fully Generative System for Travel Fashion Wardrobe Construction.[pdf][code]",
+      "papers": [
+        "GenWardrobe: A Fully Generative System for Travel Fashion Wardrobe Construction."
+      ]
+    },
+    {
+      "date": "2025/05",
+      "html": "One paper accepted by KDD'25, congratulations to Yingzhi and Xiaohao!\n\t\t\t\t<br> LLM2Rec: Large Language Models Are Powerful Embedding Models for Sequential Recommendation.[<a href=\"https://arxiv.org/pdf/2506.21579\">pdf</a>][<a href=\"https://github.com/HappyPointer/LLM2Rec\">code</a>]",
+      "text": "2025/05 One paper accepted by KDD'25, congratulations to Yingzhi and Xiaohao! LLM2Rec: Large Language Models Are Powerful Embedding Models for Sequential Recommendation.[pdf][code]",
+      "papers": [
+        "LLM2Rec: Large Language Models Are Powerful Embedding Models for Sequential Recommendation."
+      ]
+    },
+    {
+      "date": "2025/04",
+      "html": "One paper accepted by SIGIR'25, congratulations to Mingzhe!\n\t\t\t\t<br> FashionDPO:Fine-tune Fashion Outfit Generation Model using Direct Preference Optimization.[<a href=\"https://arxiv.org/pdf/2504.12900\">pdf</a>][<a href=\"https://github.com/Yzcreator/FashionDPO\">code</a>]",
+      "text": "2025/04 One paper accepted by SIGIR'25, congratulations to Mingzhe! FashionDPO:Fine-tune Fashion Outfit Generation Model using Direct Preference Optimization.[pdf][code]",
+      "papers": [
+        "FashionDPO:Fine-tune Fashion Outfit Generation Model using Direct Preference Optimization."
+      ]
+    },
+    {
+      "date": "2025/04",
+      "html": "Our ICLR'25 paper, \"Alphaedit: Null-space constrained model editing for language models\", wins the outstanding paper award!",
+      "text": "2025/04 Our ICLR'25 paper, \"Alphaedit: Null-space constrained model editing for language models\", wins the outstanding paper award!",
+      "papers": [
+
+      ]
+    },
+    {
+      "date": "2025/02",
+      "html": "Our workshop proposal, titled as \"FinIR 2025: The 2nd Workshop on Financial Information Retrieval in the Era of Generative AI\", gets accepted by SIGIR 2025.\n\t\t\t\tWe look forward to submissions relevant to broad topics on Finance and Information Retrieval. More details can be seen on the <a href=\"https://finir2025.github.io/\">website</a>.",
+      "text": "2025/02 Our workshop proposal, titled as \"FinIR 2025: The 2nd Workshop on Financial Information Retrieval in the Era of Generative AI\", gets accepted by SIGIR 2025. We look forward to submissions relevant to broad topics on Finance and Information Retrieval. More details can be seen on the website.",
+      "papers": [
+
+      ]
+    },
+    {
+      "date": "2025/01",
+      "html": "I joined Singapore Management University, <a href=\"https://computing.smu.edu.sg/\">School of Computing and Information Systems</a> as a tenure-track Assistant Professor.",
+      "text": "2025/01 I joined Singapore Management University, School of Computing and Information Systems as a tenure-track Assistant Professor.",
+      "papers": [
+
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "BundleLM: Bundle Construction Using Language Model.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+
+      ],
+      "announcement": "2026/10 One paper accepted by Multimedia Modeling (MMM) 2027 of using Language Modeling for Bundle Construction! BundleLM: Bundle Construction Using Language Model.[pdf come soon]",
+      "announced": "2026/10"
+    },
+    {
+      "title": "Distilling Transitional Patterns to Multimodal Large Language Models for Session-based Recommendation.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://dl.acm.org/doi/pdf/10.1145/3856985"
+        }
+      ],
+      "announcement": "2026/09 One paper gets accepted by TOIS of adapting MLLM for session recommendation, one paper gets accepted by SIGIR-AP of building a multimodal fashion understanding benchmark FashionStylist! Distilling Transitional Patterns to Multimodal Large Language Models for Session-based Recommendation.[pdf] FashionStylist: An Expert Knowledge-enhanced Multimodal Dataset for Fashion Understanding.[pdf] [dataset and code]",
+      "announced": "2026/09"
+    },
+    {
+      "title": "FashionStylist: An Expert Knowledge-enhanced Multimodal Dataset for Fashion Understanding.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2604.09249"
+        },
+        {
+          "label": "dataset and code",
+          "url": "https://github.com/recsys-benchmark/FashionStylist"
+        }
+      ],
+      "announcement": "2026/09 One paper gets accepted by TOIS of adapting MLLM for session recommendation, one paper gets accepted by SIGIR-AP of building a multimodal fashion understanding benchmark FashionStylist! Distilling Transitional Patterns to Multimodal Large Language Models for Session-based Recommendation.[pdf] FashionStylist: An Expert Knowledge-enhanced Multimodal Dataset for Fashion Understanding.[pdf] [dataset and code]",
+      "announced": "2026/09"
+    },
+    {
+      "title": "Personalized Context-Conditioned Tokenization for Generative Recommendation.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2510.21276"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/YoungZ365/Pctx"
+        }
+      ],
+      "announcement": "2026/08 One paper gets accepted by CIKM on tokenization of GenRec, one paper gets accepted by EMNLP of reusing LLM reasoning for financial report generation! Personalized Context-Conditioned Tokenization for Generative Recommendation.[pdf] [code] AnalysisBank: An Expert Analysis Pattern Library for Financial Report Generation.[pdf] [code]",
+      "announced": "2026/08"
+    },
+    {
+      "title": "AnalysisBank: An Expert Analysis Pattern Library for Financial Report Generation.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2609.00818"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/yajingyang/AnalysisBank"
+        }
+      ],
+      "announcement": "2026/08 One paper gets accepted by CIKM on tokenization of GenRec, one paper gets accepted by EMNLP of reusing LLM reasoning for financial report generation! Personalized Context-Conditioned Tokenization for Generative Recommendation.[pdf] [code] AnalysisBank: An Expert Analysis Pattern Library for Financial Report Generation.[pdf] [code]",
+      "announced": "2026/08"
+    },
+    {
+      "title": "Large Language Model Empowered Recommendation Meets All-domain Continual Pre-Training.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2504.08949"
+        }
+      ],
+      "announcement": "2026/07 One paper gets accepted by TKDE about continual pre-training for recommendation, one demo paper gets accepted by ACMMM of applying visual analogy retrieval to financial K-line analysis! Large Language Model Empowered Recommendation Meets All-domain Continual Pre-Training.[pdf] FinAlogy: A Visual Analogy Retrieval System for Financial K-Line Analysis.[pdf coming soon][code] [video]",
+      "announced": "2026/07"
+    },
+    {
+      "title": "FinAlogy: A Visual Analogy Retrieval System for Financial K-Line Analysis.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "code",
+          "url": "https://github.com/nice-zzy/FinAlogy"
+        },
+        {
+          "label": "video",
+          "url": "https://www.youtube.com/watch?v=SIreBcl__WU"
+        }
+      ],
+      "announcement": "2026/07 One paper gets accepted by TKDE about continual pre-training for recommendation, one demo paper gets accepted by ACMMM of applying visual analogy retrieval to financial K-line analysis! Large Language Model Empowered Recommendation Meets All-domain Continual Pre-Training.[pdf] FinAlogy: A Visual Analogy Retrieval System for Financial K-Line Analysis.[pdf coming soon][code] [video]",
+      "announced": "2026/07"
+    },
+    {
+      "title": "CFALR: Collaborative Filtering-Augmented Large Language Model for Personalized Fashion Outfit Recommendation.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2606.13001"
+        }
+      ],
+      "announcement": "2026/06 One paper gets accepted by Transactions on Information Systems about using LLMs for personalized fashion outfit recommendation! CFALR: Collaborative Filtering-Augmented Large Language Model for Personalized Fashion Outfit Recommendation.[pdf]",
+      "announced": "2026/06"
+    },
+    {
+      "title": "Dynamic Spectral Denoising with Global-Context Attention for Multi-Behavior Recommendation.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2606.02417"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/miaomiao-cai2/SpectraMB-KDD2026"
+        }
+      ],
+      "announcement": "2026/05 One paper accepted by KDD'26 about multi-behabior recommendation! Dynamic Spectral Denoising with Global-Context Attention for Multi-Behavior Recommendation. [pdf][code]",
+      "announced": "2026/05"
+    },
+    {
+      "title": "Promoting Long-tail Items through Debiased Product Bundling.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2411.19107"
+        }
+      ],
+      "announcement": "2026/04 One paper gets accepted by Transactions on Information Systems about promoting long-tail items via product bundling! Promoting Long-tail Items through Debiased Product Bundling.[pdf]",
+      "announced": "2026/04"
+    },
+    {
+      "title": "Frozen LVLMs for Micro-Video Recommendation: A Systematic Study of Feature Extraction and Fusion.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://dl.acm.org/doi/pdf/10.1145/3805622.3810736"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/Tuannnxlf/Frozen-LVLMs-for-Micro-Video-Recommendation-A-Systematic-Study-of-Feature-Extraction-and-Fusion"
+        }
+      ],
+      "announcement": "2026/04 One paper gets accepted by ICMR'26 about video LLM for micro-video recommendation, congratulations to Huatuan! Frozen LVLMs for Micro-Video Recommendation: A Systematic Study of Feature Extraction and Fusion.[pdf] [code]",
+      "announced": "2026/04"
+    },
+    {
+      "title": "MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2604.08952"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/ElephantOH/MAB-DQA"
+        }
+      ],
+      "announcement": "2026/04 Two papers are accepted by ACL'26! One accepted by the main conference about document QA, and another is accepted as findings on open-ended event forecasting. Congruatulations to Yixin and Chang He! MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits.[pdf] [code] Scattered Hypothesis Generation for Open-Ended Event Forecasting.[pdf] [code]",
+      "announced": "2026/04"
+    },
+    {
+      "title": "Scattered Hypothesis Generation for Open-Ended Event Forecasting.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2604.15788"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/Sambac1/SCATTER"
+        }
+      ],
+      "announcement": "2026/04 Two papers are accepted by ACL'26! One accepted by the main conference about document QA, and another is accepted as findings on open-ended event forecasting. Congruatulations to Yixin and Chang He! MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits.[pdf] [code] Scattered Hypothesis Generation for Open-Ended Event Forecasting.[pdf] [code]",
+      "announced": "2026/04"
+    },
+    {
+      "title": "Addressing graph heterogeneity and heterophily from a spectral perspective.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2410.13373"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/Lukangkang123/H2SGNN/"
+        }
+      ],
+      "announcement": "2026/04 One paper gets accepted by Neurocomputing about tackling the heterogeneity and heterophily issues of graphs, congratulations to Kangkang! Addressing graph heterogeneity and heterophily from a spectral perspective.[pdf][code]",
+      "announced": "2026/04"
+    },
+    {
+      "title": "Dual-Diffusional Generative Fashion Recommendation.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+
+      ],
+      "announcement": "2026/04 Two papers are accepted by SIGIR'26! One on the research track about fashion outfit image generation, and another on the resource track about travel itinerary modification. Congruatulations to Mingzhe and Zhuoxuan! Dual-Diffusional Generative Fashion Recommendation.[pdf coming soon] iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification.[pdf][dataset and code]",
+      "announced": "2026/04"
+    },
+    {
+      "title": "iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2601.10609"
+        },
+        {
+          "label": "dataset and code",
+          "url": "https://github.com/zelo2/iTIMO"
+        }
+      ],
+      "announcement": "2026/04 Two papers are accepted by SIGIR'26! One on the research track about fashion outfit image generation, and another on the resource track about travel itinerary modification. Congruatulations to Mingzhe and Zhuoxuan! Dual-Diffusional Generative Fashion Recommendation.[pdf coming soon] iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification.[pdf][dataset and code]",
+      "announced": "2026/04"
+    },
+    {
+      "title": "MetaRAG: Identifying Website Owner using Meta-Path-Guided Dynamic Graph Retrieval-Augmented Generation.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://dl.acm.org/doi/pdf/10.1145/3800961"
+        }
+      ],
+      "announcement": "2026/02 One paper gets accepted by Transactions on Information Systems about using graph RAG for website owner identification, congratulations to Tu Cheng! MetaRAG: Identifying Website Owner using Meta-Path-Guided Dynamic Graph Retrieval-Augmented Generation.[pdf]",
+      "announced": "2026/02"
+    },
+    {
+      "title": "MM-AttacKG: A Multimodal Approach to Attack Graph Construction with Large Language Models.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2506.16968"
+        }
+      ],
+      "announcement": "2026/02 One paper gets accepted by Knowledge-Based Systems about constructing attack graph using multimodal data, congratulations to Yongheng! MM-AttacKG: A Multimodal Approach to Attack Graph Construction with Large Language Models.[pdf]",
+      "announced": "2026/02"
+    },
+    {
+      "title": "Discrete Diffusion for Bundle Construction.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://openreview.net/pdf?id=dKyhgfe50H"
+        },
+        {
+          "label": "code",
+          "url": "https://anonymous.4open.science/r/DDBC-44EE"
+        }
+      ],
+      "announcement": "2026/01 Two papers are accepted by ICLR'26! On the topics of product bundling and stock forecasting, respectively. Congruatulations to Tu Teng, Li Ai, Kelvin, and Jan! Discrete Diffusion for Bundle Construction.[pdf][code] Reasoning on Time-Series for Financial Technical Analysis.[pdf][code]",
+      "announced": "2026/01"
+    },
+    {
+      "title": "Reasoning on Time-Series for Financial Technical Analysis.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://openreview.net/pdf?id=PcjIe5xNaY"
+        },
+        {
+          "label": "code",
+          "url": "https://anonymous.4open.science/r/VTA-finance-293C/"
+        }
+      ],
+      "announcement": "2026/01 Two papers are accepted by ICLR'26! On the topics of product bundling and stock forecasting, respectively. Congruatulations to Tu Teng, Li Ai, Kelvin, and Jan! Discrete Diffusion for Bundle Construction.[pdf][code] Reasoning on Time-Series for Financial Technical Analysis.[pdf][code]",
+      "announced": "2026/01"
+    },
+    {
+      "title": "ThinkTank-ME: A Multi-Expert Framework for Middle East Event Forecasting.",
+      "authors": "",
+      "venue": "",
+      "year": 2026,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2601.17065"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/LuminosityX/ThinkTank-ME"
+        }
+      ],
+      "announcement": "2026/01 One short paper, about geo-political event forecasting using LLM agents, gets accepted by The Web Conference (WWW) 2026, congratulations to Haoxuan and Chang He! ThinkTank-ME: A Multi-Expert Framework for Middle East Event Forecasting.[pdf][code]",
+      "announced": "2026/01"
+    },
+    {
+      "title": "Potent but Stealthy: Rethink Profile Pollution against Sequential Recommendation via Bi-level Constrained Reinforcement Paradigm.",
+      "authors": "",
+      "venue": "",
+      "year": 2025,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2511.09392"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/SSndot/CREAT"
+        }
+      ],
+      "announcement": "2025/11 One paper accepted by AAAI 2026, congratulations to Jiajie! Potent but Stealthy: Rethink Profile Pollution against Sequential Recommendation via Bi-level Constrained Reinforcement Paradigm.[pdf][code]",
+      "announced": "2025/11"
+    },
+    {
+      "title": "PortfolioPilot: An Agentic Platform for Financial Portfolio Management Algorithm Development and Evaluation.",
+      "authors": "",
+      "venue": "",
+      "year": 2025,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://github.com/JarudeC/portfoliopilot/blob/main/AAAI_paper/PortfolioPilot%20Demo%20Paper.pdf"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/JarudeC/portfoliopilot"
+        }
+      ],
+      "announcement": "2025/10 One demo paper accepted by AAAI 2025, big congratulations to Jared Chan! Notably, Jared is a year-2 undergradute student in SMU SCIS, and this work was done during a part-time summer research project. PortfolioPilot: An Agentic Platform for Financial Portfolio Management Algorithm Development and Evaluation.[pdf][code]",
+      "announced": "2025/10"
+    },
+    {
+      "title": "Integrating Symbolic and Waveform Music into Large Language Models.",
+      "authors": "",
+      "venue": "",
+      "year": 2025,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://link.springer.com/chapter/10.1007/978-981-95-6957-1_7"
+        },
+        {
+          "label": "website",
+          "url": "https://anonymous-2024101.github.io/"
+        }
+      ],
+      "announcement": "2025/10 One paper accepted by Multimedia Modeling (MMM) 2025, congratulations to Tu Teng and Xiaohao! Integrating Symbolic and Waveform Music into Large Language Models.[pdf][website]",
+      "announced": "2025/10"
+    },
+    {
+      "title": "Temporal Relational Reasoning of Large Language Models for Detecting Stock Portfolio Crashes.",
+      "authors": "",
+      "venue": "",
+      "year": 2025,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2410.17266"
+        }
+      ],
+      "announcement": "2025/10 One paper accepted by The 2nd Workshop on LLMs and Generative AI for Finance (co-host on ICAIF'25), congratulations to Kelvin! Temporal Relational Reasoning of Large Language Models for Detecting Stock Portfolio Crashes.[pdf]",
+      "announced": "2025/10"
+    },
+    {
+      "title": "Reasoning on Time-Series for Financial Analysis.",
+      "authors": "",
+      "venue": "",
+      "year": 2025,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2511.08616"
+        },
+        {
+          "label": "code",
+          "url": "https://anonymous.4open.science/r/VTA-finance-293C/"
+        }
+      ],
+      "announcement": "2025/10 One paper accepted by the Workshop on Rethinking Financial Time-Series, congratulations to Kelvin! Reasoning on Time-Series for Financial Analysis. [pdf][code]",
+      "announced": "2025/10"
+    },
+    {
+      "title": "VibeMus: Proactive Agentic System for Music Personalization.",
+      "authors": "",
+      "venue": "",
+      "year": 2025,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://dl.acm.org/doi/epdf/10.1145/3743093.3771663"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/tuteng0915/VibeMus"
+        }
+      ],
+      "announcement": "2025/10 One demo paper accepted by ACM Multimedia Asia 2025, congratulations to Zhiliang and Tu Teng! VibeMus: Proactive Agentic System for Music Personalization.[pdf][code]",
+      "announced": "2025/10"
+    },
+    {
+      "title": "Website Owner Identification through Multi-level Contrastive Representation Learning.",
+      "authors": "",
+      "venue": "",
+      "year": 2025,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://dl.acm.org/doi/pdf/10.1145/3767155"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/tuchen9/ReMon"
+        }
+      ],
+      "announcement": "2025/09 One paper accepted by TKDD, congratulations to Tu Cheng! Website Owner Identification through Multi-level Contrastive Representation Learning.[pdf][code]",
+      "announced": "2025/09"
+    },
+    {
+      "title": "GenWardrobe: A Fully Generative System for Travel Fashion Wardrobe Construction.",
+      "authors": "",
+      "venue": "",
+      "year": 2025,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://mysbupt.github.io/image/MM_2025_GenWardrobe.pdf"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/ShanFengShanFeng/GenWardrobe"
+        }
+      ],
+      "announcement": "2025/07 Our demo gets accepted by ACM Multimedia'25 Demo Track, congratulations to Jin Peng, Yilin, and Mingzhe! GenWardrobe: A Fully Generative System for Travel Fashion Wardrobe Construction.[pdf][code]",
+      "announced": "2025/07"
+    },
+    {
+      "title": "LLM2Rec: Large Language Models Are Powerful Embedding Models for Sequential Recommendation.",
+      "authors": "",
+      "venue": "",
+      "year": 2025,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2506.21579"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/HappyPointer/LLM2Rec"
+        }
+      ],
+      "announcement": "2025/05 One paper accepted by KDD'25, congratulations to Yingzhi and Xiaohao! LLM2Rec: Large Language Models Are Powerful Embedding Models for Sequential Recommendation.[pdf][code]",
+      "announced": "2025/05"
+    },
+    {
+      "title": "FashionDPO:Fine-tune Fashion Outfit Generation Model using Direct Preference Optimization.",
+      "authors": "",
+      "venue": "",
+      "year": 2025,
+      "links": [
+        {
+          "label": "pdf",
+          "url": "https://arxiv.org/pdf/2504.12900"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/Yzcreator/FashionDPO"
+        }
+      ],
+      "announcement": "2025/04 One paper accepted by SIGIR'25, congratulations to Mingzhe! FashionDPO:Fine-tune Fashion Outfit Generation Model using Direct Preference Optimization.[pdf][code]",
+      "announced": "2025/04"
+    },
+    {
+      "title": "Smart Fitting Room: A One-stop Framework for Matching-aware Virtual Try-On.",
+      "authors": "Mingzhe Yu, Yunshan Ma, Lei Wu, Kai Cheng, Xue Li, Lei Meng, Tat-Seng Chua.",
+      "venue": "ICMR'24",
+      "year": 2024,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "DiFashion: Towards Personalized Outfit Generation.",
+      "authors": "Yiyan Xu, Wenjie Wang, Fuli Feng, Yunshan Ma, Jizhi Zhang, Xiangnan He.",
+      "venue": "SIGIR'24",
+      "year": 2024,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Learning to Generate Explainable Stock Predictions using Self-Reflective Large Language Models.",
+      "authors": "Kelvin J.L. Koa, Yunshan Ma*, Ritchie Ng, Tat-Seng Chua.",
+      "venue": "WWW'24",
+      "year": 2024,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "FashionReGen: LLM-Empowered Fashion Report Generation.",
+      "authors": "Jun Li, Yi Bin, Yunshan Ma, Yang Yang, Zi Huang, Tat-Seng Chua.",
+      "venue": "WWW'24 Demo",
+      "year": 2024,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Filter-based Stance Network for Rumor Verification.",
+      "authors": "Jun Li, Yi Bin, Yunshan Ma, Yang Yang, Zi Huang, Tat-Seng Chua.",
+      "venue": "TOIS'24",
+      "year": 2024,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "MultiCBR: Multi-view Contrastive Learning for Bundle Recommendation.",
+      "authors": "Yunshan Ma*, Yingzhi He*, Xiang Wang, Yinwei Wei, Xiaoyu Du, Yuyangzi Fu, Tat-Seng Chua.",
+      "venue": "TOIS'24",
+      "year": 2024,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Leveraging Multimodal Features and Item-level User Feedback for Bundle Construction.",
+      "authors": "Yunshan Ma, Xiaohao Liu, Yinwei Wei, Zhulin Tao, Xiang Wang, Tat-Seng Chua.",
+      "venue": "WSDM'24",
+      "year": 2024,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Enhancing Item-level Bundle Representation for Bundle Recommendation.",
+      "authors": "Xiaoyu Du, Kun Qian, Yunshan Ma*, Xinguang Xiang.",
+      "venue": "TORS'23",
+      "year": 2023,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Rule-guided Counterfactual Explainable Recommendation.",
+      "authors": "Yinwei Wei, Xiaoyang Qu, Xiang Wang, Yunshan Ma, Liqiang Nie, Tat-Seng Chua.",
+      "venue": "TKDE'23",
+      "year": 2023,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Diffusion Variational Autoencoder for Tackling Stochasticity in Multi-Step Regression Stock Price Prediction.",
+      "authors": "Kelvin J.L. Koa, Yunshan Ma*, Ritchie Ng, Tat-Seng Chua.",
+      "venue": "CIKM'23",
+      "year": 2023,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Context-aware Event Forecasting via Graph Disentanglement.",
+      "authors": "Yunshan Ma*, Chenchen Ye*, Zijian Wu, Xiang Wang, Yixin Cao, Tat-Seng Chua.",
+      "venue": "KDD‘23",
+      "year": 2023,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "FLOOD: A Flexible Invariant Learning Framework for Out-of-Distribution Generalization on Graphs.",
+      "authors": "Yang Liu, Xiang Ao, Fuli Feng, Yunshan Ma, Kuan Li, Tat-Seng Chua, Qing He.",
+      "venue": "KDD‘23",
+      "year": 2023,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "A Learning-Based Approach for Estimating Inertial Properties of Unknown Objects from Encoder Discrepancies.",
+      "authors": "Zizhou Lao, Yuanfeng Han, Yunshan Ma, Gregory Chirikjian.",
+      "venue": "RA-L'23",
+      "year": 2023,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Personalized Fashion Outfit Generation with User Coordination Preference Learning.",
+      "authors": "Yujuan Ding, P.Y. Mok, Yunshan Ma, Yi Bin.",
+      "venue": "IPM'23",
+      "year": 2023,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Strategy-aware Bundle Recommender System.",
+      "authors": "Yinwei Wei, Xiaohao Liu, Yunshan Ma, Xiang Wang, Liqiang Nie, Tat-Seng Chua.",
+      "venue": "SIGIR'23",
+      "year": 2023,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Causal Disentangled Recommendation Against User Preference Shifts.",
+      "authors": "Wenjie Wang, Xinyu Lin, Fuli Feng, Yunshan Ma, Tat-Seng Chua.",
+      "venue": "TOIS'23",
+      "year": 2023,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "CrossCBR: Cross-view Contrastive Learning for Bundle Recommendation.",
+      "authors": "Yunshan Ma, Yingzhi He, An Zhang, Xiang Wang, Tat-Seng Chua.",
+      "venue": "KDD'22",
+      "year": 2022,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Modeling Instant User Intent and Content-level Transition for Sequential Fashion Recommendation.",
+      "authors": "Yujuan Ding, Yunshan Ma, Wai Keung Wong, Tat-Seng Chua.",
+      "venue": "TMM'21",
+      "year": 2021,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Leveraging Two Types of Global Graph for Sequential Fashion Recommendation.",
+      "authors": "Yujuan Ding, Yunshan Ma, Wai Keung Wong, Tat-Seng Chua. (Best Student Paper)",
+      "venue": "ICMR'21",
+      "year": 2021,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Leveraging Multiple Relations for Fashion Trend Forecasting Based on Social Media.",
+      "authors": "Yujuan Ding*, Yunshan Ma*, Lizi Liao, Wai Keung Wong, Tat-Seng Chua.",
+      "venue": "TMM'21",
+      "year": 2021,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Dialogue State Tracking with Incremental Reasoning.",
+      "authors": "Lizi Liao, Le Hong Long, Yunshan Ma, Wenqiang Lei, Tat-Seng Chua.",
+      "venue": "TACL'21",
+      "year": 2021,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Topic-Guided Relational Conversational Recommender in Multi-Domain.",
+      "authors": "Lizi Liao, Ryuichi Takanobu, Yunshan Ma, Xun Yang, Minlie Huang, Tat-Seng Chua.",
+      "venue": "TKDE'20",
+      "year": 2020,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Who, Where, and What to Wear? Extracting Fashion Knowledge from Social Media.",
+      "authors": "Yunshan Ma, Xun Yang, Lizi Liao, Yixin Cao, Tat-Seng Chua.",
+      "venue": "ACMMM'19",
+      "year": 2019,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Yunshan Ma, Lizi Liao, Tat-Seng Chua.",
+      "authors": "Yunshan Ma, Lizi Liao, Tat-Seng Chua.",
+      "venue": "ACMMM'19 Demo",
+      "year": 2019,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Interpretable Fashion Matching with Rich Attributes.",
+      "authors": "Xun Yang, Xiangnan He, Xiang Wang, Yunshan Ma, Fuli Feng, Meng Wang, Tat-Seng Chua.",
+      "venue": "SIGIR'19",
+      "year": 2019,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "TransNFCM: Translation-based Neural Fashion Compatibility Modeling.",
+      "authors": "Xun Yang, Yunshan Ma, Lizi Liao, Meng Wang, Tat-Seng Chua.",
+      "venue": "AAAI'19",
+      "year": 2019,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Knowledge-aware Multimodal Dialogue Systems.",
+      "authors": "Lizi Liao, Yunshan Ma, Xiangnan He, Richang Hong, Tat-Seng Chua.",
+      "venue": "ACMMM'18",
+      "year": 2018,
+      "links": [
+
+      ]
+    },
+    {
+      "title": "Knowledge-aware Multimodal Fashion Chatbot.",
+      "authors": "Lizi Liao, You Zhou, Yunshan Ma, Richang Hong, Tat-Seng Chua. (Best Paper Finallist)",
+      "venue": "ACMMM'18 Demo",
+      "year": 2018,
+      "links": [
+
+      ]
+    }
+  ],
+  "service": [
+    {
+      "title": "Conference Organizing Committee",
+      "html": "Conference Organizing Committee\n\t\t\t\t<br>  - Grand Challenge co-chair of  IEEE International Conference on Multimedia and Expo, ICME 2027, Xiamen, China.\n\t\t\t\t<br>  - Local co-chair of <a href=\"https://icmr2027.foodai.org/\">17th ACM International Conference on Multimedia Retrieval, ICMR 2027, Singapore.</a>\n\t\t    \t<br>  - Local co-chair of <a href=\"https://icaif25.org/\">ACM International Conference on AI in Finance 2025 (ICAIF'25), Singapore.</a>\n\t\t    \t<br>  - Grand Challenge co-chair of <a href=\"https://mmasia2025.org/\">ACM Multimedia Asia 2025 (MMAsia'25), Kuala Lumpur.</a>\n\t\t    \t<br>  - Open source co-chair of <a href=\"https://acmmm2025.org/\">ACM Multimedia 2025 (MM'25), Dublin.</a>\n                <br>  - Volunteers co-chair of <a href=\"https://www2024.thewebconf.org/\">The Web Conf 2024 (WWW'24), Singapore.</a>"
+    },
+    {
+      "title": "Conference Workshops, Special Sessions, Special Issues",
+      "html": "Conference Workshops, Special Sessions, Special Issues\n\t\t\t\t<br>  - MMM 2027 Special Session: Multimodal Agentic Systems and Applications.\n\t\t\t\t<br>  - SIGIR 2025 Workshop: FinIR 2025: The 2nd Workshop on Financial Information Retrieval in the Era of Generative AI.\n\t\t    \t<br>  - CIKM 2025 Workshop: International Workshop on Multimodal Generative Search and Recommendation."
+    },
+    {
+      "title": "Conference Session Chairs",
+      "html": "Conference Session Chairs\n\t\t\t\t<br>  - Session chairs of LLMs for Recommendation in <a href=\"https://sigir2026.org/\">ACM SIGIR 2026, Melbourne.</a>\n\t\t\t\t<br>  - Session chairs of Oral 13: Sketch and search in <a href=\"https://mmasia2025.org/\">ACM Multimedia Asia 2025, Kuala Lumpur.</a>\n\t\t\t\t<br>  - Session chairs of Engagement: Multimedia Search and Recommendation III in <a href=\"https://acmmm2025.org/\">ACM Multimedia 2025, Dublin.</a>\n\t\t   \t\t<br>  - Session chairs of 1) Multimodal Learning and Recommender Systems and 2) Media and Communication Technologies in <a href=\"https://2024.acmmm.org/\">ACM Multimedia 2024, Melbourne.</a>\n                <br>  - Session chair of <a href=\"https://sigir.org/sigir2023/program/schedule/\">Recommendations and Ads of SIRIP</a> in <a href=\"https://sigir.org/sigir2023/\">SIGIR 2023, Taipei.</a>"
+    },
+    {
+      "title": "Conference Program Committee",
+      "html": "Conference Program Committee\n\t\t\t\t<br>  - Area chair of <a href=\"https://www2027.thewebconf.org/\">WWW 2027</a>, <a href=\"https://mmasia2026.org/\">MMAsia 2026</a>,<a href=\"https://kdd2026.kdd.org/\">KDD 2026</a>.\n\t\t\t\t<br>  - Senior Program Committee (SPC) member of <a href=\"https://icmr2026.org/\">ICMR 2026</a>.\n\t\t\t\t<br>  - Area chair of NLPCC 2025, 2026.\n\t\t    \t<br>  - Area co-chair of <a href=\"http://cips-cl.org/static/CCL2023/index.html\">CCL 2023</a>.\n                <br>  - PC member of ACMMM, SIGIR, KDD, WWW, WSDM, CIKM, IJCAI, ICML, ICLR, AAAI, ICMR, MMM etc."
+    },
+    {
+      "title": "Journal Editors",
+      "html": "Journal Editors\n                <br>  - Associate Editor of Neurocomputing, from October 2026."
+    },
+    {
+      "title": "Journal Invited Reviewers",
+      "html": "Journal Invited Reviewers\t\t\n                <br>  - TKDE, TOIS, TMM, ToMM, TWeb, TIST, etc."
+    }
+  ],
+  "awards": [
+    "Best Paper Award, ICMR 2026.",
+    "Best Paper Award, MMM 2026.",
+    "Best Demo Award, MMAsia 2025.",
+    "Best Paper Award, ACM ICAIF'25 Workshop on Rethinking Financial Time-Series.",
+    "Outstanding Paper Award, ICLR 2025.",
+    "Best Student Paper Award, ICMR 2021.",
+    "Research Achievement Award, National University of Singapore 2019.",
+    "Best Paper Finalist, ACMMM 2018."
+  ],
+  "experience": [
+    "2025.01-present: Assistant Professor, School of Computing and Information Systems, Singapore Management University (SMU)",
+    "2022.04-2024.12: Postdoctoral Research Fellow, NExT++ Research Center, National University of Singapore (NUS) \n            <br>  Supervisor: <a href=\"https://www.chuatatseng.com/\">Prof Tat-Seng Chua.</a>",
+    "2017.08-2022.03: PhD in Computer Science, School of Computing, National University of Singapore\n            <br>  Supervisor: <a href=\"https://www.chuatatseng.com/\">Prof Tat-Seng Chua.</a>",
+    "2011-2015: Bachelor in Communication Engineering, Beijing University of Posts and Telecommunications (BUPT)"
+  ]
+}

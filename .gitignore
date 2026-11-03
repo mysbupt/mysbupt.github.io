@@ -1,1 +1,6 @@
-_site/
+__pycache__/
+.DS_Store
+*.zip
+.openai/local/
+dist/
+preview.png

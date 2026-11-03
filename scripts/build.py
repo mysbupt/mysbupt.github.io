@@ -1,0 +1,169 @@
+#!/usr/bin/env python3
+"""Build the al-folio-inspired static site using only Python's standard library."""
+import html
+import json
+import re
+import shutil
+import argparse
+from pathlib import Path
+from urllib.parse import quote
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / 'dist'
+DATA = json.loads((ROOT / 'content/site.json').read_text())
+ESC = html.escape
+SCHOLAR = 'https://scholar.google.com/citations?user=WSDsPtMAAAAJ&hl=en'
+
+ICONS = {
+    'sun': '<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>',
+    'mail': '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/>',
+    'scholar': '<path d="m2 9 10-6 10 6-10 6-10-6Zm4 3v6c4 3 8 3 12 0v-6m4-3v9"/>',
+    'github': '<path d="M9 19c-4 1-4-2-6-2m12 5v-4c0-1 .1-1.8-.5-2.5 3.3-.4 6.5-1.6 6.5-7A5.5 5.5 0 0 0 19.5 5c.2-1 .1-2-.3-3 0 0-1.2-.4-4 1.5a14 14 0 0 0-7 0C5.4 1.6 4.2 2 4.2 2c-.4 1-.5 2-.3 3a5.5 5.5 0 0 0-1.5 3.5c0 5.4 3.2 6.6 6.5 7-.6.7-.9 1.6-.9 2.5v4"/>',
+    'search': '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
+}
+def icon(name):
+    return f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>'
+
+def link(label, url, cls=''):
+    return f'<a href="{ESC(url, quote=True)}" class="{cls}">{ESC(label)}</a>'
+
+def date_label(date):
+    year, month = date.split('/')
+    months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    return f'{months[int(month)-1]} {year}'
+
+def page(filename, name, title, content, description=None):
+    nav = [('index.html','About'),('research.html','Research'),('publications.html','Publications'),('talks.html','Talks'),('cv.html','CV')]
+    nav_html = ''.join(f'<a href="{url}"'+(' aria-current="page"' if name == label else '')+f'>{label.lower()}</a>' for url,label in nav)
+    desc = description or 'Yunshan Ma, Assistant Professor at Singapore Management University. Multimodal event forecasting, computational fashion, and recommender systems.'
+    markup = f'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{ESC(title)} | Yunshan Ma · SMU</title><meta name="description" content="{ESC(desc, quote=True)}">
+<meta name="color-scheme" content="light dark"><meta property="og:type" content="website"><meta property="og:title" content="{ESC(title)} | Yunshan Ma"><meta property="og:description" content="{ESC(desc, quote=True)}">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css">
+<script>try{{const t=localStorage.getItem('theme');document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')}}catch(e){{}}</script>
+<script defer src="assets/site.js"></script></head>
+<body id="top"><a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><strong>Yunshan</strong> Ma<span aria-hidden="true">.</span></a>
+<button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="navigation" aria-expanded="false">☰</button>
+<nav class="nav" id="navigation" aria-label="Main navigation">{nav_html}</nav>
+<button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">{icon('sun')}</button></div></header>
+<main id="main" class="container">{content}</main>
+<footer class="footer"><div class="container footer-inner"><div><p>© 2026 Yunshan Ma. Singapore Management University.</p><p class="footer-secondary">A static adaptation inspired by {link('al-folio','https://github.com/alshedivat/al-folio')}. Content updated November 2026.</p></div><a class="back-top" href="#top">Back to top ↑</a></div></footer></body></html>'''
+    (OUT / filename).write_text('\n'.join(line.rstrip() for line in markup.splitlines()) + '\n')
+
+def news(items):
+    return ''.join(f'<article class="news-row"><time datetime="{item["date"].replace("/","-")}">{date_label(item["date"])}</time><div>{localize(item["html"])}</div></article>' for item in items)
+
+def localize(value):
+    return value.replace('https://mysbupt.github.io/image/', 'image/')
+
+PAPERS = [p for p in DATA['publications'] if p['title'] != 'Yunshan Ma, Lizi Liao, Tat-Seng Chua.']
+VENUES = {
+ 'BundleLM': ('MMM 2027',2027), 'Distilling Transitional': ('TOIS',2026),
+ 'FashionStylist': ('SIGIR-AP',2026), 'Personalized Context': ('CIKM',2026),
+ 'AnalysisBank': ('EMNLP',2026), 'Large Language Model Empowered': ('TKDE',2026),
+ 'FinAlogy': ('ACM MM · Demo',2026), 'CFALR': ('TOIS',2026),
+ 'Dynamic Spectral': ('KDD',2026), 'Promoting Long-tail': ('TOIS',2026),
+ 'Frozen LVLMs': ('ICMR',2026), 'MAB-DQA': ('ACL',2026),
+ 'Scattered Hypothesis': ('ACL · Findings',2026), 'Addressing graph': ('Neurocomputing',2026),
+ 'Dual-Diffusional': ('SIGIR',2026), 'iTIMO': ('SIGIR · Resource',2026),
+ 'MetaRAG': ('TOIS',2026), 'MM-AttacKG': ('KBS',2026),
+ 'Discrete Diffusion': ('ICLR',2026), 'Reasoning on Time-Series for Financial Technical': ('ICLR',2026),
+ 'ThinkTank-ME': ('WWW · Short',2026), 'Potent but Stealthy': ('AAAI',2026),
+ 'PortfolioPilot': ('AAAI · Demo¹',2025), 'Integrating Symbolic': ('MMM',2026),
+ 'Temporal Relational': ('ICAIF · Workshop',2025), 'Reasoning on Time-Series for Financial Analysis': ('ICAIF · Workshop',2025),
+ 'VibeMus': ('MMAsia · Demo',2025), 'Website Owner': ('TKDD',2025),
+ 'GenWardrobe': ('ACM MM · Demo',2025), 'LLM2Rec': ('KDD',2025), 'FashionDPO': ('SIGIR',2025),
+}
+for p in PAPERS:
+    for prefix, (venue, year) in VENUES.items():
+        if p['title'].startswith(prefix):
+            p['venue'], p['year'] = venue, year
+            break
+    if p['title'].startswith('FashionDPO:Fine'):
+        p['title'] = p['title'].replace('FashionDPO:Fine','FashionDPO: Fine')
+
+def paper(p, searchable=False):
+    attrs = f' data-search="{ESC((p["title"]+" "+p["authors"]+" "+p["venue"]+" "+str(p["year"])).lower(), quote=True)}" data-year="{p["year"]}"' if searchable else ''
+    authors = ESC(p['authors']).replace('Yunshan Ma', '<strong>Yunshan Ma</strong>')
+    resources = ''.join(link(r['label'].strip('[]').replace('pdf','PDF'), localize(r['url'])) for r in p['links'])
+    return f'<article class="pub"{attrs}><div class="venue">{ESC(p["venue"])}</div><div><h3>{ESC(p["title"])}</h3>'+(f'<p class="authors">{authors}</p>' if authors else '')+(f'<div class="resources">{resources}</div>' if resources else '')+'</div></article>'
+
+TOPICS = [
+ ('forecasting','01','Multimodal event forecasting','Understanding multimodal information to anticipate events in a changing world.', 'I study computational approaches that connect multimodal information with forecasting problems in international politics, financial markets, macroeconomics, and cybersecurity.', ['International political event detection and forecasting','Cyber threat intelligence analysis and prediction','Financial market and macroeconomy index forecasting']),
+ ('fashion','02','Computational fashion','Generative and personalized approaches to fashion understanding and creation.', 'My work investigates how data mining, information retrieval, and multimedia methods can support fashion understanding, personalized styling, and generative fashion experiences.', ['Fashion trend forecasting','Generative and personalized mix-and-match','Fashion report generation']),
+ ('recommendation','03','Recommender systems','Learning how items work together, from bundle construction to recommendation.', 'I study bundle recommendation and generation, including multimodal bundle construction, personalized recommendation, and pre-training for recommendation.', ['Personalized bundle recommendation','Bundle construction and generation','Multimodal pre-training for recommendation'])
+]
+
+TALKS = [
+ ('2026/10','LLM for Cybersecurity','NExT++ Suzhou Workshop','Ma Yunshan - LLM for Cybersecurity.pdf'),
+ ('2026/07','Multimodal Open-World Event Forecasting','Invited talk · ChinaMM 2026 Forum','Open-world Event Forecasting.pdf'),
+ ('2026/05','Bundle Recommendation and Generation','Invited talk · Workshop on search and recommendation','Generative_Bundle_Recommendation.pdf'),
+ ('2025/09','LLM for Cybersecurity','SMU-SCIS MITB AI translational seminar & ST Engineering research workshop','LLM-Enhanced_Cyber_Threat_Intelligence_Analysis.pdf'),
+ ('2025/09','Multimodal Open-World Event Forecasting','SMU-SCIS research cluster seminar','Multimodal_LLMs_for_Open-World_Forecasting.pdf'),
+ ('2025/08','Bundle Recommendation and Generation','Invited talk · Workshop on generative recommendation','Multimodal_Bundle_Recommendation_and_Generation.pdf')
+]
+
+OUT.mkdir(exist_ok=True)
+shutil.copytree(ROOT/'assets',OUT/'assets',dirs_exist_ok=True)
+shutil.copytree(ROOT/'image',OUT/'image',dirs_exist_ok=True)
+shutil.copy2(ROOT/'assets/img/profile.png',OUT/'image/profile.png')
+shutil.copytree(ROOT/'licenses',OUT/'licenses',dirs_exist_ok=True)
+(OUT/'.nojekyll').touch()
+(OUT/'assets/img/favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#8b228d"/><text x="32" y="43" text-anchor="middle" font-family="Arial,sans-serif" font-size="34" fill="white">M</text></svg>')
+
+intro = '''<div class="hero"><div><p class="eyebrow">Singapore Management University</p><h1><strong>Yunshan</strong> Ma <span class="chinese" lang="zh">马云山</span></h1><p class="subtitle">Assistant Professor<br><a href="https://computing.smu.edu.sg/">School of Computing and Information Systems</a></p>
+<div class="intro"><p>I am a tenure-track Assistant Professor at Singapore Management University. My research brings together <strong>multimodal event forecasting</strong>, <strong>computational fashion</strong>, and <strong>recommender systems</strong> to solve real-world problems.</p>
+<p>Before joining SMU, I was a Postdoctoral Research Fellow at the <a href="https://www.nextcenter.org/team">NExT++ Research Center</a>, National University of Singapore, supervised by <a href="https://www.chuatatseng.com/">Prof. Tat-Seng Chua</a>. I also worked with Prof. Chang Ee-Chien and Prof. Liang Zhenkai at the <a href="https://ncl.sg/">National Cybersecurity R&amp;D Lab</a>. I received my PhD from NUS in 2022, supervised by Prof. Chua.</p>
+<p>I am interested in discovering and formulating new problems, and in developing data mining, information retrieval, and multimedia methods with practical impact.</p></div>
+<div class="socials">'''+link('Email','mailto:ysma@smu.edu.sg')+link('Google Scholar ↗',SCHOLAR)+link('GitHub ↗','https://github.com/mysbupt')+'''</div></div>
+<aside><img class="portrait" src="assets/img/profile.png" alt="Portrait of Yunshan Ma" width="250" height="285" fetchpriority="high"><p class="profile-caption"><strong>Yunshan Ma · 马云山</strong><br>Assistant Professor, SMU<br>Singapore<br><a href="mailto:ysma@smu.edu.sg">ysma@smu.edu.sg</a></p></aside></div>'''
+research_grid = '<section class="section"><div class="section-heading"><h2>research interests</h2>'+link('Explore research →','research.html')+'</div><div class="research-grid">'+''.join(f'<article class="research-item"><span class="number">{t[1]}</span><h3>{t[2]}</h3><p>{t[3]}</p>'+link('Read more →',f'research.html#{t[0]}','text-link')+'</article>' for t in TOPICS)+'</div></section>'
+latest = '<section class="section"><div class="section-heading"><h2>news</h2>'+link('All updates →','news.html')+'</div>'+news(DATA['news'][:6])+'</section>'
+selected_titles = ['Frozen LVLMs','Discrete Diffusion','Reasoning on Time-Series for Financial Technical','FashionStylist','LLM2Rec','CrossCBR']
+selected = [next(p for p in PAPERS if p['title'].startswith(prefix)) for prefix in selected_titles]
+selection = '<section class="section"><div class="section-heading"><h2>selected publications</h2>'+link('All publications →','publications.html')+'</div><div class="award-inline"><strong>Best Paper Award · ICMR 2026</strong><br>Frozen LVLMs for Micro-Video Recommendation</div>'+''.join(paper(p) for p in selected)+'</section>'
+page('index.html','About','About',intro+research_grid+latest+selection)
+
+research_intro = '<div class="page-intro"><p class="eyebrow">Research</p><h1>From multimodal data<br>to real-world impact.</h1><p>I investigate data-driven approaches to forecasting, fashion, and recommendation, with applications in international politics, cybersecurity, financial technology, fashion, music, and e-commerce.</p></div>'
+topics = ''.join(f'<section class="topic" id="{t[0]}"><span class="topic-label">DIRECTION {t[1]}</span><div><h2>{t[2]}</h2><p>{t[4]}</p><ul>'+''.join(f'<li>{ESC(s)}</li>' for s in t[5])+'</ul>'+link('Related publications →',f'publications.html','text-link')+'</div></section>' for t in TOPICS)
+page('research.html','Research','Research',research_intro+topics+'<section class="section"><h2>Research talks</h2><p class="tagline">Slides on bundle recommendation and generation, LLMs for cybersecurity, and multimodal open-world event forecasting.</p>'+link('Browse talks and slides →','talks.html','text-link')+'</section>')
+
+years = sorted({p['year'] for p in PAPERS},reverse=True)
+pub_intro = '<div class="page-intro"><p class="eyebrow">Publications</p><h1>Research &amp; publications.</h1><p>Work spanning multimodal learning, forecasting, computational fashion, and recommendation.</p>'+link('Google Scholar ↗',SCHOLAR,'text-link')+'</div>'
+filters = '<div class="filters"><div class="search-wrap">'+icon('search')+'<label class="skip" for="publication-search">Search publications</label><input id="publication-search" type="search" placeholder="Search by title, author, or venue…" autocomplete="off"></div><label class="skip" for="publication-year">Filter by year</label><select id="publication-year"><option value="">All years</option>'+''.join(f'<option value="{y}">{y}</option>' for y in years)+'</select></div><p class="result-count" id="result-count" role="status" aria-live="polite">'+str(len(PAPERS))+' publications</p>'
+groups = ''.join(f'<section class="publication-group" aria-label="Publications {y}"><h2 class="year-heading">{y}</h2>'+''.join(paper(p,True) for p in PAPERS if p['year']==y)+'</section>' for y in years)
+note = '<p class="provenance">Recent entries were added from the news on my existing website. Author lists are included where provided in the original publications page. ¹ PortfolioPilot is listed under 2025 as announced; its conference year needs confirmation.</p>'
+page('publications.html','Publications','Publications',pub_intro+filters+groups+'<p class="empty" id="empty-results" hidden>No matching publications. Try another search or year.</p>'+note)
+
+talk_intro = '<div class="page-intro"><p class="eyebrow">Talks &amp; slides</p><h1>Ideas in conversation.</h1><p>Invited talks and research seminars on multimodal forecasting, cybersecurity, and generative recommendation.</p></div>'
+talks = ''.join(f'<article class="talk"><time datetime="{d.replace("/","-")}">{date_label(d)}</time><div><h3>{ESC(title)}</h3><p>{ESC(where)}</p><div class="resources">'+link('Slides ↗', 'image/'+quote(file))+'</div></div></article>' for d,title,where,file in TALKS)
+page('talks.html','Talks','Talks',talk_intro+talks)
+
+cv_intro = '<div class="page-intro"><p class="eyebrow">Curriculum vitae</p><h1>Yunshan Ma <span class="chinese" lang="zh">马云山</span></h1><p>Assistant Professor · School of Computing and Information Systems<br>Singapore Management University</p><div class="page-actions"><button type="button" class="print-button" data-print>Print / save as PDF ↗</button>'+link('ysma@smu.edu.sg','mailto:ysma@smu.edu.sg','text-link')+'</div></div>'
+experience = '<section class="cv-section"><h2>Education &amp;<br>experience</h2><div>'+''.join(f'<div class="experience-item">{item}</div>' for item in DATA['experience'])+'</div></section>'
+awards = '<section class="cv-section"><h2>Honors &amp;<br>awards</h2><ul>'+''.join(f'<li>{ESC(item)}</li>' for item in DATA['awards'])+'</ul></section>'
+service_html = ''
+for s in DATA['service']:
+    parts = re.split(r'<br\s*/?>',s['html'])
+    service_html += '<div class="service-group"><h3>'+re.sub('<[^>]+>','',parts[0]).strip()+'</h3><ul>'+''.join('<li>'+re.sub(r'^\s*-\s*','',part.strip())+'</li>' for part in parts[1:] if part.strip())+'</ul></div>'
+service = '<section class="cv-section"><h2>Professional<br>service</h2><div>'+service_html+'</div></section>'
+page('cv.html','CV','Curriculum vitae',cv_intro+experience+awards+service)
+
+page('news.html','News','News','<div class="page-intro"><p class="eyebrow">News archive</p><h1>Updates &amp; milestones.</h1><p>Research announcements, awards, and academic activities.</p></div><div class="news-archive">'+news(DATA['news'])+'</div>')
+page('404.html','404','Page not found','<div class="page-intro"><p class="eyebrow">404</p><h1>Page not found.</h1><p>The page may have moved.</p>'+link('Return to the homepage →','index.html')+'</div>')
+
+print(f'Built {len(list(OUT.glob("*.html")))} pages with {len(PAPERS)} publications, {len(DATA["news"])} news items, and {len(TALKS)} talks in {OUT}')
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--publish-root', action='store_true', help='Also copy the built site to the repository root for branch-based GitHub Pages hosting.')
+args = parser.parse_args()
+if args.publish_root:
+    for source in OUT.iterdir():
+        destination = ROOT / source.name
+        if source.is_dir():
+            shutil.copytree(source, destination, dirs_exist_ok=True)
+        else:
+            shutil.copy2(source, destination)
+    print('Updated root HTML and assets for branch-based GitHub Pages hosting; existing extra files were preserved.')
