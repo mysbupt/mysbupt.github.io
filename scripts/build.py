@@ -35,7 +35,7 @@ def date_label(date):
 def page(filename, name, title, content, description=None):
     nav = [('index.html','About'),('research.html','Research'),('group.html','LMF'),('publications.html','Publications'),('talks.html','Talks'),('cv.html','CV')]
     nav_html = ''.join(f'<a href="{url}"'+(' aria-current="page"' if name == label else '')+(' target="_blank" rel="noopener"' if label == 'CV' else '')+f'>{label}</a>' for url,label in nav)
-    desc = description or 'Yunshan Ma at Singapore Management University. LMF: Lab for Multimodality and Forecasting. Research across fashion, finance, cybersecurity, and music.'
+    desc = description or 'Yunshan Ma at Singapore Management University. LMF: Lab for Multimodality and Forecasting. Research across fashion, finance, cybersecurity, music, and social events.'
     markup = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{ESC(title)} | Yunshan Ma · SMU</title><meta name="description" content="{ESC(desc, quote=True)}">
@@ -101,14 +101,18 @@ DOMAINS = [
  ('Fashion','Fashion understanding, personalized styling, outfit and wardrobe generation, and trend forecasting.', ['FashionStylist','CFALR','GenWardrobe']),
  ('Finance','Financial forecasting, explainable stock prediction, time-series reasoning, and financial analysis.', ['Learning to Generate Explainable Stock Predictions','Reasoning on Time-Series for Financial Technical','AnalysisBank']),
  ('Cybersecurity','Cyber threat intelligence, attack graph construction, and cyber attack sequence prediction.', ['AttacKG+:','MM-AttacKG','MetaRAG']),
- ('Music','Connecting symbolic music and audio with language models for music understanding and personalization.', ['Integrating Symbolic','VibeMus'])
+ ('Music','Connecting symbolic music and audio with language models for music understanding and personalization.', ['Integrating Symbolic','VibeMus']),
+ ('Social Events','Understanding and forecasting social and geopolitical events through graph modeling, open-ended hypothesis generation, and multi-expert reasoning.', ['Scattered Hypothesis','ThinkTank-ME','Context-aware Event Forecasting'])
 ]
 
+def domain_slug(name):
+    return name.lower().replace(' ', '-')
+
 def domain_sections():
-    result = '<section class="section" id="domains"><p class="eyebrow">Research by Application</p><h2>Vertical Domains</h2><p class="tagline">We apply multimodality and forecasting across Fashion, Finance, Cybersecurity, and Music.</p></section>'
+    result = '<section class="section" id="domains"><p class="eyebrow">Research by Application</p><h2>Vertical Domains</h2><p class="tagline">We apply multimodality and forecasting across Fashion, Finance, Cybersecurity, Music, and Social Events.</p></section>'
     for name, description, prefixes in DOMAINS:
         examples = [next(p for p in PAPERS if p['title'].startswith(prefix)) for prefix in prefixes]
-        result += f'<section class="topic" id="{name.lower()}"><span class="topic-label">{ESC(name.upper())}</span><div><h2>{ESC(name)}</h2><p>{ESC(description)}</p><ul class="domain-papers">'+''.join('<li>'+link(p['title'],f'publications.html?q={quote(p["title"])}')+'</li>' for p in examples)+'</ul>'+link(f'All {name.lower()} publications →',f'publications.html?domain={name}','text-link')+'</div></section>'
+        result += f'<section class="topic" id="{domain_slug(name)}"><span class="topic-label">{ESC(name.upper())}</span><div><h2>{ESC(name)}</h2><p>{ESC(description)}</p><ul class="domain-papers">'+''.join('<li>'+link(p['title'],f'publications.html?q={quote(p["title"])}')+'</li>' for p in examples)+'</ul>'+link(f'All {name.lower()} publications →',f'publications.html?domain={quote(name)}','text-link')+'</div></section>'
     return result
 
 TALKS = [
@@ -134,7 +138,7 @@ intro = '''<div class="hero"><div><p class="eyebrow">Singapore Management Univer
 <p>I am interested in discovering and formulating new problems, and in developing data mining, information retrieval, and multimedia methods with practical impact.</p></div>
 <div class="socials">'''+link('Email','mailto:ysma@smu.edu.sg')+link('Google Scholar ↗',SCHOLAR)+link('GitHub ↗','https://github.com/mysbupt')+'''</div></div>
 <aside><img class="portrait" src="assets/img/profile.png" alt="Portrait of Yunshan Ma" width="250" height="285" fetchpriority="high"><p class="profile-caption"><strong>Yunshan Ma · 马云山</strong><br>Assistant Professor, SMU<br>Singapore<br><a href="mailto:ysma@smu.edu.sg">ysma@smu.edu.sg</a></p></aside></div>'''
-research_grid = '<section class="section"><div class="section-heading"><h2>Research Interests</h2>'+link('Explore research →','research.html')+'</div><div class="research-grid">'+''.join(f'<article class="research-item"><span class="number">{t[1]}</span><h3>{t[2]}</h3><p>{t[3]}</p>'+link('Read more →',f'research.html#{t[0]}','text-link')+'</article>' for t in TOPICS)+'</div><div class="domain-nav" aria-label="Research application domains">'+''.join(link(name,f'research.html#{name.lower()}') for name,_,_ in DOMAINS)+'</div></section>'
+research_grid = '<section class="section"><div class="section-heading"><h2>Research Interests</h2>'+link('Explore research →','research.html')+'</div><div class="research-grid">'+''.join(f'<article class="research-item"><span class="number">{t[1]}</span><h3>{t[2]}</h3><p>{t[3]}</p>'+link('Read more →',f'research.html#{t[0]}','text-link')+'</article>' for t in TOPICS)+'</div><div class="domain-nav" aria-label="Research application domains">'+''.join(link(name,f'research.html#{domain_slug(name)}') for name,_,_ in DOMAINS)+'</div></section>'
 latest = '<section class="section"><div class="section-heading"><h2>News</h2>'+link('All updates →','news.html')+'</div>'+news(DATA['news'][:6])+'</section>'
 selected = sorted([p for p in PAPERS if p.get('selected') or p['title'].startswith('CrossCBR:')],key=lambda p:p['year'],reverse=True)
 selection = '<section class="section" id="selected-publications"><div class="section-heading"><h2>Selected Publications</h2>'+link('All publications →','publications.html')+'</div>'+''.join(paper(p) for p in selected)+'</section>'
@@ -147,11 +151,11 @@ page('research.html','Research','Research',research_intro+topics+domain_sections
 
 group_intro = '<div class="page-intro"><p class="eyebrow">Singapore Management University</p><h1 class="lab-name">LMF<span>Lab for Multimodality<br>and Forecasting</span></h1><p>We connect multimodal understanding and modeling with forecasting at macro and micro scales, grounded in real-world problems.</p><p class="lab-director">Led by '+link('Yunshan Ma','index.html')+' · School of Computing and Information Systems</p></div>'
 group_pillars = '<section class="section"><h2>What we study</h2><div class="research-grid">'+''.join('<article class="research-item"><span class="number">'+t[1]+'</span><h3>'+t[2]+'</h3><p>'+t[3]+'</p>'+link('Explore this direction →','research.html#'+t[0],'text-link')+'</article>' for t in TOPICS)+'</div></section>'
-group_domains = '<section class="section"><h2>Where we apply it</h2><div class="domain-grid">'+''.join('<article><h3>'+link(name,'research.html#'+name.lower())+'</h3><p>'+ESC(description)+'</p></article>' for name,description,_ in DOMAINS)+'</div></section>'
+group_domains = '<section class="section"><h2>Where we apply it</h2><div class="domain-grid">'+''.join('<article><h3>'+link(name,'research.html#'+domain_slug(name))+'</h3><p>'+ESC(description)+'</p></article>' for name,description,_ in DOMAINS)+'</div></section>'
 page('group.html','LMF','LMF · Lab for Multimodality and Forecasting',group_intro+group_pillars+group_domains+'<section class="section"><h2>Connect with LMF</h2><p class="tagline">For research inquiries, contact '+link('Yunshan Ma','mailto:ysma@smu.edu.sg')+'.</p>'+link('ysma@smu.edu.sg','mailto:ysma@smu.edu.sg','text-link')+'</section>')
 
 years = sorted({p['year'] for p in PAPERS},reverse=True)
-pub_intro = '<div class="page-intro"><p class="eyebrow">Publications</p><h1>Research &amp; publications.</h1><p>Multimodality and forecasting, with applications in fashion, finance, cybersecurity, and music.</p>'+link('Google Scholar ↗',SCHOLAR,'text-link')+'</div>'
+pub_intro = '<div class="page-intro"><p class="eyebrow">Publications</p><h1>Research &amp; publications.</h1><p>Multimodality and forecasting, with applications in fashion, finance, cybersecurity, music, and social events.</p>'+link('Google Scholar ↗',SCHOLAR,'text-link')+'</div>'
 filters = '<div class="filters"><div class="search-wrap">'+icon('search')+'<label class="skip" for="publication-search">Search publications</label><input id="publication-search" type="search" placeholder="Search by title, author, or venue…" autocomplete="off"></div><label class="skip" for="publication-domain">Filter by domain</label><select id="publication-domain"><option value="">All domains</option>'+''.join(f'<option value="{name}">{name}</option>' for name,_,_ in DOMAINS)+'</select><label class="skip" for="publication-year">Filter by year</label><select id="publication-year"><option value="">All years</option>'+''.join(f'<option value="{y}">{y}</option>' for y in years)+'</select></div><p class="result-count" id="result-count" role="status" aria-live="polite">'+str(len(PAPERS))+' publications</p>'
 groups = ''.join(f'<section class="publication-group" aria-label="Publications {y}"><h2 class="year-heading">{y}</h2>'+''.join(paper(p,True) for p in PAPERS if p['year']==y)+'</section>' for y in years)
 note = '<p class="provenance">Recent entries were added from the news on my existing website. Author lists are included where provided in the original publications page. ¹ PortfolioPilot is listed under 2025 as announced; its conference year needs confirmation.</p>'

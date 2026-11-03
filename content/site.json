@@ -488,7 +488,9 @@
       ],
       "announcement": "2026/04 Two papers are accepted by ACL'26! One accepted by the main conference about document QA, and another is accepted as findings on open-ended event forecasting. Congruatulations to Yixin and Chang He! MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits.[pdf] [code] Scattered Hypothesis Generation for Open-Ended Event Forecasting.[pdf] [code]",
       "announced": "2026/04",
-      "domains": []
+      "domains": [
+        "Social Events"
+      ]
     },
     {
       "title": "Addressing graph heterogeneity and heterophily from a spectral perspective.",
@@ -631,7 +633,9 @@
       ],
       "announcement": "2026/01 One short paper, about geo-political event forecasting using LLM agents, gets accepted by The Web Conference (WWW) 2026, congratulations to Haoxuan and Chang He! ThinkTank-ME: A Multi-Expert Framework for Middle East Event Forecasting.[pdf][code]",
       "announced": "2026/01",
-      "domains": []
+      "domains": [
+        "Social Events"
+      ]
     },
     {
       "title": "Potent but Stealthy: Rethink Profile Pollution against Sequential Recommendation via Bi-level Constrained Reinforcement Paradigm.",
@@ -946,8 +950,19 @@
       "authors": "Yunshan Ma*, Chenchen Ye*, Zijian Wu, Xiang Wang, Yixin Cao, Tat-Seng Chua.",
       "venue": "KDD‘23",
       "year": 2023,
-      "links": [],
-      "domains": []
+      "links": [
+        {
+          "label": "PDF",
+          "url": "https://dl.acm.org/doi/pdf/10.1145/3580305.3599285"
+        },
+        {
+          "label": "Code & dataset",
+          "url": "https://github.com/yecchen/SeCoGD"
+        }
+      ],
+      "domains": [
+        "Social Events"
+      ]
     },
     {
       "title": "FLOOD: A Flexible Invariant Learning Framework for Out-of-Distribution Generalization on Graphs.",
