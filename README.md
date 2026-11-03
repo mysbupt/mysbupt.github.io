@@ -42,10 +42,10 @@ GitHub Pages should continue using its existing branch-based deployment configur
 
 ## Content review notes
 
-- The original Publications page ends at 2024. Recent papers were carried over from the homepage news; missing author lists have not been invented.
-- 60 valid publication entries, 33 news announcements, 6 talks, and 8 honors are included.
-- An ACM Multimedia 2019 demo entry repeats an author list where its title should be. It is preserved in the original source and imported JSON, but excluded from the displayed list pending a correct title.
-- PortfolioPilot's source announcement is dated October 2025 and says AAAI 2025. The new list keeps it under 2025 and flags the conference year for confirmation.
+- The original Publications page ends at 2024. Recent papers were carried over from the homepage news and completed using public author metadata; BundleLM's author list was supplied directly by Yunshan Ma.
+- 87 publication entries, 33 news announcements, 6 talks, and 8 honors are included.
+- The malformed ACM Multimedia 2019 demo entry was resolved as Automatic Fashion Knowledge Extraction from Social Media using its arXiv record and DOI; the original HTML remains archived.
+- PortfolioPilot's year is corrected to AAAI 2026 using the official AAAI proceedings, which also provide its full author list.
 - The music paper is listed under MMM 2026 based on the explicit January 2026 award announcement, despite an older announcement saying MMM 2025.
 - BundleLM is listed under MMM 2027; Potent but Stealthy under AAAI 2026, matching the announced conference years.
 - Minor typography fixes include the duplicated “DiFashion” prefix, spacing in FashionDPO, and “Finalist”. Unavailable PDFs are plain text, not broken empty links.
@@ -74,3 +74,11 @@ All nine selected publications have full author lists. The missing Frozen LVLMs,
 ## LMF members
 
 The LMF overview links to `members.html` through the Overview/Members navigation and a Members section. The roster in `content/members.json` preserves the roles and spellings supplied by Yunshan Ma: Assistant Professor, Postdoc, PhD Students, Visiting PhD Students, and Alumni. No personal links, photographs, or additional affiliations have been inferred.
+
+## Full topic citations and arXiv coverage
+
+All 87 publication records have full author lists. Yunshan Ma is highlighted by name in every citation. The Research page provides expandable publication lists for both fundamental technologies and all five vertical domains; these use the same complete citation component as the Publications and About pages.
+
+On 3 November 2026, an arXiv author search for Yunshan Ma returned 67 records. One known withdrawn record (2005.13129) was excluded. Existing published records were matched by arXiv ID, title, or manually verified renamed-title mappings; 26 previously missing records were added. Distinct existing workshop and conference records were preserved. Confirmed venue information was retained where available, with other added records labeled as arXiv versions rather than inferring an acceptance. arXiv metadata and primary publisher/institutional sources are recorded alongside publication entries. FinAlogy has no verified arXiv identifier, so its placeholder identifier in the code repository was not copied.
+
+Author-list corrections include FashionReGen (SMU/publisher record) and Causal Disentangled Recommendation (arXiv/SMU record). The BundleLM authors are Shuo Xu, Teng Tu, Ai Li, Haokai Ma, Yunshan Ma, Lei Meng, and Xiangxu Meng, in the order provided by Yunshan Ma.

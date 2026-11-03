@@ -260,32 +260,50 @@
   "publications": [
     {
       "title": "BundleLM: Bundle Construction Using Language Model.",
-      "authors": "",
+      "authors": "Shuo Xu, Teng Tu, Ai Li, Haokai Ma, Yunshan Ma, Lei Meng, Xiangxu Meng.",
       "venue": "",
       "year": 2026,
       "links": [],
       "announcement": "2026/10 One paper accepted by Multimedia Modeling (MMM) 2027 of using Language Modeling for Bundle Construction! BundleLM: Bundle Construction Using Language Model.[pdf come soon]",
       "announced": "2026/10",
-      "domains": []
+      "domains": [],
+      "technologies": [
+        "Multimodality"
+      ],
+      "author_source": "Provided by Yunshan Ma on 2026-11-03"
     },
     {
       "title": "Distilling Transitional Patterns to Multimodal Large Language Models for Session-based Recommendation.",
-      "authors": "",
+      "authors": "Jiajie Su, Qiyong Zhong, Yunshan Ma, Weiming Liu, Chaochao Chen, Xiaolin Zheng, Jianwei Yin, Tat-Seng Chua.",
       "venue": "",
       "year": 2026,
       "links": [
         {
           "label": "pdf",
           "url": "https://dl.acm.org/doi/pdf/10.1145/3856985"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2504.10538"
         }
       ],
       "announcement": "2026/09 One paper gets accepted by TOIS of adapting MLLM for session recommendation, one paper gets accepted by SIGIR-AP of building a multimodal fashion understanding benchmark FashionStylist! Distilling Transitional Patterns to Multimodal Large Language Models for Session-based Recommendation.[pdf] FashionStylist: An Expert Knowledge-enhanced Multimodal Dataset for Fashion Understanding.[pdf] [dataset and code]",
       "announced": "2026/09",
-      "domains": []
+      "domains": [],
+      "arxiv_id": "2504.10538",
+      "arxiv_title": "Distilling Transitional Pattern to Large Language Models for Multimodal Session-based Recommendation",
+      "arxiv_submitted": "2025-04-13",
+      "sources": [
+        "https://arxiv.org/abs/2504.10538"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
     },
     {
       "title": "FashionStylist: An Expert Knowledge-enhanced Multimodal Dataset for Fashion Understanding.",
-      "authors": "",
+      "authors": "Kaidong Feng, Zhuoxuan Huang, Huizhong Guo, Yuting Jin, Xinyu Chen, Yue Liang, Yifei Gai, Li Zhou, Yunshan Ma, Zhu Sun.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -296,17 +314,30 @@
         {
           "label": "dataset and code",
           "url": "https://github.com/recsys-benchmark/FashionStylist"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2604.09249"
         }
       ],
       "announcement": "2026/09 One paper gets accepted by TOIS of adapting MLLM for session recommendation, one paper gets accepted by SIGIR-AP of building a multimodal fashion understanding benchmark FashionStylist! Distilling Transitional Patterns to Multimodal Large Language Models for Session-based Recommendation.[pdf] FashionStylist: An Expert Knowledge-enhanced Multimodal Dataset for Fashion Understanding.[pdf] [dataset and code]",
       "announced": "2026/09",
       "domains": [
         "Fashion"
+      ],
+      "arxiv_id": "2604.09249",
+      "arxiv_title": "FashionStylist: An Expert Knowledge-enhanced Multimodal Dataset for Fashion Understanding",
+      "arxiv_submitted": "2026-04-10",
+      "sources": [
+        "https://arxiv.org/abs/2604.09249"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
       "title": "Personalized Context-Conditioned Tokenization for Generative Recommendation.",
-      "authors": "",
+      "authors": "Qiyong Zhong, Jiajie Su, Yunshan Ma, Julian McAuley, Yupeng Hou.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -317,15 +348,28 @@
         {
           "label": "code",
           "url": "https://github.com/YoungZ365/Pctx"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2510.21276"
         }
       ],
       "announcement": "2026/08 One paper gets accepted by CIKM on tokenization of GenRec, one paper gets accepted by EMNLP of reusing LLM reasoning for financial report generation! Personalized Context-Conditioned Tokenization for Generative Recommendation.[pdf] [code] AnalysisBank: An Expert Analysis Pattern Library for Financial Report Generation.[pdf] [code]",
       "announced": "2026/08",
-      "domains": []
+      "domains": [],
+      "arxiv_id": "2510.21276",
+      "arxiv_title": "Pctx: Tokenizing Personalized Context for Generative Recommendation",
+      "arxiv_submitted": "2025-10-24",
+      "sources": [
+        "https://arxiv.org/abs/2510.21276"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
     },
     {
       "title": "AnalysisBank: An Expert Analysis Pattern Library for Financial Report Generation.",
-      "authors": "",
+      "authors": "Yajing Yang, Yunshan Ma, Kelvin J. L. Koa, Min-Yen Kan.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -336,32 +380,58 @@
         {
           "label": "code",
           "url": "https://github.com/yajingyang/AnalysisBank"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2609.00818"
         }
       ],
       "announcement": "2026/08 One paper gets accepted by CIKM on tokenization of GenRec, one paper gets accepted by EMNLP of reusing LLM reasoning for financial report generation! Personalized Context-Conditioned Tokenization for Generative Recommendation.[pdf] [code] AnalysisBank: An Expert Analysis Pattern Library for Financial Report Generation.[pdf] [code]",
       "announced": "2026/08",
       "domains": [
         "Finance"
+      ],
+      "arxiv_id": "2609.00818",
+      "arxiv_title": "AnalysisBank: An Expert Analysis Pattern Library for Financial Report Generation",
+      "arxiv_submitted": "2026-09-01",
+      "sources": [
+        "https://arxiv.org/abs/2609.00818"
+      ],
+      "technologies": [
+        "Forecasting"
       ]
     },
     {
       "title": "Large Language Model Empowered Recommendation Meets All-domain Continual Pre-Training.",
-      "authors": "",
+      "authors": "Haokai Ma, Yunshan Ma, Ruobing Xie, Lei Meng, Jialie Shen, Xingwu Sun, Zhanhui Kang, Tat-Seng Chua.",
       "venue": "",
       "year": 2026,
       "links": [
         {
           "label": "pdf",
           "url": "https://arxiv.org/pdf/2504.08949"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2504.08949"
         }
       ],
       "announcement": "2026/07 One paper gets accepted by TKDE about continual pre-training for recommendation, one demo paper gets accepted by ACMMM of applying visual analogy retrieval to financial K-line analysis! Large Language Model Empowered Recommendation Meets All-domain Continual Pre-Training.[pdf] FinAlogy: A Visual Analogy Retrieval System for Financial K-Line Analysis.[pdf coming soon][code] [video]",
       "announced": "2026/07",
-      "domains": []
+      "domains": [],
+      "arxiv_id": "2504.08949",
+      "arxiv_title": "Large Language Model Empowered Recommendation Meets All-domain Continual Pre-Training",
+      "arxiv_submitted": "2025-04-11",
+      "sources": [
+        "https://arxiv.org/abs/2504.08949"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
     },
     {
       "title": "FinAlogy: A Visual Analogy Retrieval System for Financial K-Line Analysis.",
-      "authors": "",
+      "authors": "Xiaoyan Yu, Ziya Zhao, Yifan Wei, Dianbo Sui, Yunshan Ma, Tat-Seng Chua.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -378,28 +448,48 @@
       "announced": "2026/07",
       "domains": [
         "Finance"
+      ],
+      "sources": [
+        "https://github.com/nice-zzy/FinAlogy"
+      ],
+      "technologies": [
+        "Forecasting"
       ]
     },
     {
       "title": "CFALR: Collaborative Filtering-Augmented Large Language Model for Personalized Fashion Outfit Recommendation.",
-      "authors": "",
+      "authors": "Yujuan Ding, Junrong Liao, Yunshan Ma, Yi Bin, Wenqi Fan, Tat-Seng Chua, Qing Li.",
       "venue": "",
       "year": 2026,
       "links": [
         {
           "label": "pdf",
           "url": "https://arxiv.org/pdf/2606.13001"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.13001"
         }
       ],
       "announcement": "2026/06 One paper gets accepted by Transactions on Information Systems about using LLMs for personalized fashion outfit recommendation! CFALR: Collaborative Filtering-Augmented Large Language Model for Personalized Fashion Outfit Recommendation.[pdf]",
       "announced": "2026/06",
       "domains": [
         "Fashion"
+      ],
+      "arxiv_id": "2606.13001",
+      "arxiv_title": "CFALR: Collaborative Filtering-Augmented Large Language Model for Personalized Fashion Outfit Recommendation",
+      "arxiv_submitted": "2026-06-11",
+      "sources": [
+        "https://arxiv.org/abs/2606.13001"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
       ]
     },
     {
       "title": "Dynamic Spectral Denoising with Global-Context Attention for Multi-Behavior Recommendation.",
-      "authors": "",
+      "authors": "Miaomiao Cai, Yunshan Ma, Fangqi Zhu, Junfeng Fang, Zhijie Zhang, Zhiyong Cheng, Xiang Wang, See-Kiong Ng.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -410,26 +500,56 @@
         {
           "label": "code",
           "url": "https://github.com/miaomiao-cai2/SpectraMB-KDD2026"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.02417"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1145/3770855.3818191"
         }
       ],
       "announcement": "2026/05 One paper accepted by KDD'26 about multi-behabior recommendation! Dynamic Spectral Denoising with Global-Context Attention for Multi-Behavior Recommendation. [pdf][code]",
       "announced": "2026/05",
-      "domains": []
+      "domains": [],
+      "arxiv_id": "2606.02417",
+      "arxiv_title": "Dynamic Spectral Denoising with Global-Context Attention for Multi-Behavior Recommendation",
+      "arxiv_submitted": "2026-06-01",
+      "sources": [
+        "https://arxiv.org/abs/2606.02417"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
     },
     {
       "title": "Promoting Long-tail Items through Debiased Product Bundling.",
-      "authors": "",
+      "authors": "Shuo Xu, Haokai Ma, Yunshan Ma, Xiaohao Liu, Lei Meng, Xiangxu Meng, Tat-Seng Chua.",
       "venue": "",
       "year": 2026,
       "links": [
         {
           "label": "pdf",
           "url": "https://arxiv.org/pdf/2411.19107"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2411.19107"
         }
       ],
       "announcement": "2026/04 One paper gets accepted by Transactions on Information Systems about promoting long-tail items via product bundling! Promoting Long-tail Items through Debiased Product Bundling.[pdf]",
       "announced": "2026/04",
-      "domains": []
+      "domains": [],
+      "arxiv_id": "2411.19107",
+      "arxiv_title": "Headache to Overstock? Promoting Long-tail Items through Debiased Product Bundling",
+      "arxiv_submitted": "2024-11-28",
+      "sources": [
+        "https://arxiv.org/abs/2411.19107"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
     },
     {
       "title": "Frozen LVLMs for Micro-Video Recommendation: A Systematic Study of Feature Extraction and Fusion.",
@@ -444,6 +564,10 @@
         {
           "label": "code",
           "url": "https://github.com/Tuannnxlf/Frozen-LVLMs-for-Micro-Video-Recommendation-A-Systematic-Study-of-Feature-Extraction-and-Fusion"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2512.21863"
         }
       ],
       "announcement": "2026/04 One paper gets accepted by ICMR'26 about video LLM for micro-video recommendation, congratulations to Huatuan! Frozen LVLMs for Micro-Video Recommendation: A Systematic Study of Feature Extraction and Fusion.[pdf] [code]",
@@ -453,11 +577,17 @@
       "domains": [],
       "sources": [
         "https://arxiv.org/abs/2512.21863"
+      ],
+      "arxiv_id": "2512.21863",
+      "arxiv_title": "Frozen LVLMs for Micro-Video Recommendation: A Systematic Study of Feature Extraction and Fusion",
+      "arxiv_submitted": "2025-12-26",
+      "technologies": [
+        "Forecasting"
       ]
     },
     {
       "title": "MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits.",
-      "authors": "",
+      "authors": "Yixin Xiang, Yunshan Ma, Xiaoyu Du, Yibing Chen, Yanxin Zhang, Jinhui Tang.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -468,15 +598,26 @@
         {
           "label": "code",
           "url": "https://github.com/ElephantOH/MAB-DQA"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2604.08952"
         }
       ],
       "announcement": "2026/04 Two papers are accepted by ACL'26! One accepted by the main conference about document QA, and another is accepted as findings on open-ended event forecasting. Congruatulations to Yixin and Chang He! MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits.[pdf] [code] Scattered Hypothesis Generation for Open-Ended Event Forecasting.[pdf] [code]",
       "announced": "2026/04",
-      "domains": []
+      "domains": [],
+      "arxiv_id": "2604.08952",
+      "arxiv_title": "MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits",
+      "arxiv_submitted": "2026-04-10",
+      "sources": [
+        "https://arxiv.org/abs/2604.08952"
+      ],
+      "technologies": []
     },
     {
       "title": "Scattered Hypothesis Generation for Open-Ended Event Forecasting.",
-      "authors": "",
+      "authors": "He Chang, Zhulin Tao, Lifang Yang, Xianglin Huang, Yunshan Ma.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -487,17 +628,30 @@
         {
           "label": "code",
           "url": "https://github.com/Sambac1/SCATTER"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2604.15788"
         }
       ],
       "announcement": "2026/04 Two papers are accepted by ACL'26! One accepted by the main conference about document QA, and another is accepted as findings on open-ended event forecasting. Congruatulations to Yixin and Chang He! MAB-DQA: Addressing Query Aspect Importance in Document Question Answering with Multi-Armed Bandits.[pdf] [code] Scattered Hypothesis Generation for Open-Ended Event Forecasting.[pdf] [code]",
       "announced": "2026/04",
       "domains": [
         "Social Events"
+      ],
+      "arxiv_id": "2604.15788",
+      "arxiv_title": "Scattered Hypothesis Generation for Open-Ended Event Forecasting",
+      "arxiv_submitted": "2026-04-17",
+      "sources": [
+        "https://arxiv.org/abs/2604.15788"
+      ],
+      "technologies": [
+        "Forecasting"
       ]
     },
     {
       "title": "Addressing graph heterogeneity and heterophily from a spectral perspective.",
-      "authors": "",
+      "authors": "Kangkang Lu, Yanhua Yu, Zhiyong Huang, Yunshan Ma, Xiao Wang, Meiyu Liang, Yuling Wang, Yimeng Ren, Tat-Seng Chua.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -508,27 +662,59 @@
         {
           "label": "code",
           "url": "https://github.com/Lukangkang123/H2SGNN/"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2410.13373"
         }
       ],
       "announcement": "2026/04 One paper gets accepted by Neurocomputing about tackling the heterogeneity and heterophily issues of graphs, congratulations to Kangkang! Addressing graph heterogeneity and heterophily from a spectral perspective.[pdf][code]",
       "announced": "2026/04",
-      "domains": []
+      "domains": [],
+      "arxiv_id": "2410.13373",
+      "arxiv_title": "Addressing Graph Heterogeneity and Heterophily from A Spectral Perspective",
+      "arxiv_submitted": "2024-10-17",
+      "sources": [
+        "https://arxiv.org/abs/2410.13373"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
     },
     {
       "title": "Dual-Diffusional Generative Fashion Recommendation.",
-      "authors": "",
+      "authors": "Mingzhe Yu, Lei Wu, Qianru Sun, Yunshan Ma.",
       "venue": "",
       "year": 2026,
-      "links": [],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2605.17357"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2605.17357"
+        }
+      ],
       "announcement": "2026/04 Two papers are accepted by SIGIR'26! One on the research track about fashion outfit image generation, and another on the resource track about travel itinerary modification. Congruatulations to Mingzhe and Zhuoxuan! Dual-Diffusional Generative Fashion Recommendation.[pdf coming soon] iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification.[pdf][dataset and code]",
       "announced": "2026/04",
       "domains": [
         "Fashion"
+      ],
+      "arxiv_id": "2605.17357",
+      "arxiv_title": "Dual-Diffusional Generative Fashion Recommendation",
+      "arxiv_submitted": "2026-05-17",
+      "sources": [
+        "https://arxiv.org/abs/2605.17357"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
       ]
     },
     {
       "title": "iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification.",
-      "authors": "",
+      "authors": "Zhuoxuan Huang, Yunshan Ma, Hongyu Zhang, Hua Ma, Zhu Sun.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -539,15 +725,26 @@
         {
           "label": "dataset and code",
           "url": "https://github.com/zelo2/iTIMO"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2601.10609"
         }
       ],
       "announcement": "2026/04 Two papers are accepted by SIGIR'26! One on the research track about fashion outfit image generation, and another on the resource track about travel itinerary modification. Congruatulations to Mingzhe and Zhuoxuan! Dual-Diffusional Generative Fashion Recommendation.[pdf coming soon] iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification.[pdf][dataset and code]",
       "announced": "2026/04",
-      "domains": []
+      "domains": [],
+      "arxiv_id": "2601.10609",
+      "arxiv_title": "iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification",
+      "arxiv_submitted": "2026-01-15",
+      "sources": [
+        "https://arxiv.org/abs/2601.10609"
+      ],
+      "technologies": []
     },
     {
       "title": "MetaRAG: Identifying Website Owner using Meta-Path-Guided Dynamic Graph Retrieval-Augmented Generation.",
-      "authors": "",
+      "authors": "Cheng Tu, Yunshan Ma, Bingyang Guo, Qianyu Li, Yang Li, Min Zhang, Fan Shi, Xiang Wang.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -560,28 +757,47 @@
       "announced": "2026/02",
       "domains": [
         "Cybersecurity"
+      ],
+      "sources": [
+        "https://api.crossref.org/works/10.1145/3800961"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
       "title": "MM-AttacKG: A Multimodal Approach to Attack Graph Construction with Large Language Models.",
-      "authors": "",
+      "authors": "Yongheng Zhang, Xinyun Zhao, Yunshan Ma, Haokai Ma, Yingxiao Guan, Guozheng Yang, Yuliang Lu, Xiang Wang.",
       "venue": "",
       "year": 2026,
       "links": [
         {
           "label": "pdf",
           "url": "https://arxiv.org/pdf/2506.16968"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2506.16968"
         }
       ],
       "announcement": "2026/02 One paper gets accepted by Knowledge-Based Systems about constructing attack graph using multimodal data, congratulations to Yongheng! MM-AttacKG: A Multimodal Approach to Attack Graph Construction with Large Language Models.[pdf]",
       "announced": "2026/02",
       "domains": [
         "Cybersecurity"
+      ],
+      "arxiv_id": "2506.16968",
+      "arxiv_title": "MM-AttacKG: A Multimodal Approach to Attack Graph Construction with Large Language Models",
+      "arxiv_submitted": "2025-06-20",
+      "sources": [
+        "https://arxiv.org/abs/2506.16968"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
       "title": "Discrete Diffusion for Bundle Construction.",
-      "authors": "",
+      "authors": "Teng Tu, Ai Li, Yunshan Ma, Shuo Xu, Xiaohao Liu, Haokai Ma, Liang Pang, Tat-Seng Chua.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -596,7 +812,16 @@
       ],
       "announcement": "2026/01 Two papers are accepted by ICLR'26! On the topics of product bundling and stock forecasting, respectively. Congruatulations to Tu Teng, Li Ai, Kelvin, and Jan! Discrete Diffusion for Bundle Construction.[pdf][code] Reasoning on Time-Series for Financial Technical Analysis.[pdf][code]",
       "announced": "2026/01",
-      "domains": []
+      "domains": [
+        "Fashion",
+        "Music"
+      ],
+      "sources": [
+        "https://proceedings.iclr.cc/paper_files/paper/2026/hash/fec8e70600149b3c496e94d1f76ee0a7-Abstract-Conference.html"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
     },
     {
       "title": "Reasoning on Time-Series for Financial Technical Analysis.",
@@ -611,6 +836,10 @@
         {
           "label": "code",
           "url": "https://anonymous.4open.science/r/VTA-finance-293C/"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2511.08616"
         }
       ],
       "announcement": "2026/01 Two papers are accepted by ICLR'26! On the topics of product bundling and stock forecasting, respectively. Congruatulations to Tu Teng, Li Ai, Kelvin, and Jan! Discrete Diffusion for Bundle Construction.[pdf][code] Reasoning on Time-Series for Financial Technical Analysis.[pdf][code]",
@@ -619,12 +848,19 @@
         "Finance"
       ],
       "sources": [
-        "https://arxiv.org/abs/2511.08616v1"
+        "https://arxiv.org/abs/2511.08616v1",
+        "https://arxiv.org/abs/2511.08616"
+      ],
+      "arxiv_id": "2511.08616",
+      "arxiv_title": "Reasoning on Time-Series for Financial Technical Analysis",
+      "arxiv_submitted": "2025-11-06",
+      "technologies": [
+        "Forecasting"
       ]
     },
     {
       "title": "ThinkTank-ME: A Multi-Expert Framework for Middle East Event Forecasting.",
-      "authors": "",
+      "authors": "Haoxuan Li, He Chang, Yunshan Ma, Yi Bin, Yang Yang, See-Kiong Ng, Tat-Seng Chua.",
       "venue": "",
       "year": 2026,
       "links": [
@@ -635,17 +871,30 @@
         {
           "label": "code",
           "url": "https://github.com/LuminosityX/ThinkTank-ME"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2601.17065"
         }
       ],
       "announcement": "2026/01 One short paper, about geo-political event forecasting using LLM agents, gets accepted by The Web Conference (WWW) 2026, congratulations to Haoxuan and Chang He! ThinkTank-ME: A Multi-Expert Framework for Middle East Event Forecasting.[pdf][code]",
       "announced": "2026/01",
       "domains": [
         "Social Events"
+      ],
+      "arxiv_id": "2601.17065",
+      "arxiv_title": "ThinkTank-ME: A Multi-Expert Framework for Middle East Event Forecasting",
+      "arxiv_submitted": "2026-01-22",
+      "sources": [
+        "https://arxiv.org/abs/2601.17065"
+      ],
+      "technologies": [
+        "Forecasting"
       ]
     },
     {
       "title": "Potent but Stealthy: Rethink Profile Pollution against Sequential Recommendation via Bi-level Constrained Reinforcement Paradigm.",
-      "authors": "",
+      "authors": "Jiajie Su, Zihan Nan, Yunshan Ma, Xiaobo Xia, Xiaohua Feng, Weiming Liu, Xiang Chen, Xiaolin Zheng, Chaochao Chen.",
       "venue": "",
       "year": 2025,
       "links": [
@@ -656,17 +905,30 @@
         {
           "label": "code",
           "url": "https://github.com/SSndot/CREAT"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2511.09392"
         }
       ],
       "announcement": "2025/11 One paper accepted by AAAI 2026, congratulations to Jiajie! Potent but Stealthy: Rethink Profile Pollution against Sequential Recommendation via Bi-level Constrained Reinforcement Paradigm.[pdf][code]",
       "announced": "2025/11",
-      "domains": []
+      "domains": [],
+      "arxiv_id": "2511.09392",
+      "arxiv_title": "Potent but Stealthy: Rethink Profile Pollution against Sequential Recommendation via Bi-level Constrained Reinforcement Paradigm",
+      "arxiv_submitted": "2025-11-12",
+      "sources": [
+        "https://arxiv.org/abs/2511.09392"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
     },
     {
       "title": "PortfolioPilot: An Agentic Platform for Financial Portfolio Management Algorithm Development and Evaluation.",
-      "authors": "",
-      "venue": "",
-      "year": 2025,
+      "authors": "Jared Chan Xu Yang, Haokai Ma, Yunshan Ma.",
+      "venue": "AAAI · Demo",
+      "year": 2026,
       "links": [
         {
           "label": "pdf",
@@ -675,12 +937,22 @@
         {
           "label": "code",
           "url": "https://github.com/JarudeC/portfoliopilot"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1609/aaai.v40i48.42396"
         }
       ],
       "announcement": "2025/10 One demo paper accepted by AAAI 2025, big congratulations to Jared Chan! Notably, Jared is a year-2 undergradute student in SMU SCIS, and this work was done during a part-time summer research project. PortfolioPilot: An Agentic Platform for Financial Portfolio Management Algorithm Development and Evaluation.[pdf][code]",
       "announced": "2025/10",
       "domains": [
         "Finance"
+      ],
+      "sources": [
+        "https://ojs.aaai.org/index.php/AAAI/article/view/42396"
+      ],
+      "technologies": [
+        "Forecasting"
       ]
     },
     {
@@ -707,23 +979,39 @@
       ],
       "sources": [
         "https://link.springer.com/chapter/10.1007/978-981-95-6957-1_7"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
       "title": "Temporal Relational Reasoning of Large Language Models for Detecting Stock Portfolio Crashes.",
-      "authors": "",
+      "authors": "Kelvin J. L. Koa, Yunshan Ma, Yi Xu, Ritchie Ng, Huanhuan Zheng, Tat-Seng Chua.",
       "venue": "",
       "year": 2025,
       "links": [
         {
           "label": "pdf",
           "url": "https://arxiv.org/pdf/2410.17266"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2410.17266"
         }
       ],
       "announcement": "2025/10 One paper accepted by The 2nd Workshop on LLMs and Generative AI for Finance (co-host on ICAIF'25), congratulations to Kelvin! Temporal Relational Reasoning of Large Language Models for Detecting Stock Portfolio Crashes.[pdf]",
       "announced": "2025/10",
       "domains": [
         "Finance"
+      ],
+      "arxiv_id": "2410.17266",
+      "arxiv_title": "Temporal Relational Reasoning of Large Language Models for Detecting Stock Portfolio Crashes",
+      "arxiv_submitted": "2024-10-07",
+      "sources": [
+        "https://arxiv.org/abs/2410.17266"
+      ],
+      "technologies": [
+        "Forecasting"
       ]
     },
     {
@@ -739,6 +1027,10 @@
         {
           "label": "code",
           "url": "https://anonymous.4open.science/r/VTA-finance-293C/"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2511.08616"
         }
       ],
       "announcement": "2025/10 One paper accepted by the Workshop on Rethinking Financial Time-Series, congratulations to Kelvin! Reasoning on Time-Series for Financial Analysis. [pdf][code]",
@@ -749,7 +1041,14 @@
         "Finance"
       ],
       "sources": [
-        "https://arxiv.org/abs/2511.08616v1"
+        "https://arxiv.org/abs/2511.08616v1",
+        "https://arxiv.org/abs/2511.08616"
+      ],
+      "arxiv_id": "2511.08616",
+      "arxiv_title": "Reasoning on Time-Series for Financial Technical Analysis",
+      "arxiv_submitted": "2025-11-06",
+      "technologies": [
+        "Forecasting"
       ]
     },
     {
@@ -776,11 +1075,14 @@
       ],
       "sources": [
         "https://ink.library.smu.edu.sg/sis_research/10915/"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
       "title": "Website Owner Identification through Multi-level Contrastive Representation Learning.",
-      "authors": "",
+      "authors": "Cheng Tu, Yunshan Ma, Yang Li, Min Zhang, Miao Hu, Fan Shi, Xiang Wang.",
       "venue": "",
       "year": 2025,
       "links": [
@@ -797,11 +1099,15 @@
       "announced": "2025/09",
       "domains": [
         "Cybersecurity"
-      ]
+      ],
+      "sources": [
+        "https://ink.library.smu.edu.sg/sis_research/10875/"
+      ],
+      "technologies": []
     },
     {
       "title": "GenWardrobe: A Fully Generative System for Travel Fashion Wardrobe Construction.",
-      "authors": "",
+      "authors": "Peng Jin, Yilin Wen, Mingzhe Yu, Yunshan Ma, Rong Zheng, Jin-tu Fan, Chong Wah Ngo.",
       "venue": "",
       "year": 2025,
       "links": [
@@ -818,11 +1124,17 @@
       "announced": "2025/07",
       "domains": [
         "Fashion"
+      ],
+      "sources": [
+        "https://ink.library.smu.edu.sg/sis_research/10883/"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
       "title": "LLM2Rec: Large Language Models Are Powerful Embedding Models for Sequential Recommendation.",
-      "authors": "",
+      "authors": "Yingzhi He, Xiaohao Liu, An Zhang, Yunshan Ma, Tat-Seng Chua.",
       "venue": "",
       "year": 2025,
       "links": [
@@ -833,15 +1145,28 @@
         {
           "label": "code",
           "url": "https://github.com/HappyPointer/LLM2Rec"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2506.21579"
         }
       ],
       "announcement": "2025/05 One paper accepted by KDD'25, congratulations to Yingzhi and Xiaohao! LLM2Rec: Large Language Models Are Powerful Embedding Models for Sequential Recommendation.[pdf][code]",
       "announced": "2025/05",
-      "domains": []
+      "domains": [],
+      "arxiv_id": "2506.21579",
+      "arxiv_title": "LLM2Rec: Large Language Models Are Powerful Embedding Models for Sequential Recommendation",
+      "arxiv_submitted": "2025-06-16",
+      "sources": [
+        "https://arxiv.org/abs/2506.21579"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
     },
     {
       "title": "FashionDPO:Fine-tune Fashion Outfit Generation Model using Direct Preference Optimization.",
-      "authors": "",
+      "authors": "Mingzhe Yu, Yunshan Ma, Lei Wu, Changshuo Wang, Xue Li, Lei Meng.",
       "venue": "",
       "year": 2025,
       "links": [
@@ -852,12 +1177,25 @@
         {
           "label": "code",
           "url": "https://github.com/Yzcreator/FashionDPO"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2504.12900"
         }
       ],
       "announcement": "2025/04 One paper accepted by SIGIR'25, congratulations to Mingzhe! FashionDPO:Fine-tune Fashion Outfit Generation Model using Direct Preference Optimization.[pdf][code]",
       "announced": "2025/04",
       "domains": [
         "Fashion"
+      ],
+      "arxiv_id": "2504.12900",
+      "arxiv_title": "FashionDPO:Fine-tune Fashion Outfit Generation Model using Direct Preference Optimization",
+      "arxiv_submitted": "2025-04-17",
+      "sources": [
+        "https://arxiv.org/abs/2504.12900"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
@@ -865,24 +1203,66 @@
       "authors": "Mingzhe Yu, Yunshan Ma, Lei Wu, Kai Cheng, Xue Li, Lei Meng, Tat-Seng Chua.",
       "venue": "ICMR'24",
       "year": 2024,
-      "links": [],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2401.16825"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2401.16825"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1145/3652583.3658064"
+        }
+      ],
       "domains": [
         "Fashion"
-      ]
+      ],
+      "arxiv_id": "2401.16825",
+      "arxiv_title": "Smart Fitting Room: A One-stop Framework for Matching-aware Virtual Try-on",
+      "arxiv_submitted": "2024-01-30",
+      "sources": [
+        "https://arxiv.org/abs/2401.16825"
+      ],
+      "technologies": []
     },
     {
       "title": "DiFashion: Towards Personalized Outfit Generation.",
       "authors": "Yiyan Xu, Wenjie Wang, Fuli Feng, Yunshan Ma, Jizhi Zhang, Xiangnan He.",
       "venue": "SIGIR'24",
       "year": 2024,
-      "links": [],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.17279"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2402.17279"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1145/3626772.3657719"
+        }
+      ],
       "domains": [
         "Fashion"
+      ],
+      "arxiv_id": "2402.17279",
+      "arxiv_title": "Diffusion Models for Generative Outfit Recommendation",
+      "arxiv_submitted": "2024-02-27",
+      "sources": [
+        "https://arxiv.org/abs/2402.17279"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
       "title": "Learning to Generate Explainable Stock Predictions using Self-Reflective Large Language Models.",
-      "authors": "Kelvin J.L. Koa, Yunshan Ma*, Ritchie Ng, Tat-Seng Chua.",
+      "authors": "Kelvin J. L. Koa, Yunshan Ma*, Ritchie Ng, Tat-Seng Chua.",
       "venue": "WWW'24",
       "year": 2024,
       "links": [
@@ -893,21 +1273,61 @@
         {
           "label": "Code",
           "url": "https://github.com/koa-fin/sep"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.03659"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1145/3589334.3645611"
         }
       ],
       "selected": "highly-cited",
       "domains": [
         "Finance"
+      ],
+      "arxiv_id": "2402.03659",
+      "arxiv_title": "Learning to Generate Explainable Stock Predictions using Self-Reflective Large Language Models",
+      "arxiv_submitted": "2024-02-06",
+      "sources": [
+        "https://arxiv.org/abs/2402.03659"
+      ],
+      "technologies": [
+        "Forecasting"
       ]
     },
     {
       "title": "FashionReGen: LLM-Empowered Fashion Report Generation.",
-      "authors": "Jun Li, Yi Bin, Yunshan Ma, Yang Yang, Zi Huang, Tat-Seng Chua.",
+      "authors": "Yujuan Ding, Yunshan Ma, Wenqi Fan, Yige Yao, Tat-Seng Chua, Qing Li.",
       "venue": "WWW'24 Demo",
       "year": 2024,
-      "links": [],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2403.06660"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2403.06660"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1145/3589335.3651232"
+        }
+      ],
       "domains": [
         "Fashion"
+      ],
+      "arxiv_id": "2403.06660",
+      "arxiv_title": "FashionReGen: LLM-Empowered Fashion Report Generation",
+      "arxiv_submitted": "2024-03-11",
+      "sources": [
+        "https://arxiv.org/abs/2403.06660",
+        "https://ink.library.smu.edu.sg/sis_research/10913/"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
@@ -916,31 +1336,88 @@
       "venue": "TOIS'24",
       "year": 2024,
       "links": [],
-      "domains": []
+      "domains": [],
+      "technologies": []
     },
     {
       "title": "MultiCBR: Multi-view Contrastive Learning for Bundle Recommendation.",
       "authors": "Yunshan Ma*, Yingzhi He*, Xiang Wang, Yinwei Wei, Xiaoyu Du, Yuyangzi Fu, Tat-Seng Chua.",
       "venue": "TOIS'24",
       "year": 2024,
-      "links": [],
-      "domains": []
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2311.16751"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2311.16751"
+        }
+      ],
+      "domains": [],
+      "arxiv_id": "2311.16751",
+      "arxiv_title": "MultiCBR: Multi-view Contrastive Learning for Bundle Recommendation",
+      "arxiv_submitted": "2023-11-28",
+      "sources": [
+        "https://arxiv.org/abs/2311.16751"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
     },
     {
       "title": "Leveraging Multimodal Features and Item-level User Feedback for Bundle Construction.",
       "authors": "Yunshan Ma, Xiaohao Liu, Yinwei Wei, Zhulin Tao, Xiang Wang, Tat-Seng Chua.",
       "venue": "WSDM'24",
       "year": 2024,
-      "links": [],
-      "domains": []
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2310.18770"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2310.18770"
+        }
+      ],
+      "domains": [],
+      "arxiv_id": "2310.18770",
+      "arxiv_title": "Leveraging Multimodal Features and Item-level User Feedback for Bundle Construction",
+      "arxiv_submitted": "2023-10-28",
+      "sources": [
+        "https://arxiv.org/abs/2310.18770"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
     },
     {
       "title": "Enhancing Item-level Bundle Representation for Bundle Recommendation.",
       "authors": "Xiaoyu Du, Kun Qian, Yunshan Ma*, Xinguang Xiang.",
       "venue": "TORS'23",
       "year": 2023,
-      "links": [],
-      "domains": []
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2311.16892"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2311.16892"
+        }
+      ],
+      "domains": [],
+      "arxiv_id": "2311.16892",
+      "arxiv_title": "Enhancing Item-level Bundle Representation for Bundle Recommendation",
+      "arxiv_submitted": "2023-11-28",
+      "sources": [
+        "https://arxiv.org/abs/2311.16892"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
     },
     {
       "title": "Rule-guided Counterfactual Explainable Recommendation.",
@@ -948,16 +1425,41 @@
       "venue": "TKDE'23",
       "year": 2023,
       "links": [],
-      "domains": []
+      "domains": [],
+      "technologies": [
+        "Forecasting"
+      ]
     },
     {
       "title": "Diffusion Variational Autoencoder for Tackling Stochasticity in Multi-Step Regression Stock Price Prediction.",
-      "authors": "Kelvin J.L. Koa, Yunshan Ma*, Ritchie Ng, Tat-Seng Chua.",
+      "authors": "Kelvin J. L. Koa, Yunshan Ma*, Ritchie Ng, Tat-Seng Chua.",
       "venue": "CIKM'23",
       "year": 2023,
-      "links": [],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2309.00073"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2309.00073"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1145/3583780.3614844"
+        }
+      ],
       "domains": [
         "Finance"
+      ],
+      "arxiv_id": "2309.00073",
+      "arxiv_title": "Diffusion Variational Autoencoder for Tackling Stochasticity in Multi-Step Regression Stock Price Prediction",
+      "arxiv_submitted": "2023-08-18",
+      "sources": [
+        "https://arxiv.org/abs/2309.00073"
+      ],
+      "technologies": [
+        "Forecasting"
       ]
     },
     {
@@ -973,10 +1475,24 @@
         {
           "label": "Code & dataset",
           "url": "https://github.com/yecchen/SeCoGD"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2308.06480"
         }
       ],
       "domains": [
         "Social Events"
+      ],
+      "arxiv_id": "2308.06480",
+      "arxiv_title": "Context-aware Event Forecasting via Graph Disentanglement",
+      "arxiv_submitted": "2023-08-12",
+      "sources": [
+        "https://arxiv.org/abs/2308.06480"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
       ]
     },
     {
@@ -985,15 +1501,34 @@
       "venue": "KDD‘23",
       "year": 2023,
       "links": [],
-      "domains": []
+      "domains": [],
+      "technologies": [
+        "Multimodality"
+      ]
     },
     {
       "title": "A Learning-Based Approach for Estimating Inertial Properties of Unknown Objects from Encoder Discrepancies.",
-      "authors": "Zizhou Lao, Yuanfeng Han, Yunshan Ma, Gregory Chirikjian.",
+      "authors": "Zizhou Lao, Yuanfeng Han, Yunshan Ma, Gregory S. Chirikjian.",
       "venue": "RA-L'23",
       "year": 2023,
-      "links": [],
-      "domains": []
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2104.09858"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2104.09858"
+        }
+      ],
+      "domains": [],
+      "arxiv_id": "2104.09858",
+      "arxiv_title": "A Learning-Based Approach for Estimating Inertial Properties of Unknown Objects from Encoder Discrepancies",
+      "arxiv_submitted": "2021-04-20",
+      "sources": [
+        "https://arxiv.org/abs/2104.09858"
+      ],
+      "technologies": []
     },
     {
       "title": "Personalized Fashion Outfit Generation with User Coordination Preference Learning.",
@@ -1003,6 +1538,9 @@
       "links": [],
       "domains": [
         "Fashion"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
@@ -1011,15 +1549,37 @@
       "venue": "SIGIR'23",
       "year": 2023,
       "links": [],
-      "domains": []
+      "domains": [],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
     },
     {
       "title": "Causal Disentangled Recommendation Against User Preference Shifts.",
-      "authors": "Wenjie Wang, Xinyu Lin, Fuli Feng, Yunshan Ma, Tat-Seng Chua.",
+      "authors": "Wenjie Wang, Xinyu Lin, Liuhui Wang, Fuli Feng, Yunshan Ma, Tat-Seng Chua.",
       "venue": "TOIS'23",
       "year": 2023,
-      "links": [],
-      "domains": []
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2303.16068"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2303.16068"
+        }
+      ],
+      "domains": [],
+      "arxiv_id": "2303.16068",
+      "arxiv_title": "Causal Disentangled Recommendation Against User Preference Shifts",
+      "arxiv_submitted": "2023-03-28",
+      "sources": [
+        "https://arxiv.org/abs/2303.16068"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
     },
     {
       "title": "CrossCBR: Cross-view Contrastive Learning for Bundle Recommendation.",
@@ -1034,10 +1594,28 @@
         {
           "label": "Code",
           "url": "https://github.com/mysbupt/CrossCBR"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2206.00242"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2206.00242"
         }
       ],
       "domains": [],
-      "selected": "selected"
+      "selected": "selected",
+      "arxiv_id": "2206.00242",
+      "arxiv_title": "CrossCBR: Cross-view Contrastive Learning for Bundle Recommendation",
+      "arxiv_submitted": "2022-06-01",
+      "sources": [
+        "https://arxiv.org/abs/2206.00242"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
     },
     {
       "title": "Modeling Instant User Intent and Content-level Transition for Sequential Fashion Recommendation.",
@@ -1047,6 +1625,10 @@
       "links": [],
       "domains": [
         "Fashion"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
       ]
     },
     {
@@ -1058,12 +1640,30 @@
         {
           "label": "PDF",
           "url": "https://arxiv.org/pdf/2105.07585"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2105.07585"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1145/3460426.3463638"
         }
       ],
       "award": "Best Student Paper Award · ICMR 2021",
       "selected": "award",
       "domains": [
         "Fashion"
+      ],
+      "arxiv_id": "2105.07585",
+      "arxiv_title": "Leveraging Two Types of Global Graph for Sequential Fashion Recommendation",
+      "arxiv_submitted": "2021-05-17",
+      "sources": [
+        "https://arxiv.org/abs/2105.07585"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
       ]
     },
     {
@@ -1071,9 +1671,28 @@
       "authors": "Yujuan Ding*, Yunshan Ma*, Lizi Liao, Wai Keung Wong, Tat-Seng Chua.",
       "venue": "TMM'21",
       "year": 2021,
-      "links": [],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2105.03299"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2105.03299"
+        }
+      ],
       "domains": [
         "Fashion"
+      ],
+      "arxiv_id": "2105.03299",
+      "arxiv_title": "Leveraging Multiple Relations for Fashion Trend Forecasting Based on Social Media",
+      "arxiv_submitted": "2021-05-07",
+      "sources": [
+        "https://arxiv.org/abs/2105.03299"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
       ]
     },
     {
@@ -1082,7 +1701,8 @@
       "venue": "TACL'21",
       "year": 2021,
       "links": [],
-      "domains": []
+      "domains": [],
+      "technologies": []
     },
     {
       "title": "Topic-Guided Relational Conversational Recommender in Multi-Domain.",
@@ -1090,25 +1710,74 @@
       "venue": "TKDE'20",
       "year": 2020,
       "links": [],
-      "domains": []
+      "domains": [],
+      "technologies": [
+        "Forecasting"
+      ]
     },
     {
       "title": "Who, Where, and What to Wear? Extracting Fashion Knowledge from Social Media.",
       "authors": "Yunshan Ma, Xun Yang, Lizi Liao, Yixin Cao, Tat-Seng Chua.",
       "venue": "ACMMM'19",
       "year": 2019,
-      "links": [],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/1908.08985"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/1908.08985"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1145/3343031.3350889"
+        }
+      ],
       "domains": [
         "Fashion"
+      ],
+      "arxiv_id": "1908.08985",
+      "arxiv_title": "Who, Where, and What to Wear? Extracting Fashion Knowledge from Social Media",
+      "arxiv_submitted": "2019-08-12",
+      "sources": [
+        "https://arxiv.org/abs/1908.08985"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
-      "title": "Yunshan Ma, Lizi Liao, Tat-Seng Chua.",
+      "title": "Automatic Fashion Knowledge Extraction from Social Media.",
       "authors": "Yunshan Ma, Lizi Liao, Tat-Seng Chua.",
       "venue": "ACMMM'19 Demo",
       "year": 2019,
-      "links": [],
-      "domains": []
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/1908.04045"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/1908.04045"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1145/3343031.3350607"
+        }
+      ],
+      "domains": [
+        "Fashion"
+      ],
+      "arxiv_id": "1908.04045",
+      "arxiv_title": "Automatic Fashion Knowledge Extraction from Social Media",
+      "arxiv_submitted": "2019-08-12",
+      "sources": [
+        "https://arxiv.org/abs/1908.04045"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
     },
     {
       "title": "Interpretable Fashion Matching with Rich Attributes.",
@@ -1118,6 +1787,9 @@
       "links": [],
       "domains": [
         "Fashion"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
@@ -1125,9 +1797,27 @@
       "authors": "Xun Yang, Yunshan Ma, Lizi Liao, Meng Wang, Tat-Seng Chua.",
       "venue": "AAAI'19",
       "year": 2019,
-      "links": [],
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/1812.10021"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/1812.10021"
+        }
+      ],
       "domains": [
         "Fashion"
+      ],
+      "arxiv_id": "1812.10021",
+      "arxiv_title": "TransNFCM: Translation-Based Neural Fashion Compatibility Modeling",
+      "arxiv_submitted": "2018-12-25",
+      "sources": [
+        "https://arxiv.org/abs/1812.10021"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
@@ -1136,7 +1826,10 @@
       "venue": "ACMMM'18",
       "year": 2018,
       "links": [],
-      "domains": []
+      "domains": [],
+      "technologies": [
+        "Multimodality"
+      ]
     },
     {
       "title": "Knowledge-aware Multimodal Fashion Chatbot.",
@@ -1146,6 +1839,9 @@
       "links": [],
       "domains": [
         "Fashion"
+      ],
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
@@ -1161,6 +1857,10 @@
         {
           "label": "Publisher",
           "url": "https://doi.org/10.1016/j.cose.2024.104220"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2405.04753"
         }
       ],
       "sources": [
@@ -1170,6 +1870,12 @@
       "selected": "highly-cited",
       "domains": [
         "Cybersecurity"
+      ],
+      "arxiv_id": "2405.04753",
+      "arxiv_title": "AttacKG+:Boosting Attack Knowledge Graph Construction with Large Language Models",
+      "arxiv_submitted": "2024-05-08",
+      "technologies": [
+        "Multimodality"
       ]
     },
     {
@@ -1185,15 +1891,771 @@
         {
           "label": "Code",
           "url": "https://github.com/jianghoucheng/AlphaEdit"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2410.02355"
         }
       ],
       "sources": [
         "https://github.com/jianghoucheng/AlphaEdit",
-        "https://proceedings.iclr.cc/paper_files/paper/2025/file/29c8c615b3187ee995029284702d3f43-Paper-Conference.pdf"
+        "https://proceedings.iclr.cc/paper_files/paper/2025/file/29c8c615b3187ee995029284702d3f43-Paper-Conference.pdf",
+        "https://arxiv.org/abs/2410.02355"
       ],
       "award": "Outstanding Paper Award · ICLR 2025",
       "selected": "award",
-      "domains": []
+      "domains": [],
+      "arxiv_id": "2410.02355",
+      "arxiv_title": "AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models",
+      "arxiv_submitted": "2024-10-03",
+      "technologies": [
+        "Multimodality"
+      ]
+    },
+    {
+      "title": "MemForm: Benchmarking Memory Formation Poisoning in LLM Agents.",
+      "authors": "Haowen Pan, Pengyang Shao, Yunshan Ma, Yanzheng Jin, Naixin Zhai, Xiang Wang, Xun Yang.",
+      "venue": "arXiv",
+      "year": 2026,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2610.14431"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2610.14431"
+        }
+      ],
+      "domains": [
+        "Cybersecurity"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2610.14431",
+      "arxiv_title": "MemForm: Benchmarking Memory Formation Poisoning in LLM Agents",
+      "arxiv_submitted": "2026-10-10",
+      "sources": [
+        "https://arxiv.org/abs/2610.14431"
+      ],
+      "technologies": []
+    },
+    {
+      "title": "AlphaPADI: Formulaic Alpha Discovery via Pool-Aware Hierarchical Discrete Diffusion.",
+      "authors": "Yanzheng Jin, Pengyang Shao, Yunshan Ma, Haowen Pan, Naixin Zhai, Chen-Hui Song, Fei Shen, Kenji Kawaguchi.",
+      "venue": "arXiv",
+      "year": 2026,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2610.04959"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2610.04959"
+        }
+      ],
+      "domains": [
+        "Finance"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2610.04959",
+      "arxiv_title": "AlphaPADI: Formulaic Alpha Discovery via Pool-Aware Hierarchical Discrete Diffusion",
+      "arxiv_submitted": "2026-10-04",
+      "sources": [
+        "https://arxiv.org/abs/2610.04959"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "FashionKG-RAG: Knowledge Graph-Enhanced Retrieval-Augmented Generation for Fashion Question Answering.",
+      "authors": "Yujuan Ding, Linyin Luo, Shijie Wang, Xu Yuan, Yunshan Ma, Yi Bin, Wenqi Fan, Qing Li.",
+      "venue": "arXiv",
+      "year": 2026,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2608.22688"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2608.22688"
+        }
+      ],
+      "domains": [
+        "Fashion"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2608.22688",
+      "arxiv_title": "FashionKG-RAG: Knowledge Graph-Enhanced Retrieval-Augmented Generation for Fashion Question Answering",
+      "arxiv_submitted": "2026-08-24",
+      "sources": [
+        "https://arxiv.org/abs/2608.22688"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
+    },
+    {
+      "title": "CaIRec: Calibrated Modality Imputation for Incomplete Multimodal Recommendation.",
+      "authors": "Ruiyu Liu, Xiaohao Liu, Miaomiao Cai, Yunshan Ma, See-Kiong Ng.",
+      "venue": "arXiv",
+      "year": 2026,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2607.26720"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2607.26720"
+        }
+      ],
+      "domains": [],
+      "publication_type": "arxiv",
+      "arxiv_id": "2607.26720",
+      "arxiv_title": "CaIRec: Calibrated Modality Imputation for Incomplete Multimodal Recommendation",
+      "arxiv_submitted": "2026-07-29",
+      "sources": [
+        "https://arxiv.org/abs/2607.26720"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "ForecastAgentSearch: Towards a Multi-Expert Agent Search System for Geopolitical Event Forecasting.",
+      "authors": "Miaomiao Cai, He Chang, Yunshan Ma, See-kiong Ng.",
+      "venue": "SIGIR AgentSearch Workshop",
+      "year": 2026,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2606.31665"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2606.31665"
+        }
+      ],
+      "domains": [
+        "Social Events"
+      ],
+      "publication_type": "workshop",
+      "arxiv_id": "2606.31665",
+      "arxiv_title": "ForecastAgentSearch: Towards a Multi-Expert Agent Search System for Geopolitical Event Forecasting",
+      "arxiv_submitted": "2026-06-30",
+      "sources": [
+        "https://arxiv.org/abs/2606.31665"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "Less Data Approximates More: Earning Faithful Confidence in High-Stakes Domains.",
+      "authors": "Haokai Ma, Lee Yan Zhen, Gang Yang, Yunxiang Chen, Yunshan Ma, Tat-Seng Chua, Ee-Chien Chang.",
+      "venue": "arXiv",
+      "year": 2026,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2604.08454"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2604.08454"
+        }
+      ],
+      "domains": [],
+      "publication_type": "arxiv",
+      "arxiv_id": "2604.08454",
+      "arxiv_title": "Less Data Approximates More: Earning Faithful Confidence in High-Stakes Domains",
+      "arxiv_submitted": "2026-04-09",
+      "sources": [
+        "https://arxiv.org/abs/2604.08454"
+      ],
+      "technologies": []
+    },
+    {
+      "title": "MusicSem: A Semantically Rich Language--Audio Dataset of Natural Music Descriptions.",
+      "authors": "Rebecca Salganik, Teng Tu, Fei-Yueh Chen, Xiaohao Liu, Keifeng Lu, Ethan Luvisia, Zhiyao Duan, Guillaume Salha-Galvan, Anson Kahng, Yunshan Ma, Jian Kang.",
+      "venue": "arXiv",
+      "year": 2026,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2602.17769"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2602.17769"
+        }
+      ],
+      "domains": [
+        "Music"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2602.17769",
+      "arxiv_title": "MusicSem: A Semantically Rich Language--Audio Dataset of Natural Music Descriptions",
+      "arxiv_submitted": "2026-02-19",
+      "sources": [
+        "https://arxiv.org/abs/2602.17769"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
+    },
+    {
+      "title": "Generalizable Multimodal Large Language Model Editing via Invariant Trajectory Learning.",
+      "authors": "Jiajie Su, Haoyuan Wang, Xiaohua Feng, Yunshan Ma, Xiaobo Xia, Yuyuan Li, Xiaolin Zheng, Jianmao Xiao, Chaochao Chen.",
+      "venue": "arXiv",
+      "year": 2026,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2601.19700"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2601.19700"
+        }
+      ],
+      "domains": [],
+      "publication_type": "arxiv",
+      "arxiv_id": "2601.19700",
+      "arxiv_title": "Generalizable Multimodal Large Language Model Editing via Invariant Trajectory Learning",
+      "arxiv_submitted": "2026-01-27",
+      "sources": [
+        "https://arxiv.org/abs/2601.19700"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
+    },
+    {
+      "title": "HV-Attack: Hierarchical Visual Attack for Multimodal Retrieval Augmented Generation.",
+      "authors": "Linyin Luo, Yujuan Ding, Yunshan Ma, Wenqi Fan, Hanjiang Lai.",
+      "venue": "arXiv",
+      "year": 2025,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2511.15435"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2511.15435"
+        }
+      ],
+      "domains": [
+        "Cybersecurity"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2511.15435",
+      "arxiv_title": "HV-Attack: Hierarchical Visual Attack for Multimodal Retrieval Augmented Generation",
+      "arxiv_submitted": "2025-11-19",
+      "sources": [
+        "https://arxiv.org/abs/2511.15435"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
+    },
+    {
+      "title": "An item is worth one token in Multimodal Large Language Models-based Sequential Recommendation.",
+      "authors": "Qiyong Zhong, Jiajie Su, Ming Yang, Yunshan Ma, Xiaolin Zheng, Chaochao Chen.",
+      "venue": "arXiv",
+      "year": 2025,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2511.05885"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2511.05885"
+        }
+      ],
+      "domains": [],
+      "publication_type": "arxiv",
+      "arxiv_id": "2511.05885",
+      "arxiv_title": "An item is worth one token in Multimodal Large Language Models-based Sequential Recommendation",
+      "arxiv_submitted": "2025-11-08",
+      "sources": [
+        "https://arxiv.org/abs/2511.05885"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "SemCORE: A Semantic-Enhanced Generative Cross-Modal Retrieval Framework with MLLMs.",
+      "authors": "Haoxuan Li, Yi Bin, Yunshan Ma, Guoqing Wang, Yang Yang, See-Kiong Ng, Tat-Seng Chua.",
+      "venue": "arXiv",
+      "year": 2025,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2504.13172"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2504.13172"
+        }
+      ],
+      "domains": [],
+      "publication_type": "arxiv",
+      "arxiv_id": "2504.13172",
+      "arxiv_title": "SemCORE: A Semantic-Enhanced Generative Cross-Modal Retrieval Framework with MLLMs",
+      "arxiv_submitted": "2025-04-17",
+      "sources": [
+        "https://arxiv.org/abs/2504.13172"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
+    },
+    {
+      "title": "Extending Visual Dynamics for Video-to-Music Generation.",
+      "authors": "Xiaohao Liu, Teng Tu, Yunshan Ma, Tat-Seng Chua.",
+      "venue": "arXiv",
+      "year": 2025,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2504.07594"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2504.07594"
+        }
+      ],
+      "domains": [
+        "Music"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2504.07594",
+      "arxiv_title": "Extending Visual Dynamics for Video-to-Music Generation",
+      "arxiv_submitted": "2025-04-10",
+      "sources": [
+        "https://arxiv.org/abs/2504.07594"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
+    },
+    {
+      "title": "AttackSeqBench: Benchmarking the Capabilities of LLMs for Attack Sequences Understanding.",
+      "authors": "Haokai Ma, Javier Yong, Yunshan Ma, Kuei Chen, Anis Yusof, Zhenkai Liang, Ee-Chien Chang.",
+      "venue": "arXiv",
+      "year": 2025,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2503.03170"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2503.03170"
+        }
+      ],
+      "domains": [
+        "Cybersecurity"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2503.03170",
+      "arxiv_title": "AttackSeqBench: Benchmarking the Capabilities of LLMs for Attack Sequences Understanding",
+      "arxiv_submitted": "2025-03-05",
+      "sources": [
+        "https://arxiv.org/abs/2503.03170"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "Integrate Temporal Graph Learning into LLM-based Temporal Knowledge Graph Model.",
+      "authors": "He Chang, Jie Wu, Zhulin Tao, Yunshan Ma, Xianglin Huang, Tat-Seng Chua.",
+      "venue": "arXiv",
+      "year": 2025,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2501.11911"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2501.11911"
+        }
+      ],
+      "domains": [],
+      "publication_type": "arxiv",
+      "arxiv_id": "2501.11911",
+      "arxiv_title": "Integrate Temporal Graph Learning into LLM-based Temporal Knowledge Graph Model",
+      "arxiv_submitted": "2025-01-21",
+      "sources": [
+        "https://arxiv.org/abs/2501.11911"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "MM-Forecast: A Multimodal Approach to Temporal Event Forecasting with Large Language Models.",
+      "authors": "Haoxuan Li, Zhengmao Yang, Yunshan Ma, Yi Bin, Yang Yang, Tat-Seng Chua.",
+      "venue": "arXiv",
+      "year": 2024,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2408.04388"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2408.04388"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1145/3664647.3681593"
+        }
+      ],
+      "domains": [
+        "Social Events"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2408.04388",
+      "arxiv_title": "MM-Forecast: A Multimodal Approach to Temporal Event Forecasting with Large Language Models",
+      "arxiv_submitted": "2024-08-08",
+      "sources": [
+        "https://arxiv.org/abs/2408.04388"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "Fine-tuning Multimodal Large Language Models for Product Bundling.",
+      "authors": "Xiaohao Liu, Jie Wu, Zhulin Tao, Yunshan Ma, Yinwei Wei, Tat-seng Chua.",
+      "venue": "KDD",
+      "year": 2025,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.11712"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2407.11712"
+        }
+      ],
+      "domains": [],
+      "publication_type": "conference",
+      "arxiv_id": "2407.11712",
+      "arxiv_title": "Fine-tuning Multimodal Large Language Models for Product Bundling",
+      "arxiv_submitted": "2024-07-16",
+      "sources": [
+        "https://arxiv.org/abs/2407.11712"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
+    },
+    {
+      "title": "A Comprehensive Evaluation of Large Language Models on Temporal Event Forecasting.",
+      "authors": "He Chang, Chenchen Ye, Zhulin Tao, Jie Wu, Zhengmao Yang, Yunshan Ma, Xianglin Huang, Tat-Seng Chua.",
+      "venue": "arXiv",
+      "year": 2024,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.11638"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2407.11638"
+        }
+      ],
+      "domains": [
+        "Social Events"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2407.11638",
+      "arxiv_title": "A Comprehensive Evaluation of Large Language Models on Temporal Event Forecasting",
+      "arxiv_submitted": "2024-07-16",
+      "sources": [
+        "https://arxiv.org/abs/2407.11638"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "LARP: Language Audio Relational Pre-training for Cold-Start Playlist Continuation.",
+      "authors": "Rebecca Salganik, Xiaohao Liu, Yunshan Ma, Jian Kang, Tat-Seng Chua.",
+      "venue": "arXiv",
+      "year": 2024,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.14333"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2406.14333"
+        }
+      ],
+      "domains": [
+        "Music"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2406.14333",
+      "arxiv_title": "LARP: Language Audio Relational Pre-training for Cold-Start Playlist Continuation",
+      "arxiv_submitted": "2024-06-20",
+      "sources": [
+        "https://arxiv.org/abs/2406.14333"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "Analyzing Temporal Complex Events with Large Language Models? A Benchmark towards Temporal, Long Context Understanding.",
+      "authors": "Zhihan Zhang, Yixin Cao, Chenchen Ye, Yunshan Ma, Lizi Liao, Tat-Seng Chua.",
+      "venue": "ACL",
+      "year": 2024,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.02472"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2406.02472"
+        }
+      ],
+      "domains": [
+        "Social Events"
+      ],
+      "publication_type": "conference",
+      "arxiv_id": "2406.02472",
+      "arxiv_title": "Analyzing Temporal Complex Events with Large Language Models? A Benchmark towards Temporal, Long Context Understanding",
+      "arxiv_submitted": "2024-06-04",
+      "sources": [
+        "https://arxiv.org/abs/2406.02472"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "CIRP: Cross-Item Relational Pre-training for Multimodal Product Bundling.",
+      "authors": "Yunshan Ma, Yingzhi He, Wenjun Zhong, Xiang Wang, Roger Zimmermann, Tat-Seng Chua.",
+      "venue": "arXiv",
+      "year": 2024,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.01735"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2404.01735"
+        }
+      ],
+      "domains": [],
+      "publication_type": "arxiv",
+      "arxiv_id": "2404.01735",
+      "arxiv_title": "CIRP: Cross-Item Relational Pre-training for Multimodal Product Bundling",
+      "arxiv_submitted": "2024-04-02",
+      "sources": [
+        "https://arxiv.org/abs/2404.01735"
+      ],
+      "technologies": [
+        "Multimodality"
+      ]
+    },
+    {
+      "title": "Contrastive Pre-training for Deep Session Data Understanding.",
+      "authors": "Zixuan Li, Lizi Liao, Yunshan Ma, Tat-Seng Chua.",
+      "venue": "arXiv",
+      "year": 2024,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2403.02825"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2403.02825"
+        }
+      ],
+      "domains": [],
+      "publication_type": "arxiv",
+      "arxiv_id": "2403.02825",
+      "arxiv_title": "Contrastive Pre-training for Deep Session Data Understanding",
+      "arxiv_submitted": "2024-03-05",
+      "sources": [
+        "https://arxiv.org/abs/2403.02825"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "ToDA: Target-oriented Diffusion Attacker against Recommendation System.",
+      "authors": "Xiaohao Liu, Zhulin Tao, Ting Jiang, He Chang, Yunshan Ma, Yinwei Wei, Xiang Wang.",
+      "venue": "arXiv",
+      "year": 2024,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2401.12578"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2401.12578"
+        }
+      ],
+      "domains": [
+        "Cybersecurity"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2401.12578",
+      "arxiv_title": "ToDA: Target-oriented Diffusion Attacker against Recommendation System",
+      "arxiv_submitted": "2024-01-23",
+      "sources": [
+        "https://arxiv.org/abs/2401.12578"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "SCTc-TE: A Comprehensive Formulation and Benchmark for Temporal Event Forecasting.",
+      "authors": "Yunshan Ma, Chenchen Ye, Zijian Wu, Xiang Wang, Yixin Cao, Liang Pang, Tat-Seng Chua.",
+      "venue": "arXiv",
+      "year": 2023,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2312.01052"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2312.01052"
+        }
+      ],
+      "domains": [
+        "Social Events"
+      ],
+      "publication_type": "arxiv",
+      "arxiv_id": "2312.01052",
+      "arxiv_title": "SCTc-TE: A Comprehensive Formulation and Benchmark for Temporal Event Forecasting",
+      "arxiv_submitted": "2023-12-02",
+      "sources": [
+        "https://arxiv.org/abs/2312.01052"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "Reproducibility Companion Paper: Knowledge Enhanced Neural Fashion Trend Forecasting.",
+      "authors": "Yunshan Ma, Yujuan Ding, Xun Yang, Lizi Liao, Wai Keung Wong, Tat-Seng Chua, Jinyoung Moon, Hong-Han Shuai.",
+      "venue": "ICMR",
+      "year": 2021,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2105.11826"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2105.11826"
+        },
+        {
+          "label": "Publisher",
+          "url": "https://doi.org/10.1145/3460426.3463598"
+        }
+      ],
+      "domains": [
+        "Fashion"
+      ],
+      "publication_type": "conference",
+      "arxiv_id": "2105.11826",
+      "arxiv_title": "Reproducibility Companion Paper: Knowledge Enhanced Neural Fashion Trend Forecasting",
+      "arxiv_submitted": "2021-05-25",
+      "sources": [
+        "https://arxiv.org/abs/2105.11826"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "Knowledge Enhanced Neural Fashion Trend Forecasting.",
+      "authors": "Yunshan Ma, Yujuan Ding, Xun Yang, Lizi Liao, Wai Keung Wong, Tat-Seng Chua.",
+      "venue": "ICMR",
+      "year": 2020,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2005.03297"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2005.03297"
+        }
+      ],
+      "domains": [
+        "Fashion"
+      ],
+      "publication_type": "conference",
+      "arxiv_id": "2005.03297",
+      "arxiv_title": "Knowledge Enhanced Neural Fashion Trend Forecasting",
+      "arxiv_submitted": "2020-05-07",
+      "sources": [
+        "https://arxiv.org/abs/2005.03297"
+      ],
+      "technologies": [
+        "Multimodality",
+        "Forecasting"
+      ]
+    },
+    {
+      "title": "Deep Conversational Recommender in Travel.",
+      "authors": "Lizi Liao, Ryuichi Takanobu, Yunshan Ma, Xun Yang, Minlie Huang, Tat-Seng Chua.",
+      "venue": "arXiv",
+      "year": 2019,
+      "links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/1907.00710"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/1907.00710"
+        }
+      ],
+      "domains": [],
+      "publication_type": "arxiv",
+      "arxiv_id": "1907.00710",
+      "arxiv_title": "Deep Conversational Recommender in Travel",
+      "arxiv_submitted": "2019-06-25",
+      "sources": [
+        "https://arxiv.org/abs/1907.00710"
+      ],
+      "technologies": [
+        "Forecasting"
+      ]
     }
   ],
   "service": [
