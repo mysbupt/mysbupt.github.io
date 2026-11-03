@@ -63,4 +63,4 @@ AttacKG+ and AlphaEdit were missing from the initial imported publication list a
 
 Navigation labels use initial capitals. Research is organized by Fundamental Technologies and Vertical Domains. Talks are grouped into the three original topics, with oldest-to-newest talk dates within each topic. Education/experience, honors/awards, and professional service now appear at the bottom of About.
 
-The CV navigation opens a new tab. Once the user supplies the requested PDF, place that exact file at `assets/pdf/Yunshan_Ma_CV.pdf` and rebuild. The CV page will then display that PDF and request its download, with a visible Download CV link if the browser blocks automatic downloads. Until the file is supplied, the existing working HTML CV remains available; no substitute PDF has been used.
+The CV navigation opens a new tab. The user-supplied `CV_Ma_Yunshan_202608.pdf` is preserved byte-for-byte at `assets/pdf/Yunshan_Ma_CV.pdf`. The CV page displays that PDF and requests its download, with a visible Download CV link if the browser blocks automatic downloads. Background, education, honors, and service remain at the bottom of About.
