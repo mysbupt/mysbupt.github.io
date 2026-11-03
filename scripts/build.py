@@ -36,9 +36,9 @@ def date_label(date):
     return f'{months[int(month)-1]} {year}'
 
 def page(filename, name, title, content, description=None):
-    nav = [('index.html','About'),('research.html','Research'),('group.html','LMF'),('publications.html','Publications'),('talks.html','Talks'),('cv.html','CV')]
+    nav = [('index.html','About'),('research.html','Research'),('group.html','LMF'),('publications.html','Publications'),('cv.html','CV')]
     nav_html = ''.join(f'<a href="{url}"'+(' aria-current="page"' if name == label else '')+(' target="_blank" rel="noopener"' if label == 'CV' else '')+f'>{label}</a>' for url,label in nav)
-    desc = description or 'Yunshan Ma at Singapore Management University. LMF: Lab for Multimodality and Forecasting. Research across fashion, finance, cybersecurity, music, and social events.'
+    desc = description or 'Yunshan Ma at Singapore Management University. LMF: Lab for Multimodality and Forecasting. Research across fashion, finance, cybersecurity, social events, and music.'
     markup = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{ESC(title)} | Yunshan Ma · SMU</title><meta name="description" content="{ESC(desc, quote=True)}">
@@ -104,15 +104,15 @@ DOMAINS = [
  ('Fashion','Fashion understanding, personalized styling, outfit and wardrobe generation, and trend forecasting.', ['FashionStylist','CFALR','GenWardrobe']),
  ('Finance','Financial forecasting, explainable stock prediction, time-series reasoning, and financial analysis.', ['Learning to Generate Explainable Stock Predictions','Reasoning on Time-Series for Financial Technical','AnalysisBank']),
  ('Cybersecurity','Cyber threat intelligence, attack graph construction, and cyber attack sequence prediction.', ['AttacKG+:','MM-AttacKG','MetaRAG']),
- ('Music','Connecting symbolic music and audio with language models for music understanding and personalization.', ['Integrating Symbolic','VibeMus']),
- ('Social Events','Understanding and forecasting social and geopolitical events through graph modeling, open-ended hypothesis generation, and multi-expert reasoning.', ['Scattered Hypothesis','ThinkTank-ME','Context-aware Event Forecasting'])
+ ('Social Events','Understanding and forecasting social and geopolitical events through graph modeling, open-ended hypothesis generation, and multi-expert reasoning.', ['Scattered Hypothesis','ThinkTank-ME','Context-aware Event Forecasting']),
+ ('Music','Connecting symbolic music and audio with language models for music understanding and personalization.', ['Integrating Symbolic','VibeMus'])
 ]
 
 def domain_slug(name):
     return name.lower().replace(' ', '-')
 
 def domain_sections():
-    result = '<section class="section" id="domains"><p class="eyebrow">Research by Application</p><h2>Vertical Domains</h2><p class="tagline">We apply multimodality and forecasting across Fashion, Finance, Cybersecurity, Music, and Social Events.</p></section>'
+    result = '<section class="section" id="domains"><p class="eyebrow">Research by Application</p><h2>Vertical Domains</h2><p class="tagline">We apply multimodality and forecasting across Fashion, Finance, Cybersecurity, Social Events, and Music.</p></section>'
     for name, description, prefixes in DOMAINS:
         examples = [next(p for p in PAPERS if p['title'].startswith(prefix)) for prefix in prefixes]
         result += f'<section class="topic" id="{domain_slug(name)}"><span class="topic-label">{ESC(name.upper())}</span><div><h2>{ESC(name)}</h2><p>{ESC(description)}</p><ul class="domain-papers">'+''.join('<li>'+link(p['title'],f'publications.html?q={quote(p["title"])}')+'</li>' for p in examples)+'</ul>'+link(f'All {name.lower()} publications →',f'publications.html?domain={quote(name)}','text-link')+'</div></section>'
@@ -126,6 +126,18 @@ TALKS = [
  ('2025/09','Multimodal Open-World Event Forecasting','SMU-SCIS research cluster seminar','Multimodal_LLMs_for_Open-World_Forecasting.pdf'),
  ('2025/08','Bundle Recommendation and Generation','Invited talk · Workshop on generative recommendation','Multimodal_Bundle_Recommendation_and_Generation.pdf')
 ]
+
+def research_talks():
+    result = '<section class="section" id="research-talks"><h2>Research Talks</h2><p class="tagline">Invited talks and research seminars, grouped by topic and listed in chronological order.</p>'
+    for topic in ['Bundle Recommendation and Generation','LLM for Cybersecurity','Multimodal Open-World Event Forecasting']:
+        result += '<section class="talk-topic"><h3>'+ESC(topic)+'</h3>'
+        for date,title,where,file in sorted([talk for talk in TALKS if talk[1] == topic], key=lambda talk:talk[0]):
+            result += f'<article class="talk"><time datetime="{date.replace("/","-")}">{date_label(date)}</time><div><h4>{ESC(where)}</h4><div class="resources">'+link('Slides ↗','image/'+quote(file))+'</div></div></article>'
+        result += '</section>'
+    return result + '</section>'
+
+def group_navigation(active):
+    return '<nav class="group-navigation" aria-label="LMF navigation">'+''.join(f'<a href="{url}"'+(' aria-current="page"' if label == active else '')+f'>{label}</a>' for url,label in [('group.html','Overview'),('members.html','Members')])+'</nav>'
 
 OUT.mkdir(exist_ok=True)
 shutil.copytree(ROOT/'assets',OUT/'assets',dirs_exist_ok=True)
@@ -146,33 +158,35 @@ latest = '<section class="section"><div class="section-heading"><h2>News</h2>'+l
 selected = sorted([p for p in PAPERS if p.get('selected') or p['title'].startswith('CrossCBR:')],key=lambda p:p['year'],reverse=True)
 selection = '<section class="section" id="selected-publications"><div class="section-heading"><h2>Selected Publications</h2>'+link('All publications →','publications.html')+'</div>'+''.join(paper(p) for p in selected)+'</section>'
 
-research_intro = '<div class="page-intro"><p class="eyebrow">LMF · Research</p><h1>Multimodality<br>&amp; Forecasting.</h1><p>Our research can be viewed through two complementary organizations: the fundamental technologies we develop and the vertical domains where we apply them.</p><div class="domain-nav">'+link('Fundamental Technologies','#fundamental-technologies')+link('Vertical Domains','#domains')+'</div></div>'
+research_intro = '<div class="page-intro"><p class="eyebrow">LMF · Research</p><h1>Multimodality<br>&amp; Forecasting.</h1><p>Our research can be viewed through two complementary organizations: the fundamental technologies we develop and the vertical domains where we apply them.</p><div class="domain-nav">'+link('Fundamental Technologies','#fundamental-technologies')+link('Vertical Domains','#domains')+link('Research Talks','#research-talks')+'</div></div>'
 topics = '''<section class="section" id="fundamental-technologies"><p class="eyebrow">Research by Method</p><h2>Fundamental Technologies</h2></section>
 <section class="topic" id="multimodality"><span class="topic-label">MULTIMODALITY</span><div><h2>Multimodality</h2><p>We investigate multimodal understanding, fusion, and compositional and combinatorial modeling across text, images, audio, graphs, and symbolic data.</p><h3>Understanding and Fusion</h3><p>Learning representations of heterogeneous information, understanding the relationships between modalities, and combining complementary signals.</p><h3>Compositional and Combinatorial Modeling</h3><p>Modeling how individual elements combine into coherent structures and sets, with applications in bundle construction, recommender systems, and related tasks.</p></div></section>
 <section class="topic" id="forecasting"><span class="topic-label">FORECASTING</span><div><h2>Forecasting</h2><p>We aim to anticipate future events and behavior at both macro and micro scales.</p><h3>Macro-level Forecasting</h3><p>Financial forecasting and geopolitical event forecasting: reasoning about markets, economies, and evolving events in the wider world.</p><h3>Micro-level Forecasting</h3><p>User behavior forecasting in recommender systems and cyber attack sequence prediction: modeling how individual actions and sequences unfold over time.</p></div></section>'''
-page('research.html','Research','Research',research_intro+topics+domain_sections()+'<section class="section"><h2>Research talks</h2><p class="tagline">Slides on bundle recommendation and generation, LLMs for cybersecurity, and multimodal open-world event forecasting.</p>'+link('Browse talks and slides →','talks.html','text-link')+'</section>')
+page('research.html','Research','Research',research_intro+topics+domain_sections()+research_talks())
 
 group_intro = '<div class="page-intro"><p class="eyebrow">Singapore Management University</p><h1 class="lab-name"><b class="lab-monogram"><i class="lab-initial">L</i><i class="lab-initial">M</i><i class="lab-initial">F</i></b><span>Lab for Multimodality<br>and Forecasting</span></h1><p>We connect multimodal understanding and modeling with forecasting at macro and micro scales, grounded in real-world problems.</p><p class="lab-director">Led by '+link('Yunshan Ma','index.html')+' · School of Computing and Information Systems</p></div>'
 group_pillars = '<section class="section"><h2>What we study</h2><div class="research-grid">'+''.join('<article class="research-item"><span class="number">'+t[1]+'</span><h3>'+t[2]+'</h3><p>'+t[3]+'</p>'+link('Explore this direction →','research.html#'+t[0],'text-link')+'</article>' for t in TOPICS)+'</div></section>'
 group_domains = '<section class="section"><h2>Where we apply it</h2><div class="domain-grid">'+''.join('<article><h3>'+link(name,'research.html#'+domain_slug(name))+'</h3><p>'+ESC(description)+'</p></article>' for name,description,_ in DOMAINS)+'</div></section>'
-page('group.html','LMF','LMF · Lab for Multimodality and Forecasting',group_intro+group_pillars+group_domains+'<section class="section"><h2>Connect with LMF</h2><p class="tagline">For research inquiries, contact '+link('Yunshan Ma','mailto:ysma@smu.edu.sg')+'.</p>'+link('ysma@smu.edu.sg','mailto:ysma@smu.edu.sg','text-link')+'</section>')
+group_members = '<section class="section"><div class="section-heading"><h2>Our Members</h2>'+link('Meet the members →','members.html')+'</div><p class="tagline">Meet the faculty, postdoc, PhD students, visiting PhD students, and alumni of LMF.</p></section>'
+page('group.html','LMF','LMF · Lab for Multimodality and Forecasting',group_navigation('Overview')+group_intro+group_members+group_pillars+group_domains+'<section class="section"><h2>Connect with LMF</h2><p class="tagline">For research inquiries, contact '+link('Yunshan Ma','mailto:ysma@smu.edu.sg')+'.</p>'+link('ysma@smu.edu.sg','mailto:ysma@smu.edu.sg','text-link')+'</section>')
+
+members_data = json.loads((ROOT/'content/members.json').read_text())
+members_content = group_navigation('Members')+'<div class="page-intro"><p class="eyebrow">Lab for Multimodality and Forecasting</p><h1>Our Members</h1><p>The people of LMF.</p></div>'
+for category in members_data:
+    members_content += '<section class="member-section"><h2>'+ESC(category['role'])+'</h2><ul class="member-list">'
+    for name in category['names']:
+        members_content += '<li>'+(link(name,'index.html') if name == 'Yunshan Ma' else ESC(name))+'</li>'
+    members_content += '</ul></section>'
+page('members.html','LMF','LMF Members',members_content)
 
 years = sorted({p['year'] for p in PAPERS},reverse=True)
-pub_intro = '<div class="page-intro"><p class="eyebrow">Publications</p><h1>Research &amp; publications.</h1><p>Multimodality and forecasting, with applications in fashion, finance, cybersecurity, music, and social events.</p>'+link('Google Scholar ↗',SCHOLAR,'text-link')+'</div>'
+pub_intro = '<div class="page-intro"><p class="eyebrow">Publications</p><h1>Research &amp; publications.</h1><p>Multimodality and forecasting, with applications in fashion, finance, cybersecurity, social events, and music.</p>'+link('Google Scholar ↗',SCHOLAR,'text-link')+'</div>'
 filters = '<div class="filters"><div class="search-wrap">'+icon('search')+'<label class="skip" for="publication-search">Search publications</label><input id="publication-search" type="search" placeholder="Search by title, author, or venue…" autocomplete="off"></div><label class="skip" for="publication-domain">Filter by domain</label><select id="publication-domain"><option value="">All domains</option>'+''.join(f'<option value="{name}">{name}</option>' for name,_,_ in DOMAINS)+'</select><label class="skip" for="publication-year">Filter by year</label><select id="publication-year"><option value="">All years</option>'+''.join(f'<option value="{y}">{y}</option>' for y in years)+'</select></div><p class="result-count" id="result-count" role="status" aria-live="polite">'+str(len(PAPERS))+' publications</p>'
 groups = ''.join(f'<section class="publication-group" aria-label="Publications {y}"><h2 class="year-heading">{y}</h2>'+''.join(paper(p,True) for p in PAPERS if p['year']==y)+'</section>' for y in years)
 note = '<p class="provenance">Recent entries were added from the news on my existing website. Author lists are included where provided in the original publications page. ¹ PortfolioPilot is listed under 2025 as announced; its conference year needs confirmation.</p>'
 page('publications.html','Publications','Publications',pub_intro+filters+groups+'<p class="empty" id="empty-results" hidden>No matching publications. Try another search or year.</p>'+note)
 
-talk_intro = '<div class="page-intro"><p class="eyebrow">Talks &amp; slides</p><h1>Ideas in conversation.</h1><p>Invited talks and research seminars on multimodal forecasting, cybersecurity, and generative recommendation.</p></div>'
-talk_topics = ['Bundle Recommendation and Generation','LLM for Cybersecurity','Multimodal Open-World Event Forecasting']
-talks = ''
-for topic in talk_topics:
-    talks += '<section class="section"><h2>'+ESC(topic)+'</h2>'
-    for d,title,where,file in sorted([talk for talk in TALKS if talk[1] == topic],key=lambda talk:talk[0]):
-        talks += f'<article class="talk"><time datetime="{d.replace("/","-")}">{date_label(d)}</time><div><h3>{ESC(where)}</h3><div class="resources">'+link('Slides ↗', 'image/'+quote(file))+'</div></div></article>'
-    talks += '</section>'
-page('talks.html','Talks','Talks',talk_intro+talks)
+(OUT/'talks.html').write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Research Talks | Yunshan Ma</title><link rel="canonical" href="https://mysbupt.github.io/research.html#research-talks"><meta http-equiv="refresh" content="0;url=research.html#research-talks"></head><body><h1>Research Talks</h1><p><a href="research.html#research-talks">Continue to Research Talks →</a></p></body></html>\n')
 
 cv_intro = '<div class="page-intro"><p class="eyebrow">Curriculum vitae</p><h1>Yunshan Ma <span class="chinese" lang="zh">马云山</span></h1><p>Assistant Professor · School of Computing and Information Systems<br>Singapore Management University</p><div class="page-actions"><button type="button" class="print-button" data-print>Print / save as PDF ↗</button>'+link('ysma@smu.edu.sg','mailto:ysma@smu.edu.sg','text-link')+'</div></div>'
 experience = '<section class="cv-section"><h2>Education &amp;<br>Experience</h2><div>'+''.join(f'<div class="experience-item">{item}</div>' for item in DATA['experience'])+'</div></section>'
