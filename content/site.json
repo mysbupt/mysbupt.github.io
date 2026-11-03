@@ -996,8 +996,18 @@
       "authors": "Yunshan Ma, Yingzhi He, An Zhang, Xiang Wang, Tat-Seng Chua.",
       "venue": "KDD'22",
       "year": 2022,
-      "links": [],
-      "domains": []
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://doi.org/10.1145/3534678.3539229"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/mysbupt/CrossCBR"
+        }
+      ],
+      "domains": [],
+      "selected": "selected"
     },
     {
       "title": "Modeling Instant User Intent and Content-level Transition for Sequential Fashion Recommendation.",

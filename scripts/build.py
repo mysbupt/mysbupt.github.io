@@ -34,7 +34,7 @@ def date_label(date):
 
 def page(filename, name, title, content, description=None):
     nav = [('index.html','About'),('research.html','Research'),('group.html','LMF'),('publications.html','Publications'),('talks.html','Talks'),('cv.html','CV')]
-    nav_html = ''.join(f'<a href="{url}"'+(' aria-current="page"' if name == label else '')+f'>{label if label == "LMF" else label.lower()}</a>' for url,label in nav)
+    nav_html = ''.join(f'<a href="{url}"'+(' aria-current="page"' if name == label else '')+(' target="_blank" rel="noopener"' if label == 'CV' else '')+f'>{label}</a>' for url,label in nav)
     desc = description or 'Yunshan Ma at Singapore Management University. LMF: Lab for Multimodality and Forecasting. Research across fashion, finance, cybersecurity, and music.'
     markup = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -85,11 +85,12 @@ for p in PAPERS:
         p['title'] = p['title'].replace('FashionDPO:Fine','FashionDPO: Fine')
 
 def paper(p, searchable=False):
-    attrs = f' data-search="{ESC((p["title"]+" "+p["authors"]+" "+p["venue"]+" "+str(p["year"])+" "+" ".join(p.get("domains",[]))).lower(), quote=True)}" data-year="{p["year"]}" data-domains="{ESC("|".join(p.get("domains",[])), quote=True)}"' if searchable else ''
+    attrs = f' data-search="{ESC((p["title"]+" "+p["authors"]+" "+p["venue"]+" "+str(p["year"])+" "+" ".join(p.get("domains",[]))).lower(), quote=True)}" data-year="{p["year"]}" data-domains="{ESC("|".join(p.get("domains",[])), quote=True)}"' if searchable else f' data-year="{p["year"]}"'
     authors = ESC(p['authors']).replace('Yunshan Ma', '<strong>Yunshan Ma</strong>')
     resources = ''.join(link(r['label'].strip('[]').replace('pdf','PDF'), localize(r['url'])) for r in p['links'])
     award = f'<p class="paper-award">{ESC(p["award"])}</p>' if p.get('award') else ''
-    return f'<article class="pub"{attrs}><div class="venue">{ESC(p["venue"])}</div><div><h3>{ESC(p["title"])}</h3>'+award+(f'<p class="authors">{authors}</p>' if authors else '')+(f'<div class="resources">{resources}</div>' if resources else '')+'</div></article>'
+    venue = p['venue'] if str(p['year']) in p['venue'] or re.search(r"[‘’']\d{2}",p['venue']) else f'{p["venue"]} · {p["year"]}'
+    return f'<article class="pub"{attrs}><div class="venue">{ESC(venue)}</div><div><h3>{ESC(p["title"])}</h3>'+award+(f'<p class="authors">{authors}</p>' if authors else '')+(f'<div class="resources">{resources}</div>' if resources else '')+'</div></article>'
 
 TOPICS = [
  ('multimodality','01','Multimodality','Understanding and fusing text, images, audio, graphs, and symbolic data; modeling how their elements compose and combine.', 'We study multimodal understanding and fusion, together with compositional and combinatorial modeling, across text, images, audio, graphs, and symbolic data. Our methods capture relationships both within and across modalities, with applications in bundle construction, recommender systems, and other structured decision problems.', ['Multimodal understanding and fusion','Compositional and combinatorial modeling','Bundle construction and recommender systems']),
@@ -104,7 +105,7 @@ DOMAINS = [
 ]
 
 def domain_sections():
-    result = '<section class="section" id="domains"><p class="eyebrow">Application domains</p><h2>Research in context</h2><p class="tagline">Our two research pillars connect across four vertical domains.</p></section>'
+    result = '<section class="section" id="domains"><p class="eyebrow">Research by Application</p><h2>Vertical Domains</h2><p class="tagline">We apply multimodality and forecasting across Fashion, Finance, Cybersecurity, and Music.</p></section>'
     for name, description, prefixes in DOMAINS:
         examples = [next(p for p in PAPERS if p['title'].startswith(prefix)) for prefix in prefixes]
         result += f'<section class="topic" id="{name.lower()}"><span class="topic-label">{ESC(name.upper())}</span><div><h2>{ESC(name)}</h2><p>{ESC(description)}</p><ul class="domain-papers">'+''.join('<li>'+link(p['title'],f'publications.html?q={quote(p["title"])}')+'</li>' for p in examples)+'</ul>'+link(f'All {name.lower()} publications →',f'publications.html?domain={name}','text-link')+'</div></section>'
@@ -133,15 +134,15 @@ intro = '''<div class="hero"><div><p class="eyebrow">Singapore Management Univer
 <p>I am interested in discovering and formulating new problems, and in developing data mining, information retrieval, and multimedia methods with practical impact.</p></div>
 <div class="socials">'''+link('Email','mailto:ysma@smu.edu.sg')+link('Google Scholar ↗',SCHOLAR)+link('GitHub ↗','https://github.com/mysbupt')+'''</div></div>
 <aside><img class="portrait" src="assets/img/profile.png" alt="Portrait of Yunshan Ma" width="250" height="285" fetchpriority="high"><p class="profile-caption"><strong>Yunshan Ma · 马云山</strong><br>Assistant Professor, SMU<br>Singapore<br><a href="mailto:ysma@smu.edu.sg">ysma@smu.edu.sg</a></p></aside></div>'''
-research_grid = '<section class="section"><div class="section-heading"><h2>research interests</h2>'+link('Explore research →','research.html')+'</div><div class="research-grid">'+''.join(f'<article class="research-item"><span class="number">{t[1]}</span><h3>{t[2]}</h3><p>{t[3]}</p>'+link('Read more →',f'research.html#{t[0]}','text-link')+'</article>' for t in TOPICS)+'</div><div class="domain-nav" aria-label="Research application domains">'+''.join(link(name,f'research.html#{name.lower()}') for name,_,_ in DOMAINS)+'</div></section>'
-latest = '<section class="section"><div class="section-heading"><h2>news</h2>'+link('All updates →','news.html')+'</div>'+news(DATA['news'][:6])+'</section>'
-award_papers = sorted([p for p in PAPERS if p.get('selected') == 'award'],key=lambda p:p['year'],reverse=True)
-cited_papers = [p for p in PAPERS if p.get('selected') == 'highly-cited']
-selection = '<section class="section"><div class="section-heading"><h2>selected publications</h2>'+link('All publications →','publications.html')+'</div><h3 class="selection-label">Award-winning papers</h3>'+''.join(paper(p) for p in award_papers)+'<h3 class="selection-label">Highly cited work</h3>'+''.join(paper(p) for p in cited_papers)+'</section>'
-page('index.html','About','About',intro+research_grid+latest+selection)
+research_grid = '<section class="section"><div class="section-heading"><h2>Research Interests</h2>'+link('Explore research →','research.html')+'</div><div class="research-grid">'+''.join(f'<article class="research-item"><span class="number">{t[1]}</span><h3>{t[2]}</h3><p>{t[3]}</p>'+link('Read more →',f'research.html#{t[0]}','text-link')+'</article>' for t in TOPICS)+'</div><div class="domain-nav" aria-label="Research application domains">'+''.join(link(name,f'research.html#{name.lower()}') for name,_,_ in DOMAINS)+'</div></section>'
+latest = '<section class="section"><div class="section-heading"><h2>News</h2>'+link('All updates →','news.html')+'</div>'+news(DATA['news'][:6])+'</section>'
+selected = sorted([p for p in PAPERS if p.get('selected') or p['title'].startswith('CrossCBR:')],key=lambda p:p['year'],reverse=True)
+selection = '<section class="section" id="selected-publications"><div class="section-heading"><h2>Selected Publications</h2>'+link('All publications →','publications.html')+'</div>'+''.join(paper(p) for p in selected)+'</section>'
 
-research_intro = '<div class="page-intro"><p class="eyebrow">LMF · Research</p><h1>Multimodality<br>&amp; forecasting.</h1><p>At the Lab for Multimodality and Forecasting, we study how to understand and combine heterogeneous information, and how to anticipate what happens next—from global events to individual behavior.</p></div>'
-topics = ''.join(f'<section class="topic" id="{t[0]}"><span class="topic-label">DIRECTION {t[1]}</span><div><h2>{t[2]}</h2><p>{t[4]}</p><ul>'+''.join(f'<li>{ESC(s)}</li>' for s in t[5])+'</ul>'+link('Related publications →',f'publications.html','text-link')+'</div></section>' for t in TOPICS)
+research_intro = '<div class="page-intro"><p class="eyebrow">LMF · Research</p><h1>Multimodality<br>&amp; Forecasting.</h1><p>Our research can be viewed through two complementary organizations: the fundamental technologies we develop and the vertical domains where we apply them.</p><div class="domain-nav">'+link('Fundamental Technologies','#fundamental-technologies')+link('Vertical Domains','#domains')+'</div></div>'
+topics = '''<section class="section" id="fundamental-technologies"><p class="eyebrow">Research by Method</p><h2>Fundamental Technologies</h2></section>
+<section class="topic" id="multimodality"><span class="topic-label">MULTIMODALITY</span><div><h2>Multimodality</h2><p>We investigate multimodal understanding, fusion, and compositional and combinatorial modeling across text, images, audio, graphs, and symbolic data.</p><h3>Understanding and Fusion</h3><p>Learning representations of heterogeneous information, understanding the relationships between modalities, and combining complementary signals.</p><h3>Compositional and Combinatorial Modeling</h3><p>Modeling how individual elements combine into coherent structures and sets, with applications in bundle construction, recommender systems, and related tasks.</p></div></section>
+<section class="topic" id="forecasting"><span class="topic-label">FORECASTING</span><div><h2>Forecasting</h2><p>We aim to anticipate future events and behavior at both macro and micro scales.</p><h3>Macro-level Forecasting</h3><p>Financial forecasting and geopolitical event forecasting: reasoning about markets, economies, and evolving events in the wider world.</p><h3>Micro-level Forecasting</h3><p>User behavior forecasting in recommender systems and cyber attack sequence prediction: modeling how individual actions and sequences unfold over time.</p></div></section>'''
 page('research.html','Research','Research',research_intro+topics+domain_sections()+'<section class="section"><h2>Research talks</h2><p class="tagline">Slides on bundle recommendation and generation, LLMs for cybersecurity, and multimodal open-world event forecasting.</p>'+link('Browse talks and slides →','talks.html','text-link')+'</section>')
 
 group_intro = '<div class="page-intro"><p class="eyebrow">Singapore Management University</p><h1 class="lab-name">LMF<span>Lab for Multimodality<br>and Forecasting</span></h1><p>We connect multimodal understanding and modeling with forecasting at macro and micro scales, grounded in real-world problems.</p><p class="lab-director">Led by '+link('Yunshan Ma','index.html')+' · School of Computing and Information Systems</p></div>'
@@ -157,18 +158,32 @@ note = '<p class="provenance">Recent entries were added from the news on my exis
 page('publications.html','Publications','Publications',pub_intro+filters+groups+'<p class="empty" id="empty-results" hidden>No matching publications. Try another search or year.</p>'+note)
 
 talk_intro = '<div class="page-intro"><p class="eyebrow">Talks &amp; slides</p><h1>Ideas in conversation.</h1><p>Invited talks and research seminars on multimodal forecasting, cybersecurity, and generative recommendation.</p></div>'
-talks = ''.join(f'<article class="talk"><time datetime="{d.replace("/","-")}">{date_label(d)}</time><div><h3>{ESC(title)}</h3><p>{ESC(where)}</p><div class="resources">'+link('Slides ↗', 'image/'+quote(file))+'</div></div></article>' for d,title,where,file in TALKS)
+talk_topics = ['Bundle Recommendation and Generation','LLM for Cybersecurity','Multimodal Open-World Event Forecasting']
+talks = ''
+for topic in talk_topics:
+    talks += '<section class="section"><h2>'+ESC(topic)+'</h2>'
+    for d,title,where,file in sorted([talk for talk in TALKS if talk[1] == topic],key=lambda talk:talk[0]):
+        talks += f'<article class="talk"><time datetime="{d.replace("/","-")}">{date_label(d)}</time><div><h3>{ESC(where)}</h3><div class="resources">'+link('Slides ↗', 'image/'+quote(file))+'</div></div></article>'
+    talks += '</section>'
 page('talks.html','Talks','Talks',talk_intro+talks)
 
 cv_intro = '<div class="page-intro"><p class="eyebrow">Curriculum vitae</p><h1>Yunshan Ma <span class="chinese" lang="zh">马云山</span></h1><p>Assistant Professor · School of Computing and Information Systems<br>Singapore Management University</p><div class="page-actions"><button type="button" class="print-button" data-print>Print / save as PDF ↗</button>'+link('ysma@smu.edu.sg','mailto:ysma@smu.edu.sg','text-link')+'</div></div>'
-experience = '<section class="cv-section"><h2>Education &amp;<br>experience</h2><div>'+''.join(f'<div class="experience-item">{item}</div>' for item in DATA['experience'])+'</div></section>'
-awards = '<section class="cv-section"><h2>Honors &amp;<br>awards</h2><ul>'+''.join(f'<li>{ESC(item)}</li>' for item in DATA['awards'])+'</ul></section>'
+experience = '<section class="cv-section"><h2>Education &amp;<br>Experience</h2><div>'+''.join(f'<div class="experience-item">{item}</div>' for item in DATA['experience'])+'</div></section>'
+awards = '<section class="cv-section"><h2>Honors &amp;<br>Awards</h2><ul>'+''.join(f'<li>{ESC(item)}</li>' for item in DATA['awards'])+'</ul></section>'
 service_html = ''
 for s in DATA['service']:
     parts = re.split(r'<br\s*/?>',s['html'])
     service_html += '<div class="service-group"><h3>'+re.sub('<[^>]+>','',parts[0]).strip()+'</h3><ul>'+''.join('<li>'+re.sub(r'^\s*-\s*','',part.strip())+'</li>' for part in parts[1:] if part.strip())+'</ul></div>'
-service = '<section class="cv-section"><h2>Professional<br>service</h2><div>'+service_html+'</div></section>'
-page('cv.html','CV','Curriculum vitae',cv_intro+experience+awards+service)
+service = '<section class="cv-section"><h2>Professional<br>Service</h2><div>'+service_html+'</div></section>'
+background = '<section class="section" id="background"><h2>Background &amp; Service</h2>'+experience+awards+service+'</section>'
+page('index.html','About','About',intro+research_grid+latest+selection+background)
+cv_pdf = ROOT / 'assets/pdf/Yunshan_Ma_CV.pdf'
+if cv_pdf.is_file():
+    cv_viewer = '<div class="page-intro"><p class="eyebrow">Curriculum Vitae</p><h1>Yunshan Ma · CV</h1><p><a id="download-cv" href="assets/pdf/Yunshan_Ma_CV.pdf" download="Yunshan_Ma_CV.pdf">Download CV (PDF) ↓</a></p></div><iframe class="cv-pdf" src="assets/pdf/Yunshan_Ma_CV.pdf" title="Yunshan Ma curriculum vitae PDF"></iframe><script>document.getElementById("download-cv").click();</script>'
+    page('cv.html','CV','Curriculum Vitae',cv_viewer)
+else:
+    # Retain the existing working CV until the user supplies the requested PDF.
+    page('cv.html','CV','Curriculum Vitae',cv_intro+experience+awards+service)
 
 page('news.html','News','News','<div class="page-intro"><p class="eyebrow">News archive</p><h1>Updates &amp; milestones.</h1><p>Research announcements, awards, and academic activities.</p></div><div class="news-archive">'+news(DATA['news'])+'</div>')
 page('404.html','404','Page not found','<div class="page-intro"><p class="eyebrow">404</p><h1>Page not found.</h1><p>The page may have moved.</p>'+link('Return to the homepage →','index.html')+'</div>')
