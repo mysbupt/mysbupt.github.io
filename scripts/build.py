@@ -90,7 +90,7 @@ for p in PAPERS:
 def paper(p, searchable=False):
     attrs = f' data-search="{ESC((p["title"]+" "+p["authors"]+" "+p["venue"]+" "+str(p["year"])+" "+" ".join(p.get("domains",[]))).lower(), quote=True)}" data-year="{p["year"]}" data-domains="{ESC("|".join(p.get("domains",[])), quote=True)}"' if searchable else f' data-year="{p["year"]}"'
     authors = ESC(p['authors']).replace('Yunshan Ma', '<strong class="self-author">Yunshan Ma</strong>')
-    resources = ''.join(link(r['label'].strip('[]').replace('pdf','PDF'), localize(r['url'])) for r in p['links'])
+    resources = ''.join(link(r['label'].strip('[]').replace('pdf','PDF'), localize(r['url'])) for r in p['links'] if r['label'].strip('[]').strip().casefold() != 'arxiv')
     award = f'<p class="paper-award">{ESC(p["award"])}</p>' if p.get('award') else ''
     venue = p['venue'] if str(p['year']) in p['venue'] or re.search(r"[‘’']\d{2}",p['venue']) else f'{p["venue"]} · {p["year"]}'
     return f'<article class="pub"{attrs}><div class="venue">{ESC(venue)}</div><div><h3>{ESC(p["title"])}</h3>'+award+(f'<p class="authors">{authors}</p>' if authors else '')+(f'<div class="resources">{resources}</div>' if resources else '')+'</div></article>'
