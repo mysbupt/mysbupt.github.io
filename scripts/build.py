@@ -61,7 +61,7 @@ def news(items):
 def localize(value):
     return value.replace('https://mysbupt.github.io/image/', 'image/')
 
-PAPERS = [p for p in DATA['publications'] if p['title'] != 'Yunshan Ma, Lizi Liao, Tat-Seng Chua.']
+PAPERS = [p for p in DATA['publications'] if p['title'] != 'Yunshan Ma, Lizi Liao, Tat-Seng Chua.' and p.get('venue', '').casefold() != 'arxiv']
 VENUES = {
  'BundleLM': ('MMM 2027',2027), 'Distilling Transitional': ('TOIS',2026),
  'FashionStylist': ('SIGIR-AP',2026), 'Personalized Context': ('CIKM',2026),
@@ -186,7 +186,7 @@ for category in members_data:
 page('members.html','LMF','LMF Members',members_content)
 
 years = sorted({p['year'] for p in PAPERS},reverse=True)
-pub_intro = '<div class="page-intro"><p class="eyebrow">Publications</p><h1>Research &amp; publications.</h1><p>Published papers and arXiv preprints on multimodality and forecasting, with applications in fashion, finance, cybersecurity, social events, and music.</p>'+link('Google Scholar ↗',SCHOLAR,'text-link')+'</div>'
+pub_intro = '<div class="page-intro"><p class="eyebrow">Publications</p><h1>Research &amp; publications.</h1><p>Published papers on multimodality and forecasting, with applications in fashion, finance, cybersecurity, social events, and music.</p>'+link('Google Scholar ↗',SCHOLAR,'text-link')+'</div>'
 filters = '<div class="filters"><div class="search-wrap">'+icon('search')+'<label class="skip" for="publication-search">Search publications</label><input id="publication-search" type="search" placeholder="Search by title, author, or venue…" autocomplete="off"></div><label class="skip" for="publication-domain">Filter by domain</label><select id="publication-domain"><option value="">All domains</option>'+''.join(f'<option value="{name}">{name}</option>' for name,_,_ in DOMAINS)+'</select><label class="skip" for="publication-year">Filter by year</label><select id="publication-year"><option value="">All years</option>'+''.join(f'<option value="{y}">{y}</option>' for y in years)+'</select></div><p class="result-count" id="result-count" role="status" aria-live="polite">'+str(len(PAPERS))+' publications</p>'
 groups = ''.join(f'<section class="publication-group" aria-label="Publications {y}"><h2 class="year-heading">{y}</h2>'+''.join(paper(p,True) for p in PAPERS if p['year']==y)+'</section>' for y in years)
 note = ''
