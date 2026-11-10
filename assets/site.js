@@ -3,19 +3,17 @@
   const toggle = document.querySelector('.theme-toggle');
   let saved;
   try { saved = localStorage.getItem('theme'); } catch (_) {}
-  const system = matchMedia('(prefers-color-scheme: dark)');
   function setTheme(theme) {
     root.dataset.theme = theme;
     toggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
     toggle.setAttribute('aria-pressed', String(theme === 'dark'));
   }
-  setTheme(saved || (system.matches ? 'dark' : 'light'));
+  setTheme(saved || 'light');
   toggle.addEventListener('click', () => {
     saved = root.dataset.theme === 'dark' ? 'light' : 'dark';
     setTheme(saved);
     try { localStorage.setItem('theme', saved); } catch (_) {}
   });
-  system.addEventListener('change', () => { if (!saved) setTheme(system.matches ? 'dark' : 'light'); });
   const menu = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
   function closeMenu() { nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); }

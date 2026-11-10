@@ -1,8 +1,6 @@
 # Yunshan Ma — personal academic website
 
-Recommended template: **[al-folio](https://github.com/alshedivat/al-folio)**, a popular academic website theme with publication, news, and CV layouts. [View its demo](https://alshedivat.github.io/al-folio/).
-
-This implementation is a **static adaptation inspired by al-folio**, with its academic layout, NExT++ logo-inspired four-color palette, right-aligned portrait, publication rows, and light/dark appearance. It is not the upstream Jekyll theme installation. It uses HTML, CSS, JavaScript, and a Python build script so it can run without Ruby, Jekyll, npm, or external frontend dependencies. Theme attribution and the upstream MIT license are included.
+The frontend is inspired by [Yicong Li’s homepage](https://yl3800.github.io/): a navy-to-teal profile banner, circular portrait, curved transition, and light content sections with compact research cards and publication rows. The site uses its own HTML, CSS, JavaScript, and Python build script, with a light default and an optional dark theme. The earlier layout was inspired by [al-folio](https://github.com/alshedivat/al-folio); its license remains in the repository.
 
 Content was imported from https://mysbupt.github.io/ on 3 November 2026. The original HTML is preserved in `content/original/` for comparison. The website includes About, Research with integrated talks, an LMF overview and Members page, Publications, CV, and a news archive; publication search, year filtering, responsive navigation, dark mode, and a print-friendly CV are implemented. The seven existing public PDFs are included, and existing `/image/` PDF paths are preserved.
 
@@ -67,7 +65,7 @@ The CV navigation opens a new tab. The user-supplied `CV_Ma_Yunshan_202608.pdf` 
 
 ## Palette and author metadata
 
-The logo at https://www.nextcenter.org/ supplied four sampled colors: yellow `#eeb11c`, orange `#de5c1d`, sky blue `#579ece`, and purple `#7962a9`. These colors inform the header, research-domain accents, LMF monogram, awards, and favicon; readable tonal variants are used for text in light and dark modes. The logo itself is not used as site branding.
+The logo at https://www.nextcenter.org/ supplied four sampled colors: yellow `#eeb11c`, orange `#de5c1d`, sky blue `#579ece`, and purple `#7962a9`. These colors complement the teal theme in research cards, the LMF monogram, awards, and favicon; readable tonal variants are used for text in light and dark modes. The logo itself is not used as site branding.
 
 All nine selected publications have full author lists. The missing Frozen LVLMs, symbolic/waveform music, financial time-series reasoning, and VibeMus records were completed using arXiv, Springer, and SMU repository metadata. Source URLs are retained on the records in `content/site.json`.
 
