@@ -127,9 +127,9 @@ def domain_sections():
     return result
 
 TALKS = [
- ('2026/11','Bundle Recommendation and Generation','Keynote Talk · 2nd EReL@MIR Workshop on Efficient Representation Learning for Multimodal Information Retrieval (ACM Multimedia 2026)','Ma_Yunshan_Efficient_Multimodal_Recommendation_ERelMIR_MM2026.pdf','Toward Efficient Multimodal Recommendation: From Content Understanding to Personalized Generation','https://erel-mir.github.io/'),
+ ('2026/11','Bundle Recommendation and Generation','Keynote Talk · 2nd EReL@MIR Workshop on Efficient Representation Learning for Multimodal Information Retrieval (ACM Multimedia 2026)','Ma_Yunshan_Efficient_Multimodal_Recommendation_ERelMIR_MM2026.pdf','Toward Efficient Multimodal Recommendation: From Content Understanding to Personalized Generation','https://erel-mir.github.io/','Workshop ↗'),
  ('2026/10','LLM for Cybersecurity','NExT++ Suzhou Workshop','Ma Yunshan - LLM for Cybersecurity.pdf'),
- ('2026/07','Multimodal Open-World Event Forecasting','Invited talk · ChinaMM 2026 Forum','Open-world Event Forecasting.pdf'),
+ ('2026/07','Multimodal Open-World Event Forecasting','Invited talk · ChinaMM 2026 Thematic Forum: 新一代多模态智能：从认知到预判的能力跃迁','Open-world Event Forecasting.pdf','面向开放世界预测的多模态大语言模型','https://chinamm.csig.org.cn/2026/forum.html','Forum program ↗'),
  ('2026/05','Bundle Recommendation and Generation','Invited talk · Workshop on search and recommendation','Generative_Bundle_Recommendation.pdf'),
  ('2025/09','LLM for Cybersecurity','SMU-SCIS MITB AI translational seminar & ST Engineering research workshop','LLM-Enhanced_Cyber_Threat_Intelligence_Analysis.pdf'),
  ('2025/09','Multimodal Open-World Event Forecasting','SMU-SCIS research cluster seminar','Multimodal_LLMs_for_Open-World_Forecasting.pdf'),
@@ -144,9 +144,9 @@ def research_talks():
             resources = link('Slides ↗', 'image/'+quote(file))
             subtitle = ''
             if details:
-                talk_title, event_url = details
+                talk_title, event_url, event_label = details
                 subtitle = f'<p>{ESC(talk_title)}</p>'
-                resources += link('Workshop ↗', event_url)
+                resources += link(event_label, event_url)
             result += f'<article class="talk"><time datetime="{date.replace("/","-")}">{date_label(date)}</time><div><h4>{ESC(where)}</h4>{subtitle}<div class="resources">{resources}</div></div></article>'
         result += '</section>'
     return result + '</section>'
