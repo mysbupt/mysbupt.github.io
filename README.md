@@ -41,7 +41,7 @@ GitHub Pages should continue using its existing branch-based deployment configur
 ## Content review notes
 
 - The original Publications page ends at 2024. Recent papers were carried over from the homepage news and completed using public author metadata; BundleLM's author list was supplied directly by Yunshan Ma.
-- 66 publication entries, 33 news announcements, 6 talks, and 8 honors are included.
+- 66 publication entries, 33 news announcements, 7 talks, and 8 honors are included.
 - The malformed ACM Multimedia 2019 demo entry was resolved as Automatic Fashion Knowledge Extraction from Social Media using its arXiv record and DOI; the original HTML remains archived.
 - PortfolioPilot's year is corrected to AAAI 2026 using the official AAAI proceedings, which also provide its full author list.
 - The music paper is listed under MMM 2026 based on the explicit January 2026 award announcement, despite an older announcement saying MMM 2025.

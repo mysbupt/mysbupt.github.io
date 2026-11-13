@@ -127,6 +127,7 @@ def domain_sections():
     return result
 
 TALKS = [
+ ('2026/11','Bundle Recommendation and Generation','Keynote Talk · 2nd EReL@MIR Workshop on Efficient Representation Learning for Multimodal Information Retrieval (ACM Multimedia 2026)','Ma_Yunshan_Efficient_Multimodal_Recommendation_ERelMIR_MM2026.pdf','Toward Efficient Multimodal Recommendation: From Content Understanding to Personalized Generation','https://erel-mir.github.io/'),
  ('2026/10','LLM for Cybersecurity','NExT++ Suzhou Workshop','Ma Yunshan - LLM for Cybersecurity.pdf'),
  ('2026/07','Multimodal Open-World Event Forecasting','Invited talk · ChinaMM 2026 Forum','Open-world Event Forecasting.pdf'),
  ('2026/05','Bundle Recommendation and Generation','Invited talk · Workshop on search and recommendation','Generative_Bundle_Recommendation.pdf'),
@@ -139,8 +140,14 @@ def research_talks():
     result = '<section class="section" id="research-talks"><h2>Research Talks</h2><p class="tagline">Invited talks and research seminars, grouped by topic and listed in chronological order.</p>'
     for topic in ['Bundle Recommendation and Generation','LLM for Cybersecurity','Multimodal Open-World Event Forecasting']:
         result += '<section class="talk-topic"><h3>'+ESC(topic)+'</h3>'
-        for date,title,where,file in sorted([talk for talk in TALKS if talk[1] == topic], key=lambda talk:talk[0]):
-            result += f'<article class="talk"><time datetime="{date.replace("/","-")}">{date_label(date)}</time><div><h4>{ESC(where)}</h4><div class="resources">'+link('Slides ↗','image/'+quote(file))+'</div></div></article>'
+        for date, _, where, file, *details in sorted([talk for talk in TALKS if talk[1] == topic], key=lambda talk:talk[0]):
+            resources = link('Slides ↗', 'image/'+quote(file))
+            subtitle = ''
+            if details:
+                talk_title, event_url = details
+                subtitle = f'<p>{ESC(talk_title)}</p>'
+                resources += link('Workshop ↗', event_url)
+            result += f'<article class="talk"><time datetime="{date.replace("/","-")}">{date_label(date)}</time><div><h4>{ESC(where)}</h4>{subtitle}<div class="resources">{resources}</div></div></article>'
         result += '</section>'
     return result + '</section>'
 
