@@ -179,11 +179,11 @@ for topic_name in ['Multimodality','Forecasting']:
     topics = topics.replace('<!--'+topic_name.lower()+'-papers-->', topic_publications([p for p in PAPERS if topic_name in p.get('technologies',[])], topic_name+' Publications'))
 page('research.html','Research','Research',topics+domain_sections()+research_talks(),heading=banner(research_intro))
 
-group_intro = '<div class="page-intro"><p class="eyebrow">Singapore Management University</p><h1 class="lab-name"><b class="lab-monogram"><i class="lab-initial">L</i><i class="lab-initial">M</i><i class="lab-initial">F</i></b><span>Lab for Multimodality<br>and Forecasting</span></h1><p>We connect multimodal understanding and modeling with forecasting at macro and micro scales, grounded in real-world problems.</p><p class="lab-director">Led by '+link('Yunshan Ma','index.html')+' · School of Computing and Information Systems</p></div>'
+group_intro = '<div class="page-intro"><p class="eyebrow">Singapore Management University</p><h1 class="lab-name"><b class="lab-monogram"><i class="lab-initial">L</i><i class="lab-initial">M</i><i class="lab-initial">F</i></b><span>Lab for Multimodality<br>and Forecasting</span></h1><p>We connect multimodal understanding and modeling with forecasting at macro and micro scales, grounded in real-world problems.</p><p class="lab-director">Led by '+link('MA Yunshan','index.html')+' · School of Computing and Information Systems</p></div>'
 group_pillars = '<section class="section"><h2>What we study</h2><div class="research-grid">'+''.join('<article class="research-item"><span class="number">'+t[1]+'</span><h3>'+t[2]+'</h3><p>'+t[3]+'</p>'+link('Explore this direction →','research.html#'+t[0],'text-link')+'</article>' for t in TOPICS)+'</div></section>'
 group_domains = '<section class="section"><h2>Where we apply it</h2><div class="domain-grid">'+''.join('<article><h3>'+link(name,'research.html#'+domain_slug(name))+'</h3><p>'+ESC(description)+'</p></article>' for name,description,_ in DOMAINS)+'</div></section>'
 group_members = '<section class="section"><div class="section-heading"><h2>Our Members</h2>'+link('Meet the members →','members.html')+'</div><p class="tagline">Meet the faculty, postdoc, PhD students, visiting PhD students, and alumni of LMF.</p></section>'
-page('group.html','LMF','LMF · Lab for Multimodality and Forecasting',group_navigation('Overview')+group_members+group_pillars+group_domains+'<section class="section"><h2>Connect with LMF</h2><p class="tagline">For research inquiries, contact '+link('Yunshan Ma','mailto:ysma@smu.edu.sg')+'.</p>'+link('ysma@smu.edu.sg','mailto:ysma@smu.edu.sg','text-link')+'</section>',heading=banner(group_intro))
+page('group.html','LMF','LMF · Lab for Multimodality and Forecasting',group_navigation('Overview')+group_members+group_pillars+group_domains+'<section class="section"><h2>Connect with LMF</h2><p class="tagline">For research inquiries, contact '+link('MA Yunshan','mailto:ysma@smu.edu.sg')+'.</p>'+link('ysma@smu.edu.sg','mailto:ysma@smu.edu.sg','text-link')+'</section>',heading=banner(group_intro))
 
 members_data = json.loads((ROOT/'content/members.json').read_text())
 members_intro = '<div class="page-intro"><p class="eyebrow">Lab for Multimodality and Forecasting</p><h1>Our Members</h1><p>The people of LMF.</p></div>'
@@ -191,7 +191,7 @@ members_content = group_navigation('Members')
 for category in members_data:
     members_content += '<section class="member-section"><h2>'+ESC(category['role'])+'</h2><ul class="member-list">'
     for name in category['names']:
-        members_content += '<li>'+(link(name,'index.html') if name == 'Yunshan Ma' else ESC(name))+'</li>'
+        members_content += '<li>'+(link(name,'index.html') if name == 'MA Yunshan' else ESC(name))+'</li>'
     members_content += '</ul></section>'
 page('members.html','LMF','LMF Members',members_content,heading=banner(members_intro))
 
