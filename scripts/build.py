@@ -220,7 +220,7 @@ for s in DATA['service']:
     service_html += '<div class="service-group"><h3>'+re.sub('<[^>]+>','',parts[0]).strip()+'</h3><ul>'+''.join('<li>'+re.sub(r'^\s*-\s*','',part.strip())+'</li>' for part in parts[1:] if part.strip())+'</ul></div>'
 service = '<section class="cv-section"><h2>Professional<br>Service</h2><div>'+service_html+'</div></section>'
 background = '<section class="section" id="background"><h2>Background &amp; Service</h2>'+experience+awards+service+'</section>'
-page('index.html','About','About',biography+research_grid+selection+latest+background,heading=banner(home_hero,compact=False))
+page('index.html','About','About',biography+research_grid+latest+selection+background,heading=banner(home_hero,compact=False))
 cv_pdf = ROOT / 'assets/pdf/Yunshan_Ma_CV.pdf'
 if cv_pdf.is_file():
     cv_heading = '<div class="page-intro"><p class="eyebrow">Curriculum Vitae</p><h1>Yunshan Ma · CV</h1><p><a id="download-cv" href="assets/pdf/Yunshan_Ma_CV.pdf" download="Yunshan_Ma_CV.pdf">Download CV (PDF) ↓</a></p></div>'

@@ -3,6 +3,12 @@
   "imported": "2026-11-03",
   "news": [
     {
+      "date": "2026/11",
+      "html": "I gave two keynote talks at ACM Multimedia 2026 workshops in Rio de Janeiro, Brazil.<br><a href=\"https://erel-mir.github.io/\">2nd EReL@MIR Workshop on Efficient Representation Learning for Multimodal Information Retrieval</a>: <em>Toward Efficient Multimodal Recommendation: From Content Understanding to Personalized Generation</em>.<br><a href=\"https://amimm2026.github.io/\">1st Workshop on Agentic Multimodal Intelligence (AMI): Models, Benchmarks, and Applications</a>: <em>Understand, Forecast, Act: Applications of Multimodal LLM Agents in Security-critical Domains</em>.",
+      "text": "2026/11 I gave two keynote talks at ACM Multimedia 2026 workshops in Rio de Janeiro, Brazil.  2nd EReL@MIR Workshop on Efficient Representation Learning for Multimodal Information Retrieval :  Toward Efficient Multimodal Recommendation: From Content Understanding to Personalized Generation .  1st Workshop on Agentic Multimodal Intelligence (AMI): Models, Benchmarks, and Applications :  Understand, Forecast, Act: Applications of Multimodal LLM Agents in Security-critical Domains .",
+      "papers": []
+    },
+    {
       "date": "2026/10",
       "html": "One paper accepted by Multimedia Modeling (MMM) 2027 of using Language Modeling for Bundle Construction!\n\t\t\t\t<br> BundleLM: Bundle Construction Using Language Model.[pdf come soon]",
       "text": "2026/10 One paper accepted by Multimedia Modeling (MMM) 2027 of using Language Modeling for Bundle Construction! BundleLM: Bundle Construction Using Language Model.[pdf come soon]",
